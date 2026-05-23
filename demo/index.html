@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NSCD Web — Build Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  :root {
+    --paper:    #F4EFE6;
+    --paper-2:  #FAF6EC;
+    --ink:      #0E1F2C;
+    --green:    #2C5F2D;
+    --green-dp: #23492A;
+    --coral:    #F96167;
+    --sage:     #5A6C57;
+    --grain:    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { background-image: var(--grain); }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .display, .display * { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 0.92; }
+  .label-mono {
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 11px;
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  .zh { font-family: 'Noto Sans SC', sans-serif; }
+
+  /* Reset for links */
+  a { color: inherit; text-decoration: none; }
+
+  /* ─── Top bar ─── */
+  .topbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--ink);
+    background: var(--paper);
+    flex-wrap: wrap; gap: 16px;
+  }
+  .logo {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; letter-spacing: -0.04em;
+    font-size: 36px; line-height: 1;
+  }
+  .logo .ns { color: var(--green); }
+  .logo .c  { color: var(--coral); }
+  .logo .d  { color: var(--green); }
+  .logo small {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px; letter-spacing: 0.18em;
+    color: var(--sage); margin-top: 4px;
+    text-transform: uppercase;
+  }
+  .topbar .meta {
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 11px;
+    color: var(--sage);
+    text-align: right;
+  }
+  .topbar .meta a { color: var(--coral); border-bottom: 2px solid var(--coral); }
+  .topbar .meta a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+
+  /* ─── Hero ─── */
+  .hero {
+    background: var(--green); color: var(--paper);
+    border-bottom: 6px solid var(--ink);
+    padding: 80px 0 88px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; letter-spacing: -0.02em;
+    line-height: 0.9; text-transform: uppercase;
+    font-size: clamp(64px, 9vw, 128px);
+  }
+  .hero h1 .stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--coral);
+    margin-right: 18px;
+  }
+  .hero p { max-width: 56ch; margin-top: 22px; font-size: 19px; line-height: 1.55; color: rgba(244,239,230,0.85); }
+  .hero .tag { color: var(--coral); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.18em; font-size: 11px; margin-bottom: 14px; }
+
+  /* ─── Stats band ─── */
+  .stats {
+    background: var(--coral); color: var(--ink);
+    border-bottom: 6px solid var(--ink);
+    padding: 36px 0;
+  }
+  .stats .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .stats .stat {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; letter-spacing: -0.01em;
+    font-size: 36px; line-height: 1; text-transform: uppercase;
+  }
+  .stats .stat small {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.12em;
+    margin-top: 8px;
+  }
+  @media (max-width: 720px) { .stats .wrap { grid-template-columns: 1fr 1fr; } }
+
+  /* ─── Sections ─── */
+  section.area { padding: 80px 0 56px; border-bottom: 2px solid var(--ink); }
+  .eyebrow { color: var(--coral); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.18em; font-size: 11px; margin-bottom: 14px; }
+  .area h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; letter-spacing: -0.02em;
+    text-transform: uppercase; line-height: 0.95;
+    font-size: clamp(40px, 6vw, 72px);
+    max-width: 18ch;
+  }
+  .area .intro { max-width: 60ch; margin-top: 16px; font-size: 16.5px; line-height: 1.6; color: rgba(14,31,44,0.85); }
+
+  /* ─── Page cards ─── */
+  .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 40px; }
+  @media (max-width: 880px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--green-dp);
+    padding: 26px 24px 22px;
+    display: flex; flex-direction: column; gap: 14px;
+    min-width: 0;
+  }
+  .card.coral { background: var(--coral); }
+  .card.ink { background: var(--ink); color: var(--paper); }
+  .card.ink .eyebrow { color: var(--coral); }
+  .card .head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .card .route {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: var(--ink); color: var(--paper);
+    padding: 4px 10px;
+    text-transform: lowercase;
+  }
+  .card.ink .route { background: var(--paper); color: var(--ink); }
+  .card.coral .route { background: var(--ink); color: var(--paper); }
+  .card h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; letter-spacing: -0.015em;
+    font-size: 26px; line-height: 1.05; text-transform: none;
+  }
+  .card p { font-size: 15px; line-height: 1.6; max-width: 60ch; }
+  .card ul {
+    list-style: none;
+    padding-top: 8px;
+    border-top: 1.5px solid rgba(14,31,44,0.15);
+  }
+  .card.ink ul { border-top-color: rgba(244,239,230,0.25); }
+  .card li {
+    position: relative;
+    padding: 5px 0 5px 18px;
+    font-size: 14.5px; line-height: 1.5;
+  }
+  .card li::before {
+    content: "→";
+    position: absolute; left: 0; top: 5px;
+    color: var(--coral);
+    font-weight: 800;
+  }
+  .card.ink li::before { color: var(--coral); }
+  .card .open {
+    align-self: flex-start;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.1em; font-size: 12px;
+    background: var(--ink); color: var(--paper);
+    border: 2px solid var(--ink);
+    padding: 9px 16px;
+    margin-top: auto;
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .card.ink .open { background: var(--coral); color: var(--ink); border-color: var(--ink); }
+  .card.coral .open { background: var(--ink); color: var(--paper); }
+  .card .open:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+
+  /* ─── How to run ─── */
+  .runme {
+    background: var(--paper);
+    border-top: 6px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+    padding: 56px 0 64px;
+  }
+  .runme .grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 56px; align-items: start; }
+  @media (max-width: 880px) { .runme .grid { grid-template-columns: 1fr; gap: 32px; } }
+  .runme h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; text-transform: uppercase;
+    letter-spacing: -0.02em; line-height: 0.95;
+    font-size: clamp(36px, 5vw, 56px);
+  }
+  pre {
+    background: var(--ink); color: var(--paper);
+    border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--coral);
+    padding: 22px 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.5px; line-height: 1.7;
+    overflow-x: auto;
+  }
+  pre .c { color: rgba(244,239,230,0.55); }
+  pre .k { color: var(--coral); }
+
+  /* ─── Nav showcase ─── */
+  .navshow {
+    padding: 56px 0;
+    background: var(--paper-2);
+    border-bottom: 2px solid var(--ink);
+  }
+  .navshow .row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 12px; margin-top: 28px;
+  }
+  @media (max-width: 720px) { .navshow .row { grid-template-columns: 1fr 1fr; } }
+  .navshow .item {
+    border: 2px solid var(--ink); background: var(--paper);
+    padding: 14px 16px;
+  }
+  .navshow .item .top {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; font-size: 13px;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 8px; margin-bottom: 10px;
+    display: flex; justify-content: space-between;
+  }
+  .navshow .item .top span:last-child { color: var(--coral); }
+  .navshow .item ul { list-style: none; }
+  .navshow .item li {
+    padding: 4px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500; font-size: 13px;
+    color: var(--ink);
+  }
+  .navshow .item li.muted { color: var(--sage); font-style: italic; }
+
+  /* ─── Deferred / footer ─── */
+  .deferred { padding: 56px 0 64px; }
+  .deferred h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800; text-transform: uppercase;
+    letter-spacing: -0.02em; line-height: 0.95;
+    font-size: clamp(36px, 5vw, 56px);
+  }
+  .deferred ul { margin-top: 24px; max-width: 70ch; }
+  .deferred li {
+    list-style: none; position: relative;
+    padding: 12px 0 12px 28px;
+    border-top: 1.5px solid rgba(14,31,44,0.15);
+    font-size: 16px; line-height: 1.55;
+  }
+  .deferred li:first-child { border-top: none; }
+  .deferred li::before {
+    content: "○"; position: absolute; left: 0; top: 11px;
+    color: var(--coral); font-size: 18px;
+  }
+
+  footer.colophon {
+    background: var(--ink); color: var(--paper);
+    padding: 36px 0; font-size: 13px;
+  }
+  footer.colophon .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  footer.colophon .label-mono { color: rgba(244,239,230,0.6); }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">
+    <span class="ns">NS</span><span class="c">C</span><span class="d">D</span>
+    <small>Build review · localhost preview</small>
+  </div>
+  <div class="meta">
+    Commit <a href="https://github.com/North-South-Climate-Dialogue/nscd-web/commit/9f56f7b" target="_blank" rel="noopener">9f56f7b</a><br />
+    Generated May 23, 2026
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="tag">A walk through what's built</div>
+    <h1><span class="stroke">NSCD</span>Web<br />Build Review.</h1>
+    <p>
+      Bilingual climate learning platform — Home, About, Contact, Events,
+      Learning (Glossary · Pinyin Guide · Flashcards), Quiz, Blog (MDX),
+      Sign up / Log in, and a full /account dashboard. This page is a
+      guided tour. Open the live URLs to click around.
+    </p>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat">17<small>routes shipped</small></div>
+    <div class="stat">149<small>bilingual climate terms</small></div>
+    <div class="stat">2<small>blog posts · MDX</small></div>
+    <div class="stat">9<small>vocabulary categories</small></div>
+  </div>
+</div>
+
+<!-- HOW TO RUN -->
+<section class="runme">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="eyebrow">Run the live site</div>
+        <h2>Three commands.<br />Two minutes.</h2>
+        <p style="margin-top:16px;line-height:1.6;font-size:16px;max-width:50ch">
+          You'll need <strong>Node.js 18+</strong> installed once
+          (<a href="https://nodejs.org" target="_blank" rel="noopener" style="color:var(--coral);border-bottom:2px solid var(--coral)">nodejs.org</a>).
+          After that, every page in this tour becomes clickable.
+        </p>
+      </div>
+      <div>
+<pre><span class="c"># 1. Clone the repo</span>
+git clone https://github.com/North-South-Climate-Dialogue/nscd-web.git
+<span class="k">cd</span> nscd-web
+
+<span class="c"># 2. Install dependencies (once)</span>
+npm install
+
+<span class="c"># 3. Start the dev server</span>
+npm run dev
+
+<span class="c"># Open http://localhost:3000 in your browser.</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV SHOWCASE -->
+<section class="navshow">
+  <div class="wrap">
+    <div class="eyebrow">Navigation hierarchy</div>
+    <h2 style="font-family:'Bricolage Grotesque',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:-0.02em;line-height:0.95;font-size:clamp(32px,4.5vw,48px);max-width:18ch">Four sections · hover for the second layer.</h2>
+    <div class="row">
+      <div class="item">
+        <div class="top"><span>LEARN</span><span>▾</span></div>
+        <ul>
+          <li>Glossary</li>
+          <li>Simple Pinyin Guide</li>
+          <li>Flashcards</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="top"><span>QUIZ</span><span></span></div>
+        <ul><li class="muted">(no submenu)</li></ul>
+      </div>
+      <div class="item">
+        <div class="top"><span>OUR WORK</span><span>▾</span></div>
+        <ul>
+          <li>Blog</li>
+          <li>Events</li>
+        </ul>
+      </div>
+      <div class="item">
+        <div class="top"><span>ABOUT</span><span>▾</span></div>
+        <ul>
+          <li>Who we are</li>
+          <li>Contact / Join</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOME + MARKETING -->
+<section class="area">
+  <div class="wrap">
+    <div class="eyebrow">Section 01 · Home &amp; Marketing</div>
+    <h2>Front door of NSCD.</h2>
+    <p class="intro">
+      The pages a first-time visitor sees. Bold typography, QiQi the mascot
+      waving from the hero, and clear CTAs into the learning modules.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="head">
+          <h3>Home</h3>
+          <a class="route" href="http://localhost:3000/" target="_blank">/</a>
+        </div>
+        <p>
+          Green full-bleed hero with the "Speak Climate." headline and
+          QiQi waving with bilingual speech bubbles. Coral stats band
+          (LEARN · PRACTICE · MATCH). Featured "Today's words" cards
+          pulled live from <code>data/vocabulary.json</code>.
+        </p>
+        <ul>
+          <li>QiQi mascot · animated wave + bilingual bubbles</li>
+          <li>Two sample vocab cards (Climate · Net Zero)</li>
+          <li>CTAs into Glossary and Quiz</li>
+          <li>Full footer with land acknowledgement</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Who we are</h3>
+          <a class="route" href="http://localhost:3000/about" target="_blank">/about</a>
+        </div>
+        <p>
+          The team behind NSCD, with the CityHive group photo as hero.
+          Mission · Values · Goals laid out as three stacked cards beside
+          a sticky "Why we exist." intro on desktop.
+        </p>
+        <ul>
+          <li>Team hero image with caption</li>
+          <li>Two-column: sticky intro + 3 pillar cards</li>
+          <li>Footer CTAs into Glossary · Blog · Contact</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/about" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Contact / Join</h3>
+          <a class="route" href="http://localhost:3000/contact" target="_blank">/contact</a>
+        </div>
+        <p>
+          Email card with <code>asknscd@gmail.com</code> rendered huge as
+          a <code>mailto:</code> link, plus a "Copy email" button (with
+          fallback for older browsers). "Coming soon" placeholders for
+          Instagram and other channels.
+        </p>
+        <ul>
+          <li>Big mailto link · Copy-to-clipboard button</li>
+          <li>Two dashed social placeholders (IG · LinkedIn/WeChat/小红书)</li>
+          <li>While-you're-here CTAs</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/contact" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Events</h3>
+          <a class="route" href="http://localhost:3000/events" target="_blank">/events</a>
+        </div>
+        <p>
+          Placeholder page with a giant "Stay tuned." headline and a
+          softly-pulsing coral status dot reading "Programming the next
+          event." Two CTAs: Get notified · Read past recaps.
+        </p>
+        <ul>
+          <li>136px display headline</li>
+          <li>Live programming-status badge</li>
+          <li>Routes through to Contact + Blog</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/events" target="_blank">Open →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNING -->
+<section class="area">
+  <div class="wrap">
+    <div class="eyebrow">Section 02 · Learning</div>
+    <h2>The core of the product.</h2>
+    <p class="intro">
+      All three learning modules read from the same <code>data/vocabulary.json</code>
+      (149 terms with English, 中文, pinyin, pronunciation guide, English
+      example translation, definition, A/B/C answers, and category).
+    </p>
+
+    <div class="cards">
+      <div class="card coral">
+        <div class="head">
+          <h3>Glossary</h3>
+          <a class="route" href="http://localhost:3000/learning/glossary" target="_blank">/learning/glossary</a>
+        </div>
+        <p>
+          The full 149-term directory. Sticky toolbar with search, status
+          filter (All / Not yet / Learned), 9-category filter, and sort.
+          Every filter state lives in the URL — links are shareable.
+        </p>
+        <ul>
+          <li>Search across English, 中文, pinyin, definition, category</li>
+          <li>Side-panel detail view (English ↔ 中文 ↔ pinyin ↔ pronunciation ↔ example)</li>
+          <li>Mark-as-learned · saved to localStorage</li>
+          <li>Keyboard: ↑↓ rows, Enter opens, Esc closes, ←→ in panel</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/learning/glossary" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Simple Pinyin Guide</h3>
+          <a class="route" href="http://localhost:3000/learning/pinyin-guide" target="_blank">/learning/pinyin-guide</a>
+        </div>
+        <p>
+          A short field manual for reading the Chinese terms aloud.
+          Headlines with the anatomy of 气 from 气候 (initial · final ·
+          tone · syllable · character). Four-column reference tables for
+          tricky initials and finals.
+        </p>
+        <ul>
+          <li>Anatomy of a Syllable with all 5 parts shown big</li>
+          <li>Tricky-sounds reference tables (4-column layout)</li>
+          <li>Tones section · the four diacritics</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/learning/pinyin-guide" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Flashcards</h3>
+          <a class="route" href="http://localhost:3000/learning/flashcards" target="_blank">/learning/flashcards</a>
+        </div>
+        <p>
+          Single big card centered on screen, 3D-flip on click. Front: word
+          + category tag. Back: 中文, pinyin, "Say it" pronunciation
+          guide, definition, bilingual example.
+        </p>
+        <ul>
+          <li>3D-flip animation · click anywhere or hit Space</li>
+          <li>Direction toggle: EN → 中文 / 中文 → EN</li>
+          <li>Again · Good · Mastered (kb: 1 / 2 / 3)</li>
+          <li>"Round complete" screen with Start over / Back to glossary</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/learning/flashcards" target="_blank">Open →</a>
+      </div>
+
+      <div class="card ink">
+        <div class="head">
+          <h3>Quiz</h3>
+          <a class="route" href="http://localhost:3000/quiz" target="_blank">/quiz</a>
+        </div>
+        <p>
+          Multiple-choice rounds drawn from <code>answerA/B/C</code>.
+          Setup → Play → Results. Three-button choice picker, instant
+          feedback, missed-words review at the end with deep-links into
+          the glossary.
+        </p>
+        <ul>
+          <li>5 / 10 / 20 / All round length · 9-category filter</li>
+          <li>Live timer · animated progress bar</li>
+          <li>Auto-marks correct answers as learned</li>
+          <li>Keyboard: 1 / 2 / 3 to choose · Enter to advance</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/quiz" target="_blank">Open →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG / OUR WORK -->
+<section class="area">
+  <div class="wrap">
+    <div class="eyebrow">Section 03 · Our Work · Blog</div>
+    <h2>Field notes from the dialogue.</h2>
+    <p class="intro">
+      MDX-based blog. Each post is a markdown file in
+      <code>content/blog/</code>. Frontmatter handles title · date ·
+      excerpt · cover image · tags. New posts appear instantly after
+      <code>git pull</code>.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="head">
+          <h3>Blog index</h3>
+          <a class="route" href="http://localhost:3000/blog" target="_blank">/blog</a>
+        </div>
+        <p>
+          List of every post, newest first. Each row: date column · title
+          · excerpt · tags · author. Coral left edge on hover.
+        </p>
+        <ul>
+          <li>Header eyebrow + count + intro</li>
+          <li>Empty-state ready if posts cleared</li>
+          <li>Two posts seeded: Welcome · CityHive recap</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/blog" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>CityHive recap (a real post)</h3>
+          <a class="route" href="http://localhost:3000/blog/cityhive-shifting-systems-2025" target="_blank">/blog/cityhive-…</a>
+        </div>
+        <p>
+          The first long-form post — Learning Climate Across Languages,
+          NSCD at CityHive. Cover image, breadcrumb, full prose with
+          embedded photos, prev/next nav at the foot.
+        </p>
+        <ul>
+          <li>Cover image with thunk shadow</li>
+          <li>Prose: H2/H3, lists, blockquotes, bilingual inline text</li>
+          <li>Three embedded photos from the workshop</li>
+          <li>Prev/Next post navigation</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/blog/cityhive-shifting-systems-2025" target="_blank">Open →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNT -->
+<section class="area">
+  <div class="wrap">
+    <div class="eyebrow">Section 04 · Account</div>
+    <h2>Sign up, sign in, dashboard.</h2>
+    <p class="intro">
+      Supabase auth via <code>@supabase/ssr</code>. Email confirmation
+      required. The four <code>/account/*</code> pages are guarded —
+      they redirect to /login when signed out, or show a friendly
+      "Auth isn't configured yet" notice when env vars are missing.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="head">
+          <h3>Sign up</h3>
+          <a class="route" href="http://localhost:3000/signup" target="_blank">/signup</a>
+        </div>
+        <p>
+          Name · email · password · confirm. Validation runs locally
+          before submit. Success state shows a "Check your email" card.
+        </p>
+        <ul>
+          <li>4 fields · client validation · loading state</li>
+          <li>Confirmation-required flow</li>
+          <li>Inline "auth not configured" warning when env missing</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/signup" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Log in</h3>
+          <a class="route" href="http://localhost:3000/login" target="_blank">/login</a>
+        </div>
+        <p>
+          Email + password. Honors <code>?next=</code> for return-to URL.
+          After sign-in, the navbar swaps to a "Hi, [name] ▾" dropdown.
+        </p>
+        <ul>
+          <li>Same form aesthetic as signup</li>
+          <li>Redirects respect protected-route deep links</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/login" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Account dashboard</h3>
+          <a class="route" href="http://localhost:3000/account" target="_blank">/account</a>
+        </div>
+        <p>
+          "Hi, [name]." headline · sticky identity card with log-out · four
+          tiles linking to Profile / Goals / Progress / Matching.
+        </p>
+        <ul>
+          <li>Server-rendered greeting from user metadata</li>
+          <li>Log out via server action</li>
+          <li>Coral-accent Matching tile</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/account" target="_blank">Open →</a>
+      </div>
+
+      <div class="card coral">
+        <div class="head">
+          <h3>Profile</h3>
+          <a class="route" href="http://localhost:3000/account/profile" target="_blank">/account/profile</a>
+        </div>
+        <p>
+          Editable: display name, bio (500 char with live counter),
+          native language, what you're practicing, location. Saves to
+          Supabase user_metadata. "✓ Saved" flashes after submit.
+        </p>
+        <ul>
+          <li>5 fields · pre-filled from user metadata</li>
+          <li>Initials avatar derived from name</li>
+          <li>Navbar refreshes on save (router.refresh)</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/account/profile" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Language goals</h3>
+          <a class="route" href="http://localhost:3000/account/goals" target="_blank">/account/goals</a>
+        </div>
+        <p>
+          Weekly target picker (5/10/20/30). Live stat card with this
+          week's count + streak + target, rendered from localStorage
+          timestamps.
+        </p>
+        <ul>
+          <li>Streak counter (consecutive-day calculation)</li>
+          <li>"This week" rolling 7-day count</li>
+          <li>Animated coral progress bar against target</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/account/goals" target="_blank">Open →</a>
+      </div>
+
+      <div class="card">
+        <div class="head">
+          <h3>Progress</h3>
+          <a class="route" href="http://localhost:3000/account/progress" target="_blank">/account/progress</a>
+        </div>
+        <p>
+          The visualization page. Big <code>X / 149</code> stat, a
+          heat-grid of all 149 terms (click → glossary side panel),
+          per-category progress bars, last-10 recent activity feed,
+          and a confirm-protected Reset button.
+        </p>
+        <ul>
+          <li>149-tile heat-grid · grouped by category</li>
+          <li>Per-category bars sorted by completion</li>
+          <li>Relative-time recent activity</li>
+          <li>Reset · confirmation prompt</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/account/progress" target="_blank">Open →</a>
+      </div>
+
+      <div class="card ink">
+        <div class="head">
+          <h3>Matching</h3>
+          <a class="route" href="http://localhost:3000/account/matching" target="_blank">/account/matching</a>
+        </div>
+        <p>
+          Pen-pal interest form. Availability · neighborhood · topics ·
+          about (500-char) · open-to-matching. Stored in
+          <code>user_metadata.matching</code> for now; easy to migrate
+          to a Supabase table later.
+        </p>
+        <ul>
+          <li>Multi-select tiles (availability + 7 topic options)</li>
+          <li>Open-to-match radio: Yes / Maybe / No</li>
+          <li>Disclaimer: organizers pair manually, no algorithm</li>
+        </ul>
+        <a class="open" href="http://localhost:3000/account/matching" target="_blank">Open →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEFERRED -->
+<section class="deferred">
+  <div class="wrap">
+    <div class="eyebrow">Still ahead</div>
+    <h2>What we left for next session.</h2>
+    <ul>
+      <li>
+        <strong>Supabase project + env keys.</strong> Create a project at
+        <a href="https://supabase.com" target="_blank" rel="noopener" style="color:var(--coral);border-bottom:2px solid var(--coral)">supabase.com</a>,
+        copy URL + anon key into <code>.env.local</code>. Unlocks every /account page.
+      </li>
+      <li>
+        <strong>Sync progress to Supabase when signed in.</strong> Currently progress
+        saves to localStorage. Once auth is live, swap the import in
+        <code>hooks/useProgress.ts</code> to use <code>lib/supabase/vocabulary-progress.ts</code>
+        (already written).
+      </li>
+      <li>
+        <strong>Deploy to Vercel.</strong> Push the repo, import in Vercel,
+        add the two env vars. Every <code>git push</code> auto-deploys.
+        See <code>FRONTEND.md</code> for the steps.
+      </li>
+      <li>
+        <strong>Migrate matching interests to a proper table.</strong> Currently in
+        user_metadata. When your friend has time, design a
+        <code>matching_interests</code> Supabase table and swap the store.
+      </li>
+      <li>
+        <strong>Password reset / forgot password.</strong> Small follow-up
+        once the core auth is in production use.
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- COLOPHON -->
+<footer class="colophon">
+  <div class="wrap">
+    <span>NSCD Web · Build Review · Made in Vancouver</span>
+    <span class="label-mono">Civic Poster Edition</span>
+  </div>
+</footer>
+
+</body>
+</html>
