@@ -1,0 +1,9 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" rx="120" fill="#FFFFFF"/>
+  <style>
+    .nscd-icon { font-family: 'Trebuchet MS', sans-serif; font-size: 260px; font-weight: bold; }
+  </style>
+  <text x="300" y="380" class="nscd-icon" text-anchor="middle">
+    <tspan fill="#2C5F2D">NS</tspan><tspan fill="#F96167">C</tspan><tspan fill="#2C5F2D">D</tspan>
+  </text>
+</svg>

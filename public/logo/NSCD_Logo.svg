@@ -1,0 +1,10 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .nscd-main { font-family: 'Trebuchet MS', sans-serif; font-size: 280px; font-weight: bold; }
+    .tagline { font-family: 'Trebuchet MS', sans-serif; font-size: 38px; letter-spacing: 12px; fill: #5A6C57; }
+  </style>
+  <text x="600" y="320" class="nscd-main" text-anchor="middle">
+    <tspan fill="#2C5F2D">NS</tspan><tspan fill="#F96167">C</tspan><tspan fill="#2C5F2D">D</tspan>
+  </text>
+  <text x="600" y="410" class="tagline" text-anchor="middle">NORTH SOUTH CLIMATE DIALOGUE</text>
+</svg>

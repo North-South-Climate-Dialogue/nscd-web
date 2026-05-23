@@ -9,5 +9,14 @@ node_modules/
 .next/
 out/
 
+# Backup files (e.g. data/vocabulary.json.bak from the regenerate script)
+*.bak
+
+# Editor / agent local config
+.claude/
+.vscode/
+.idea/
+
 # OS
 .DS_Store
+Thumbs.db

@@ -1,1492 +1,2088 @@
 [
   {
     "id": "climate",
+    "category": "Basic Concept",
     "word": "Climate",
     "chineseTranslation": "气候",
+    "pinyin": "qì hòu",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home",
     "description": "The long-term pattern of weather conditions in a region, typically averaged over 30 years.",
     "answerA": "A sudden, severe storm or weather event that causes immediate damage.",
     "answerB": "The layer of gases that surrounds the Earth and enables life.",
     "answerC": "The long-term pattern of weather conditions in a region, typically averaged over 30 years.",
-    "example": "地中海气候的特点是夏季炎热干燥，冬季温和多雨。"
+    "example": "地中海气候的特点是夏季炎热干燥，冬季温和多雨。",
+    "exampleEnglish": "The Mediterranean climate is characterized by hot, dry summers and mild, rainy winters."
   },
   {
     "id": "weather",
+    "category": "Basic Concept",
     "word": "Weather",
     "chineseTranslation": "气象",
+    "pinyin": "qì xiàng",
+    "pronunciation": "气: “chee” as in cheese; 象: “shahng” as in Shawn",
     "description": "The short-term state of the atmosphere at a specific time and place, including temperature, wind, and precipitation.",
     "answerA": "The short-term state of the atmosphere at a specific time and place, including temperature, wind, and precipitation.",
     "answerB": "The long-term average atmospheric conditions of a region over decades.",
     "answerC": "The movement of large ocean current systems around the globe.",
-    "example": "今天的天气晴朗，最高气温25°C，风力较弱。"
+    "example": "今天的天气晴朗，最高气温25°C，风力较弱。",
+    "exampleEnglish": "Today's weather is sunny, with a high of 25°C and light winds."
   },
   {
     "id": "climate-change",
+    "category": "Basic Concept",
     "word": "Climate Change",
     "chineseTranslation": "气候变化",
+    "pinyin": "qì hòu biàn huà",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 变: “byen” as in beyond; 化: “hwah” as in wow",
     "description": "Long-term shifts in global or regional climate patterns, largely attributed to increased greenhouse gas emissions from human activities.",
     "answerA": "Long-term shifts in global or regional climate patterns, largely attributed to increased greenhouse gas emissions from human activities.",
     "answerB": "A temporary change in local weather caused by seasonal variation.",
     "answerC": "The process of converting sunlight into electricity using solar panels.",
-    "example": "科学家警告，气候变化将导致极端天气事件更加频繁。"
+    "example": "科学家警告，气候变化将导致极端天气事件更加频繁。",
+    "exampleEnglish": "Scientists warn that climate change will make extreme weather events more frequent."
   },
   {
     "id": "greenhouse-gas",
+    "category": "Greenhouse gases",
     "word": "Greenhouse Gas",
     "chineseTranslation": "温室气体",
+    "pinyin": "wēn shì qì tǐ",
+    "pronunciation": "温: “wun” as in when; 室: “shur” as in shirt; 气: “chee” as in cheese; 体: “tee” as in tea",
     "description": "A gas that absorbs and re-emits heat in the atmosphere, contributing to the greenhouse effect; examples include CO₂, methane, and water vapor.",
     "answerA": "A type of gas used in industrial refrigeration and air-conditioning systems.",
     "answerB": "A colorless gas essential for photosynthesis and plant growth.",
     "answerC": "A gas that absorbs and re-emits heat in the atmosphere, contributing to the greenhouse effect; examples include CO₂, methane, and water vapor.",
-    "example": "二氧化碳是人类活动产生的最主要的温室气体。"
+    "example": "二氧化碳是人类活动产生的最主要的温室气体。",
+    "exampleEnglish": "Carbon dioxide is the main greenhouse gas produced by human activities."
   },
   {
     "id": "carbon-dioxide",
+    "category": "Greenhouse gases",
     "word": "Carbon Dioxide",
     "chineseTranslation": "二氧化碳",
+    "pinyin": "èr yǎng huà tàn",
+    "pronunciation": "二: “ar” as in are; 氧: “yahng” as in young; 化: “hwah” as in wow; 碳: “tahn” as in tan",
     "description": "A colorless greenhouse gas (CO₂) produced by burning fossil fuels, deforestation, and respiration; the primary driver of human-caused climate change.",
     "answerA": "A toxic gas released by coal mines that poses explosion hazards.",
     "answerB": "A colorless greenhouse gas (CO₂) produced by burning fossil fuels, deforestation, and respiration; the primary driver of human-caused climate change.",
     "answerC": "A chemical compound that reacts with water vapor to form acid rain.",
-    "example": "自工业化以来，大气中的二氧化碳浓度已从280ppm上升至420ppm以上。"
+    "example": "自工业化以来，大气中的二氧化碳浓度已从280ppm上升至420ppm以上。",
+    "exampleEnglish": "Since industrialization, the concentration of carbon dioxide in the atmosphere has risen from 280 ppm to more than 420 ppm."
   },
   {
     "id": "sulfur-dioxide",
+    "category": "Greenhouse gases",
     "word": "Sulfur Dioxide",
     "chineseTranslation": "二氧化硫",
+    "pinyin": "èr yǎng huà liú",
+    "pronunciation": "二: “ar” as in are; 氧: “yahng” as in young; 化: “hwah” as in wow; 硫: “lyo” as in yo-yo",
     "description": "A toxic gas (SO₂) released by burning coal and volcanic eruptions, a major contributor to acid rain and respiratory illness.",
     "answerA": "A toxic gas (SO₂) released by burning coal and volcanic eruptions, a major contributor to acid rain and respiratory illness.",
     "answerB": "The primary component of natural gas used for household heating.",
     "answerC": "A harmless gas that makes up 78% of the Earth's atmosphere.",
-    "example": "煤电厂排放的二氧化硫导致欧洲部分地区在20世纪80年代出现严重酸雨问题。"
+    "example": "煤电厂排放的二氧化硫导致欧洲部分地区在20世纪80年代出现严重酸雨问题。",
+    "exampleEnglish": "Sulfur dioxide emissions from coal power plants caused severe acid rain in parts of Europe in the 1980s."
   },
   {
     "id": "methane",
+    "category": "Greenhouse gases",
     "word": "Methane",
     "chineseTranslation": "甲烷",
+    "pinyin": "jiǎ wán",
+    "pronunciation": "甲: “jyah” as in jar; 烷: “wahn” as in wand",
     "description": "A potent greenhouse gas (CH₄) produced by livestock, landfills, rice paddies, and natural gas leaks; about 80 times more warming than CO₂ over a 20-year period.",
     "answerA": "A potent greenhouse gas (CH₄) produced by livestock, landfills, rice paddies, and natural gas leaks; about 80 times more warming than CO₂ over a 20-year period.",
     "answerB": "A liquid fuel derived from crude oil used primarily in aviation.",
     "answerC": "A chemical used in industrial water purification and treatment processes.",
-    "example": "牛的肠道发酵产生的甲烷排放是全球温室气体总量的重要组成部分。"
+    "example": "牛的肠道发酵产生的甲烷排放是全球温室气体总量的重要组成部分。",
+    "exampleEnglish": "Methane emissions from cows' digestive processes are an important part of total global greenhouse gas emissions."
   },
   {
     "id": "net-zero",
+    "category": "Basic Concept",
     "word": "Net Zero",
     "chineseTranslation": "净零排放",
+    "pinyin": "jìng líng pái fàng",
+    "pronunciation": "净: “jing” as in jingle; 零: “ling” as in sing; 排: “pie” as in pie; 放: “fahng” as in song",
     "description": "A state in which the amount of greenhouse gases emitted equals the amount removed from the atmosphere, resulting in no net addition to atmospheric concentrations.",
     "answerA": "A state in which the amount of greenhouse gases emitted equals the amount removed from the atmosphere, resulting in no net addition to atmospheric concentrations.",
     "answerB": "A goal to completely eliminate all use of fossil fuels within an economy.",
     "answerC": "An economic framework that eliminates all forms of carbon taxation.",
-    "example": "英国的目标是到2050年实现温室气体净零排放。"
+    "example": "英国的目标是到2050年实现温室气体净零排放。",
+    "exampleEnglish": "The United Kingdom aims to achieve net-zero greenhouse gas emissions by 2050."
   },
   {
     "id": "carbon-neutrality",
+    "category": "Policies & Cooperation",
     "word": "Carbon Neutrality",
     "chineseTranslation": "碳中和",
+    "pinyin": "tàn zhōng hé",
+    "pronunciation": "碳: “tahn” as in tan; 中: “jong” as in John; 和: “huh” as in hut",
     "description": "A condition where carbon dioxide emissions are balanced by an equivalent amount of carbon removal or offsetting, resulting in no net CO₂ release.",
     "answerA": "The complete elimination of all fossil fuel use from an economy.",
     "answerB": "A government policy that requires carbon taxes across all industries equally.",
     "answerC": "A condition where carbon dioxide emissions are balanced by an equivalent amount of carbon removal or offsetting, resulting in no net CO₂ release.",
-    "example": "许多航空公司正在投资碳抵消项目，以实现碳中和目标。"
+    "example": "许多航空公司正在投资碳抵消项目，以实现碳中和目标。",
+    "exampleEnglish": "Many airlines are investing in carbon offset projects to achieve carbon neutrality goals."
   },
   {
     "id": "temperature",
+    "category": "Basic Concept",
     "word": "Temperature",
     "chineseTranslation": "温度",
+    "pinyin": "wēn dù",
+    "pronunciation": "温: “wun” as in when; 度: “doo” as in do",
     "description": "A measure of the degree of heat or cold in the atmosphere or an object, typically expressed in Celsius or Fahrenheit.",
     "answerA": "A measure of the degree of heat or cold in the atmosphere or an object, typically expressed in Celsius or Fahrenheit.",
     "answerB": "The speed at which air masses move from one region to another.",
     "answerC": "The altitude above sea level of a specific geographical location.",
-    "example": "自工业化前时代以来，全球平均温度已上升约1.1°C。"
+    "example": "自工业化前时代以来，全球平均温度已上升约1.1°C。",
+    "exampleEnglish": "Global average temperature has risen by about 1.1°C since the pre-industrial era."
   },
   {
     "id": "rise",
+    "category": "Natural Environment",
     "word": "Rise",
     "chineseTranslation": "上升",
+    "pinyin": "shàng shēng",
+    "pronunciation": "上: “shahng” as in Shawn; 升: “sheng” as sh + “ung” in hung",
     "description": "An increase in level, amount, or value; in climate contexts, commonly refers to increases in temperature, sea level, or emissions over time.",
     "answerA": "The gradual cooling of a region due to the accumulation of ice and snow.",
     "answerB": "The decrease in atmospheric pressure that occurs during storm systems.",
     "answerC": "An increase in level, amount, or value; in climate contexts, commonly refers to increases in temperature, sea level, or emissions over time.",
-    "example": "海平面上升威胁着全球低洼沿海社区的生存。"
+    "example": "海平面上升威胁着全球低洼沿海社区的生存。",
+    "exampleEnglish": "Sea level rise threatens the survival of low-lying coastal communities around the world."
   },
   {
     "id": "fossil-fuels",
+    "category": "Energy",
     "word": "Fossil Fuels",
     "chineseTranslation": "化石燃料",
+    "pinyin": "huà shí rán liào",
+    "pronunciation": "化: “hwah” as in wow; 石: “shur” as in shirt; 燃: “rahn” as in run; 料: “lyow” as in meow",
     "description": "Energy sources formed from ancient organic matter over millions of years, including coal, oil, and natural gas; combustion releases CO₂ and other greenhouse gases.",
     "answerA": "Fuels derived from living plant matter such as corn or sugarcane.",
     "answerB": "Natural insulating materials used to reduce heat loss in buildings.",
     "answerC": "Energy sources formed from ancient organic matter over millions of years, including coal, oil, and natural gas; combustion releases CO₂ and other greenhouse gases.",
-    "example": "燃烧化石燃料用于发电和交通运输是温室气体排放的最大来源。"
+    "example": "燃烧化石燃料用于发电和交通运输是温室气体排放的最大来源。",
+    "exampleEnglish": "Burning fossil fuels for electricity and transportation is the largest source of greenhouse gas emissions."
   },
   {
     "id": "renewable-energy",
+    "category": "Energy",
     "word": "Renewable Energy",
     "chineseTranslation": "可再生能源",
+    "pinyin": "kě zài shēng néng yuán",
+    "pronunciation": "可: “kuh” as in cup; 再: “dz-eye” as in eye; 生: “sheng” as sh + “ung” in hung; 能: “nung” as in hung; 源: “ywen” as in when",
     "description": "Energy from naturally replenishing sources—such as sunlight, wind, rain, tides, and geothermal heat—that are not depleted when used.",
     "answerA": "Energy stored in the chemical bonds of fossil fuels extracted from the earth.",
     "answerB": "Energy generated from burning wood, agricultural waste, and other biomass.",
     "answerC": "Energy from naturally replenishing sources—such as sunlight, wind, rain, tides, and geothermal heat—that are not depleted when used.",
-    "example": "该国计划到2030年从可再生能源中获取70%的电力。"
+    "example": "该国计划到2030年从可再生能源中获取70%的电力。",
+    "exampleEnglish": "The country plans to get 70% of its electricity from renewable energy by 2030."
   },
   {
     "id": "solar-energy",
+    "category": "Energy",
     "word": "Solar energy",
     "chineseTranslation": "太阳能",
+    "pinyin": "tài yáng néng",
+    "pronunciation": "太: “tie” as in tie; 阳: “yahng” as in young; 能: “nung” as in hung",
     "description": "Energy derived from the sun's radiation, converted into electricity using photovoltaic panels or into heat using solar thermal collectors.",
     "answerA": "Energy derived from the sun's radiation, converted into electricity using photovoltaic panels or into heat using solar thermal collectors.",
     "answerB": "Energy generated by the tidal movement of ocean water near coastlines.",
     "answerC": "Energy produced by splitting hydrogen molecules in electrochemical fuel cells.",
-    "example": "随着光伏板成本大幅下降，太阳能装机容量迅速增长。"
+    "example": "随着光伏板成本大幅下降，太阳能装机容量迅速增长。",
+    "exampleEnglish": "As the cost of solar panels has fallen sharply, installed solar energy capacity has grown rapidly."
   },
   {
     "id": "wind-energy",
+    "category": "Energy",
     "word": "Wind energy",
     "chineseTranslation": "风能",
+    "pinyin": "fēng néng",
+    "pronunciation": "风: “fung” as in hung; 能: “nung” as in hung",
     "description": "Electricity generated by capturing the kinetic energy of wind using turbines; one of the fastest-growing sources of renewable energy globally.",
     "answerA": "Energy produced from the movement of ocean waves and tidal forces.",
     "answerB": "Energy generated through the controlled nuclear fission of uranium atoms.",
     "answerC": "Electricity generated by capturing the kinetic energy of wind using turbines; one of the fastest-growing sources of renewable energy globally.",
-    "example": "海上风电场正在建设中，以利用海上更强劲、更稳定的风力资源。"
+    "example": "海上风电场正在建设中，以利用海上更强劲、更稳定的风力资源。",
+    "exampleEnglish": "Offshore wind farms are being built to use stronger and more stable wind resources at sea."
   },
   {
     "id": "extreme-weather",
+    "category": "Natural Environment",
     "word": "Extreme Weather",
     "chineseTranslation": "极端天气",
+    "pinyin": "jí duān tiān qì",
+    "pronunciation": "极: “jee” as in jeep; 端: “dwan” as in swan; 天: “tyen” as in yen; 气: “chee” as in cheese",
     "description": "Unusual, severe, or unseasonal weather events—such as heatwaves, droughts, floods, and hurricanes—that lie outside the normal range of climate variability.",
     "answerA": "The average daily temperature range experienced in tropical and subtropical regions.",
     "answerB": "Unusual, severe, or unseasonal weather events—such as heatwaves, droughts, floods, and hurricanes—that lie outside the normal range of climate variability.",
     "answerC": "A type of weather pattern specifically associated with El Niño ocean warming cycles.",
-    "example": "气候科学家将极端天气事件的增加与全球气温上升联系起来。"
+    "example": "气候科学家将极端天气事件的增加与全球气温上升联系起来。",
+    "exampleEnglish": "Climate scientists link the increase in extreme weather events to rising global temperatures."
   },
   {
     "id": "flood",
+    "category": "Natural Environment",
     "word": "Flood",
     "chineseTranslation": "洪水",
+    "pinyin": "hóng shuǐ",
+    "pronunciation": "洪: “hong” as in song; 水: “shway” as in sway",
     "description": "An overflow of water onto normally dry land caused by heavy rainfall, storm surges, rapid snowmelt, or river overflow.",
     "answerA": "An overflow of water onto normally dry land caused by heavy rainfall, storm surges, rapid snowmelt, or river overflow.",
     "answerB": "A prolonged period of abnormally low rainfall that leads to water shortages.",
     "answerC": "A sudden intrusion of cold polar air into temperate or tropical regions.",
-    "example": "这场洪水摧毁了沿海城市，数千名居民被迫撤离。"
+    "example": "这场洪水摧毁了沿海城市，数千名居民被迫撤离。",
+    "exampleEnglish": "The flood destroyed the coastal city, forcing thousands of residents to evacuate."
   },
   {
     "id": "wildfire",
+    "category": "Natural Environment",
     "word": "Wildfire",
     "chineseTranslation": "野火",
+    "pinyin": "yě huǒ",
+    "pronunciation": "野: “yeh” as in yes; 火: “hwaw” as in raw",
     "description": "An uncontrolled fire that spreads through forests, grasslands, or other natural vegetation, often intensified by drought, heat, and strong winds.",
     "answerA": "An uncontrolled fire that spreads through forests, grasslands, or other natural vegetation, often intensified by drought, heat, and strong winds.",
     "answerB": "A deliberately set fire used to clear agricultural land for planting.",
     "answerC": "A controlled burn conducted by forest service workers to manage fuel loads.",
-    "example": "澳大利亚创纪录的野火季节烧毁了数百万公顷的丛林。"
+    "example": "澳大利亚创纪录的野火季节烧毁了数百万公顷的丛林。",
+    "exampleEnglish": "Australia's record wildfire season burned millions of hectares of bushland."
   },
   {
     "id": "drought",
+    "category": "Natural Environment",
     "word": "Drought",
     "chineseTranslation": "干旱",
+    "pinyin": "gān hàn",
+    "pronunciation": "干: “gahn” as in gone; 旱: “hahn” as in Han",
     "description": "A prolonged period of abnormally low precipitation leading to water shortages, crop failures, and significant ecosystem stress.",
     "answerA": "A prolonged period of abnormally low precipitation leading to water shortages, crop failures, and significant ecosystem stress.",
     "answerB": "A sudden and intense rainfall event that causes rapid flash flooding.",
     "answerC": "A period of unusually cold temperatures occurring in a tropical region.",
-    "example": "严重干旱导致粮食产量下降，引发区域性粮食安全危机。"
+    "example": "严重干旱导致粮食产量下降，引发区域性粮食安全危机。",
+    "exampleEnglish": "Severe drought reduced food production and triggered a regional food security crisis."
   },
   {
     "id": "sea-level",
+    "category": "Natural Environment",
     "word": "Sea level",
     "chineseTranslation": "海平面",
+    "pinyin": "hǎi píng miàn",
+    "pronunciation": "海: “hi” as in hi; 平: “ping” as in ping; 面: “myen” as in men",
     "description": "The average height of the ocean surface, used as a baseline for measuring altitude; currently rising due to thermal expansion of seawater and melting land ice.",
     "answerA": "The average height of the ocean surface, used as a baseline for measuring altitude; currently rising due to thermal expansion of seawater and melting land ice.",
     "answerB": "The deepest point in the ocean measured from the water's surface.",
     "answerC": "The boundary between saltwater and freshwater in a coastal estuary.",
-    "example": "海平面上升对太平洋小岛国构成生存威胁。"
+    "example": "海平面上升对太平洋小岛国构成生存威胁。",
+    "exampleEnglish": "Sea level rise poses an existential threat to small island states in the Pacific."
   },
   {
     "id": "ecosystem",
+    "category": "Natural Environment",
     "word": "Ecosystem",
     "chineseTranslation": "生态系统",
+    "pinyin": "shēng tài xì tǒng",
+    "pronunciation": "生: “sheng” as sh + “ung” in hung; 态: “tie” as in tie; 系: “shee” as in she; 统: “tong” as in tongue",
     "description": "A community of living organisms—plants, animals, and microbes—interacting with each other and their physical environment as a functional unit.",
     "answerA": "A community of living organisms—plants, animals, and microbes—interacting with each other and their physical environment as a functional unit.",
     "answerB": "A government-designated zone where human activity is strictly prohibited.",
     "answerC": "A network of weather monitoring stations distributed across a large region.",
-    "example": "珊瑚礁生态系统养育了约25%的已知海洋物种。"
+    "example": "珊瑚礁生态系统养育了约25%的已知海洋物种。",
+    "exampleEnglish": "Coral reef ecosystems support about 25% of known marine species."
   },
   {
     "id": "policy",
+    "category": "Policies & Cooperation",
     "word": "Policy",
     "chineseTranslation": "政策",
+    "pinyin": "zhèng cè",
+    "pronunciation": "政: “jung” as in jungle; 策: “tsuh” as in sun",
     "description": "A set of principles, rules, or guidelines adopted by a government or organization to guide decision-making and achieve specific goals.",
     "answerA": "A formal legal agreement between two or more countries to reduce emissions.",
     "answerB": "A financial instrument specifically designed to fund large climate projects.",
     "answerC": "A set of principles, rules, or guidelines adopted by a government or organization to guide decision-making and achieve specific goals.",
-    "example": "政府新出台的气候政策为减少温室气体排放设定了具有约束力的目标。"
+    "example": "政府新出台的气候政策为减少温室气体排放设定了具有约束力的目标。",
+    "exampleEnglish": "The government's new climate policy sets binding targets for reducing greenhouse gas emissions."
   },
   {
     "id": "environmental-regulation",
+    "category": "Policies & Cooperation",
     "word": "Environmental Regulation",
     "chineseTranslation": "环境监管",
+    "pinyin": "huán jìng jiān guǎn",
+    "pronunciation": "环: “hwan” as in swan; 境: “jing” as in jingle; 监: “jyen” as in Jen; 管: “gwan” as in swan",
     "description": "Laws and rules established by governments to limit pollution, protect natural resources, and require businesses to adopt sustainable practices.",
     "answerA": "A voluntary reporting program where companies disclose their carbon emissions annually.",
     "answerB": "A market-based mechanism that allows companies to trade emissions allowances.",
     "answerC": "Laws and rules established by governments to limit pollution, protect natural resources, and require businesses to adopt sustainable practices.",
-    "example": "更严格的环境监管迫使重工业采用更清洁的生产方式。"
+    "example": "更严格的环境监管迫使重工业采用更清洁的生产方式。",
+    "exampleEnglish": "Stricter environmental regulation is forcing heavy industries to adopt cleaner production methods."
   },
   {
     "id": "carbon-tax",
+    "category": "Policies & Cooperation",
     "word": "Carbon tax",
     "chineseTranslation": "碳税",
+    "pinyin": "tàn shuì",
+    "pronunciation": "碳: “tahn” as in tan; 税: “shway” as in sway",
     "description": "A fee imposed on the burning of carbon-containing fuels, based on the amount of CO₂ they emit, designed to make fossil fuels more expensive and reduce emissions.",
     "answerA": "A fee imposed on the burning of carbon-containing fuels, based on the amount of CO₂ they emit, designed to make fossil fuels more expensive and reduce emissions.",
     "answerB": "A subsidy paid to companies that invest in renewable energy technology.",
     "answerC": "A government import fee on goods from countries with weaker climate policies.",
-    "example": "加拿大碳税逐步提高，以激励企业减少排放。"
+    "example": "加拿大碳税逐步提高，以激励企业减少排放。",
+    "exampleEnglish": "Canada's carbon tax is gradually increasing to encourage businesses to reduce emissions."
   },
   {
     "id": "carbon-price",
+    "category": "Policies & Cooperation",
     "word": "Carbon price",
     "chineseTranslation": "碳价",
+    "pinyin": "tàn jià",
+    "pronunciation": "碳: “tahn” as in tan; 价: “jyah” as in jar",
     "description": "The monetary value assigned to each unit of carbon dioxide emitted, used as an economic signal to internalize the cost of climate damage and drive emission reductions.",
     "answerA": "The market value of carbon credits generated by planting or protecting forests.",
     "answerB": "A consumer fee charged for recycling products that contain carbon-based materials.",
     "answerC": "The monetary value assigned to each unit of carbon dioxide emitted, used as an economic signal to internalize the cost of climate damage and drive emission reductions.",
-    "example": "更高的碳价使化石燃料相较于清洁能源的竞争力大幅下降。"
+    "example": "更高的碳价使化石燃料相较于清洁能源的竞争力大幅下降。",
+    "exampleEnglish": "A higher carbon price makes fossil fuels much less competitive compared with clean energy."
   },
   {
     "id": "emissions-trading",
+    "category": "Policies & Cooperation",
     "word": "Emissions trading",
     "chineseTranslation": "排放交易",
+    "pinyin": "pái fàng jiāo yì",
+    "pronunciation": "排: “pie” as in pie; 放: “fahng” as in song; 交: “jyow” as in meow; 易: “ee” as in see",
     "description": "A market-based system in which companies buy and sell permits to emit greenhouse gases, creating a financial incentive to reduce emissions at the lowest cost.",
     "answerA": "A market-based system in which companies buy and sell permits to emit greenhouse gases, creating a financial incentive to reduce emissions at the lowest cost.",
     "answerB": "An international program that transfers clean energy technology to developing nations.",
     "answerC": "A financial mechanism for pooling investment in renewable energy infrastructure.",
-    "example": "欧盟排放交易体系是全球规模最大的碳市场。"
+    "example": "欧盟排放交易体系是全球规模最大的碳市场。",
+    "exampleEnglish": "The EU Emissions Trading System is the world's largest carbon market."
   },
   {
     "id": "cap-and-trade",
+    "category": "Policies & Cooperation",
     "word": "Cap and trade",
     "chineseTranslation": "限额与交易",
+    "pinyin": "xiàn é yǔ jiāo yì",
+    "pronunciation": "限: “shyen” as in yen; 额: “uh” as in up; 与: “yoo” as in you; 交: “jyow” as in meow; 易: “ee” as in see",
     "description": "A pollution control approach that sets a total limit (cap) on emissions and allows companies to buy and sell allowances, incentivizing emission reductions where they are cheapest.",
     "answerA": "A policy mandating that all new vehicles sold must be fully electric by a set date.",
     "answerB": "A voluntary scheme where businesses compensate for emissions by funding tree planting.",
     "answerC": "A pollution control approach that sets a total limit (cap) on emissions and allows companies to buy and sell allowances, incentivizing emission reductions where they are cheapest.",
-    "example": "该限额与交易计划显著减少了发电厂的二氧化硫排放量。"
+    "example": "该限额与交易计划显著减少了发电厂的二氧化硫排放量。",
+    "exampleEnglish": "The cap-and-trade program significantly reduced sulfur dioxide emissions from power plants."
   },
   {
     "id": "paris-agreement",
+    "category": "Policies & Cooperation",
     "word": "Paris Agreement",
     "chineseTranslation": "巴黎协定",
+    "pinyin": "bā lí xié dìng",
+    "pronunciation": "巴: “bah” as in bar; 黎: “lee” as in Lee; 协: “shyeh” as in yes; 定: “ding” as in ding",
     "description": "A 2015 international treaty under the UN Framework Convention on Climate Change, committing countries to limit global warming to well below 2°C above pre-industrial levels.",
     "answerA": "A 1997 accord establishing the first binding carbon emissions targets for developed nations.",
     "answerB": "A bilateral trade deal between the EU and China on clean energy technology.",
     "answerC": "A 2015 international treaty under the UN Framework Convention on Climate Change, committing countries to limit global warming to well below 2°C above pre-industrial levels.",
-    "example": "根据《巴黎协定》，各国须提交国家自主贡献，阐明各自的气候目标。"
+    "example": "根据《巴黎协定》，各国须提交国家自主贡献，阐明各自的气候目标。",
+    "exampleEnglish": "Under the Paris Agreement, countries must submit nationally determined contributions outlining their climate targets."
   },
   {
     "id": "target",
+    "category": "Policies & Cooperation",
     "word": "Target",
     "chineseTranslation": "目标",
+    "pinyin": "mù biāo",
+    "pronunciation": "目: “moo” as in moon; 标: “byow” as in meow",
     "description": "A specific, measurable goal set by a government or organization to be achieved within a defined timeframe, such as reducing emissions by 50% by 2030.",
     "answerA": "A legally binding obligation imposed by international law on all signatory countries.",
     "answerB": "A projected financial return on a portfolio of green infrastructure investments.",
     "answerC": "A specific, measurable goal set by a government or organization to be achieved within a defined timeframe, such as reducing emissions by 50% by 2030.",
-    "example": "该公司制定了基于科学的目标，力争到2030年将碳足迹减少一半。"
+    "example": "该公司制定了基于科学的目标，力争到2030年将碳足迹减少一半。",
+    "exampleEnglish": "The company has set science-based targets to cut its carbon footprint in half by 2030."
   },
   {
     "id": "climate-adaptation",
+    "category": "Basic Concept",
     "word": "Climate Adaptation",
     "chineseTranslation": "气候适应",
+    "pinyin": "qì hòu shì yìng",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 适: “shur” as in shirt; 应: “ying” as in sing",
     "description": "The process of adjusting human systems, infrastructure, and practices to actual or expected climate change impacts, to reduce harm and take advantage of new opportunities.",
     "answerA": "The long-term economic transition away from fossil fuels toward clean energy.",
     "answerB": "The removal of CO₂ from the atmosphere using engineered carbon capture devices.",
     "answerC": "The process of adjusting human systems, infrastructure, and practices to actual or expected climate change impacts, to reduce harm and take advantage of new opportunities.",
-    "example": "修建海堤和恢复红树林是气候适应措施的典型例子。"
+    "example": "修建海堤和恢复红树林是气候适应措施的典型例子。",
+    "exampleEnglish": "Building seawalls and restoring mangroves are typical examples of climate adaptation measures."
   },
   {
     "id": "climate-mitigation",
+    "category": "Basic Concept",
     "word": "Climate Mitigation",
     "chineseTranslation": "气候缓解",
+    "pinyin": "qì hòu huǎn jiě",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 缓: “hwan” as in swan; 解: “jyeh” as in yes",
     "description": "Actions taken to reduce or prevent greenhouse gas emissions, or to enhance the capacity of carbon sinks, in order to limit the extent of global warming.",
     "answerA": "The process of helping communities recover from climate-related disasters.",
     "answerB": "Actions taken to reduce or prevent greenhouse gas emissions, or to enhance the capacity of carbon sinks, in order to limit the extent of global warming.",
     "answerC": "International negotiations on how to distribute climate finance for developing nations.",
-    "example": "向可再生能源转型是目前最有效的气候缓解战略。"
+    "example": "向可再生能源转型是目前最有效的气候缓解战略。",
+    "exampleEnglish": "Transitioning to renewable energy is currently one of the most effective climate mitigation strategies."
   },
   {
     "id": "sustainability",
+    "category": "Basic Concept",
     "word": "Sustainability",
     "chineseTranslation": "可持续性",
+    "pinyin": "kě chí xù xìng",
+    "pronunciation": "可: “kuh” as in cup; 持: “chur” as in church; 续: “shoo” as in shoe; 性: “shing” as in sing",
     "description": "The capacity to meet present needs without compromising the ability of future generations to meet their own needs, balancing environmental, social, and economic concerns.",
     "answerA": "The capacity to meet present needs without compromising the ability of future generations to meet their own needs, balancing environmental, social, and economic concerns.",
     "answerB": "The degree to which an ecosystem can recover from a natural or human disturbance.",
     "answerC": "A measurement of how much carbon is currently stored in global soils and forests.",
-    "example": "该公司的可持续发展报告阐述了其减少废弃物和排放的承诺。"
+    "example": "该公司的可持续发展报告阐述了其减少废弃物和排放的承诺。",
+    "exampleEnglish": "The company's sustainability report explains its commitment to reducing waste and emissions."
   },
   {
     "id": "climate-finance",
+    "category": "Policies & Cooperation",
     "word": "Climate Finance",
     "chineseTranslation": "气候金融",
+    "pinyin": "qì hòu jīn róng",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 金: “jin” as in gin; 融: “rong” as in wrong",
     "description": "Financial flows—public or private—directed toward climate change mitigation and adaptation, including clean energy investment, resilience building, and ecosystem protection.",
     "answerA": "Revenue generated by governments through the collection of carbon taxes.",
     "answerB": "Financial flows—public or private—directed toward climate change mitigation and adaptation, including clean energy investment, resilience building, and ecosystem protection.",
     "answerC": "Funding provided by multilateral development banks for general infrastructure projects.",
-    "example": "发展中国家需要大量气候金融支持，才能完成向清洁能源的转型。"
+    "example": "发展中国家需要大量气候金融支持，才能完成向清洁能源的转型。",
+    "exampleEnglish": "Developing countries need significant climate finance support to transition to clean energy."
   },
   {
     "id": "insurance",
+    "category": "Policies & Cooperation",
     "word": "Insurance",
     "chineseTranslation": "保险",
+    "pinyin": "bǎo xiǎn",
+    "pronunciation": "保: “bow” as in bow; 险: “shyen” as in yen",
     "description": "A financial product providing compensation for specified losses; in climate contexts, used to manage financial risks from extreme weather events and natural disasters.",
     "answerA": "A government bond specifically issued to fund the expansion of renewable energy projects.",
     "answerB": "A legal requirement obliging businesses to offset a proportion of their carbon emissions.",
     "answerC": "A financial product providing compensation for specified losses; in climate contexts, used to manage financial risks from extreme weather events and natural disasters.",
-    "example": "在高风险沿海地区，洪水保险的保费变得越来越难以承受。"
+    "example": "在高风险沿海地区，洪水保险的保费变得越来越难以承受。",
+    "exampleEnglish": "In high-risk coastal areas, flood insurance premiums are becoming increasingly unaffordable."
   },
   {
     "id": "investment",
+    "category": "Policies & Cooperation",
     "word": "Investment",
     "chineseTranslation": "投资",
+    "pinyin": "tóu zī",
+    "pronunciation": "投: “to” as in toe; 资: “dzuh” as in pizza",
     "description": "The allocation of money or resources into an asset or project with the expectation of generating returns; in climate contexts, includes funding for clean energy and sustainable infrastructure.",
     "answerA": "A government subsidy paid directly to fossil fuel companies to lower energy prices.",
     "answerB": "The allocation of money or resources into an asset or project with the expectation of generating returns; in climate contexts, includes funding for clean energy and sustainable infrastructure.",
     "answerC": "The process of calculating the total carbon emissions embedded in a financial portfolio.",
-    "example": "随着清洁能源回报提升、成本下降，绿色投资规模迅速扩大。"
+    "example": "随着清洁能源回报提升、成本下降，绿色投资规模迅速扩大。",
+    "exampleEnglish": "Green investment is growing rapidly as clean energy returns improve and costs fall."
   },
   {
     "id": "capital",
+    "category": "Policies & Cooperation",
     "word": "Capital",
     "chineseTranslation": "资本",
+    "pinyin": "zī běn",
+    "pronunciation": "资: “dzuh” as in pizza; 本: “bun” as in bun",
     "description": "Financial assets and investments used to fund business activities or projects; in climate contexts, refers to the funding needed for the global energy transition.",
     "answerA": "Financial assets and investments used to fund business activities or projects; in climate contexts, refers to the funding needed for the global energy transition.",
     "answerB": "The physical electricity transmission and distribution infrastructure of a country.",
     "answerC": "The intellectual property owned by clean energy technology companies and innovators.",
-    "example": "调动私人资本投入清洁能源领域，对于实现全球气候目标至关重要。"
+    "example": "调动私人资本投入清洁能源领域，对于实现全球气候目标至关重要。",
+    "exampleEnglish": "Mobilizing private capital for clean energy is essential for achieving global climate goals."
   },
   {
     "id": "debt",
+    "category": "Policies & Cooperation",
     "word": "Debt",
     "chineseTranslation": "债务",
+    "pinyin": "zhài wù",
+    "pronunciation": "债: “j-eye” as in eye; 务: “woo” as in woo",
     "description": "Money owed by a borrower to a lender; many developing nations face debt burdens that severely limit their capacity to invest in climate action and resilience.",
     "answerA": "Money owed by a borrower to a lender; many developing nations face debt burdens that severely limit their capacity to invest in climate action and resilience.",
     "answerB": "A financial penalty imposed on nations that miss their agreed emissions targets.",
     "answerC": "Revenue generated through the sale of renewable energy certificates on open markets.",
-    "example": "沉重的债务负担使许多发展中国家无力为气候适应行动提供资金。"
+    "example": "沉重的债务负担使许多发展中国家无力为气候适应行动提供资金。",
+    "exampleEnglish": "Heavy debt burdens leave many developing countries unable to finance climate adaptation actions."
   },
   {
     "id": "bond",
+    "category": "Policies & Cooperation",
     "word": "Bond",
     "chineseTranslation": "债券",
+    "pinyin": "zhài quàn",
+    "pronunciation": "债: “j-eye” as in eye; 券: “chwan” as in swan",
     "description": "A fixed-income financial instrument in which an investor lends money to an entity for a defined period; green bonds are used to finance climate and environmental projects.",
     "answerA": "A government guarantee used to backstop clean energy investment funds.",
     "answerB": "A type of insurance product that provides compensation for climate disaster losses.",
     "answerC": "A fixed-income financial instrument in which an investor lends money to an entity for a defined period; green bonds are used to finance climate and environmental projects.",
-    "example": "该城市发行绿色债券，为新建太阳能和公共交通基础设施提供资金。"
+    "example": "该城市发行绿色债券，为新建太阳能和公共交通基础设施提供资金。",
+    "exampleEnglish": "The city issued green bonds to fund new solar energy and public transit infrastructure."
   },
   {
     "id": "energy-transition",
+    "category": "Energy",
     "word": "Energy transition",
     "chineseTranslation": "能源转型",
+    "pinyin": "néng yuán zhuǎn xíng",
+    "pronunciation": "能: “nung” as in hung; 源: “ywen” as in when; 转: “jwan” as in swan; 型: “shing” as in sing",
     "description": "The global shift from fossil-fuel-based energy systems toward cleaner, renewable energy sources to reduce greenhouse gas emissions and address climate change.",
     "answerA": "A seasonal variation in household energy demand caused by changing temperatures.",
     "answerB": "The global shift from fossil-fuel-based energy systems toward cleaner, renewable energy sources to reduce greenhouse gas emissions and address climate change.",
     "answerC": "A government program for upgrading and modernizing aging national power grid infrastructure.",
-    "example": "能源转型需要对风能、太阳能和储能技术进行大规模投资。"
+    "example": "能源转型需要对风能、太阳能和储能技术进行大规模投资。",
+    "exampleEnglish": "The energy transition requires large-scale investment in wind, solar, and energy storage technologies."
   },
   {
     "id": "decarbonization",
+    "category": "Energy",
     "word": "Decarbonization",
     "chineseTranslation": "脱碳",
+    "pinyin": "tuō tàn",
+    "pronunciation": "脱: “twaw” as in raw; 碳: “tahn” as in tan",
     "description": "The process of reducing or eliminating carbon dioxide emissions from an economic sector or activity, typically through electrification and the use of renewable energy.",
     "answerA": "A chemical process by which carbon dioxide is removed from industrial water supplies.",
     "answerB": "The process of reducing or eliminating carbon dioxide emissions from an economic sector or activity, typically through electrification and the use of renewable energy.",
     "answerC": "The underground injection and permanent storage of captured carbon dioxide.",
-    "example": "钢铁和水泥行业在实现全面脱碳方面面临重大挑战。"
+    "example": "钢铁和水泥行业在实现全面脱碳方面面临重大挑战。",
+    "exampleEnglish": "The steel and cement industries face major challenges in achieving full decarbonization."
   },
   {
     "id": "electrification",
+    "category": "Energy",
     "word": "Electrification",
     "chineseTranslation": "电气化",
+    "pinyin": "diàn qì huà",
+    "pronunciation": "电: “dyen” as in yen; 气: “chee” as in cheese; 化: “hwah” as in wow",
     "description": "The process of replacing fossil-fuel-powered technologies—such as cars and heating systems—with electrically powered alternatives, especially from clean energy sources.",
     "answerA": "The expansion of electricity grid access into rural and remote communities.",
     "answerB": "The process of replacing fossil-fuel-powered technologies—such as cars and heating systems—with electrically powered alternatives, especially from clean energy sources.",
     "answerC": "The process of generating electricity from intermittent renewable energy sources.",
-    "example": "通过推广电动汽车实现交通运输电气化，是减少城市空气污染的关键。"
+    "example": "通过推广电动汽车实现交通运输电气化，是减少城市空气污染的关键。",
+    "exampleEnglish": "Electrifying transportation by promoting electric vehicles is key to reducing urban air pollution."
   },
   {
     "id": "clean-technology",
+    "category": "Energy",
     "word": "Clean technology",
     "chineseTranslation": "清洁技术",
+    "pinyin": "qīng jié jì shù",
+    "pronunciation": "清: “ching” as in sing; 洁: “jyeh” as in yes; 技: “jee” as in jeep; 术: “shoo” as in shoe",
     "description": "Technologies that reduce or eliminate negative environmental impacts through improved processes and products, including solar panels, wind turbines, and energy-efficient systems.",
     "answerA": "Technologies that reduce or eliminate negative environmental impacts through improved processes and products, including solar panels, wind turbines, and energy-efficient systems.",
     "answerB": "Technologies designed to monitor, detect, and measure environmental pollution levels.",
     "answerC": "Government-funded research programs focused on improving climate modeling accuracy.",
-    "example": "随着各国努力履行气候承诺，清洁技术投资大幅增加。"
+    "example": "随着各国努力履行气候承诺，清洁技术投资大幅增加。",
+    "exampleEnglish": "Investment in clean technology has increased significantly as countries work to meet their climate commitments."
   },
   {
     "id": "battery-storage",
+    "category": "Energy",
     "word": "Battery storage",
     "chineseTranslation": "电池蓄能",
+    "pinyin": "diàn chí xù néng",
+    "pronunciation": "电: “dyen” as in yen; 池: “chur” as in church; 蓄: “shoo” as in shoe; 能: “nung” as in hung",
     "description": "Technology that stores electrical energy in chemical form for later use, enabling the integration of intermittent renewable energy sources into the power grid.",
     "answerA": "Technology that stores electrical energy in chemical form for later use, enabling the integration of intermittent renewable energy sources into the power grid.",
     "answerB": "An industrial system for injecting and permanently storing captured CO₂ underground.",
     "answerC": "A method of producing hydrogen fuel from surplus renewable electricity via electrolysis.",
-    "example": "大规模电池储能对于管理太阳能和风能的间歇性至关重要。"
+    "example": "大规模电池储能对于管理太阳能和风能的间歇性至关重要。",
+    "exampleEnglish": "Large-scale battery storage is essential for managing the intermittency of solar and wind energy."
   },
   {
     "id": "hydrogen-energy",
+    "category": "Energy",
     "word": "Hydrogen energy",
     "chineseTranslation": "氢能",
+    "pinyin": "qīng néng",
+    "pronunciation": "氢: “ching” as in sing; 能: “nung” as in hung",
     "description": "Energy produced using hydrogen as a fuel, often generated by electrolysis powered by renewable electricity; a key solution for decarbonizing heavy industry and long-distance transport.",
     "answerA": "Energy generated from the natural rise and fall of ocean tides near coastlines.",
     "answerB": "Energy produced using hydrogen as a fuel, often generated by electrolysis powered by renewable electricity; a key solution for decarbonizing heavy industry and long-distance transport.",
     "answerC": "Power generated from volcanic heat and hot springs deep within the Earth.",
-    "example": "由可再生能源制取的绿氢有望替代钢铁生产中使用的化石燃料。"
+    "example": "由可再生能源制取的绿氢有望替代钢铁生产中使用的化石燃料。",
+    "exampleEnglish": "Green hydrogen produced from renewable energy could replace fossil fuels used in steel production."
   },
   {
     "id": "supply-chain",
+    "category": "Basic Concept",
     "word": "Supply chain",
     "chineseTranslation": "供应链",
+    "pinyin": "gōng yìng liàn",
+    "pronunciation": "供: “gong” as in gong; 应: “ying” as in sing; 链: “lyen” as in yen",
     "description": "The full sequence of processes and organizations involved in producing and delivering a product, from raw materials to end consumers; supply chains often contribute significantly to corporate carbon footprints.",
     "answerA": "The full sequence of processes and organizations involved in producing and delivering a product, from raw materials to end consumers; supply chains often contribute significantly to corporate carbon footprints.",
     "answerB": "A network of organizations collaborating to develop and implement climate policy.",
     "answerC": "The flow of carbon credits between participating companies in an emissions trading scheme.",
-    "example": "企业越来越多地被要求披露其整个供应链的碳排放情况。"
+    "example": "企业越来越多地被要求披露其整个供应链的碳排放情况。",
+    "exampleEnglish": "Companies are increasingly required to disclose carbon emissions across their entire supply chain."
   },
   {
     "id": "manufacturing",
+    "category": "Basic Concept",
     "word": "Manufacturing",
     "chineseTranslation": "制造",
+    "pinyin": "zhì zào",
+    "pronunciation": "制: “jur” as in jerk; 造: “dzow” as in cow",
     "description": "The industrial process of producing goods from raw materials or components using labor, machines, and tools; a significant source of energy consumption and greenhouse gas emissions.",
     "answerA": "The industrial process of producing goods from raw materials or components using labor, machines, and tools; a significant source of energy consumption and greenhouse gas emissions.",
     "answerB": "The process of extracting raw materials such as metals and minerals from the earth.",
     "answerC": "The recycling and repurposing of industrial materials and production waste.",
-    "example": "电动汽车的制造需要大量的锂和钴等关键矿产资源。"
+    "example": "电动汽车的制造需要大量的锂和钴等关键矿产资源。",
+    "exampleEnglish": "Manufacturing electric vehicles requires large amounts of critical minerals such as lithium and cobalt."
   },
   {
     "id": "industrial-emissions",
+    "category": "Basic Concept",
     "word": "Industrial emissions",
     "chineseTranslation": "工业排放",
+    "pinyin": "gōng yè pái fàng",
+    "pronunciation": "工: “gong” as in gong; 业: “yeh” as in yes; 排: “pie” as in pie; 放: “fahng” as in song",
     "description": "Greenhouse gases and pollutants released by industrial processes such as steel production, cement manufacturing, and chemical refining.",
     "answerA": "Carbon dioxide produced by residential energy consumption and household heating.",
     "answerB": "Greenhouse gases and pollutants released by industrial processes such as steel production, cement manufacturing, and chemical refining.",
     "answerC": "Pollution generated by the international shipping and commercial aviation sectors.",
-    "example": "钢铁和水泥生产产生的工业排放是最难减少的排放之一。"
+    "example": "钢铁和水泥生产产生的工业排放是最难减少的排放之一。",
+    "exampleEnglish": "Industrial emissions from steel and cement production are among the hardest emissions to reduce."
   },
   {
     "id": "circular-economy",
+    "category": "Basic Concept",
     "word": "Circular economy",
     "chineseTranslation": "循环经济",
+    "pinyin": "xún huán jīng jì",
+    "pronunciation": "循: “shun” as in shun; 环: “hwan” as in swan; 经: “jing” as in jingle; 济: “jee” as in jeep",
     "description": "An economic model that minimizes waste by keeping materials in use for as long as possible through reuse, repair, remanufacturing, and recycling.",
     "answerA": "An economic model that minimizes waste by keeping materials in use for as long as possible through reuse, repair, remanufacturing, and recycling.",
     "answerB": "An economic system based entirely on renewable energy sources and zero-waste principles.",
     "answerC": "A global trade system that prioritizes low-carbon goods and penalizes high-emission exports.",
-    "example": "将循环经济理念应用于电子产品，可以显著减少对原材料的需求。"
+    "example": "将循环经济理念应用于电子产品，可以显著减少对原材料的需求。",
+    "exampleEnglish": "Applying circular economy principles to electronics can significantly reduce demand for raw materials."
   },
   {
     "id": "risk",
+    "category": "Basic Concept",
     "word": "Risk",
     "chineseTranslation": "风险",
+    "pinyin": "fēng xiǎn",
+    "pronunciation": "风: “fung” as in hung; 险: “shyen” as in yen",
     "description": "The potential for harm, loss, or adverse outcomes; in climate contexts, includes physical risks from climate impacts and transition risks from policy and market changes.",
     "answerA": "A measurable financial return projected from an environmental or green investment.",
     "answerB": "The potential for harm, loss, or adverse outcomes; in climate contexts, includes physical risks from climate impacts and transition risks from policy and market changes.",
     "answerC": "A government guarantee issued to protect specific categories of climate investments.",
-    "example": "气候风险已成为企业财务报告和信息披露的核心议题。"
+    "example": "气候风险已成为企业财务报告和信息披露的核心议题。",
+    "exampleEnglish": "Climate risk has become a core issue in corporate financial reporting and disclosure."
   },
   {
     "id": "physical-risk",
+    "category": "Basic Concept",
     "word": "Physical risk",
     "chineseTranslation": "物理风险",
+    "pinyin": "wù lǐ fēng xiǎn",
+    "pronunciation": "物: “woo” as in woo; 理: “lee” as in Lee; 风: “fung” as in hung; 险: “shyen” as in yen",
     "description": "Risks to assets and livelihoods arising from the physical impacts of climate change, such as extreme weather, sea-level rise, and ecosystem disruption.",
     "answerA": "Risks arising from changes in climate regulation and policy that affect asset valuations.",
     "answerB": "Risks to assets and livelihoods arising from the physical impacts of climate change, such as extreme weather, sea-level rise, and ecosystem disruption.",
     "answerC": "Operational risks created by rising energy prices in the transition to low-carbon systems.",
-    "example": "沿海基础设施面临海平面上升和风暴潮带来的重大物理风险。"
+    "example": "沿海基础设施面临海平面上升和风暴潮带来的重大物理风险。",
+    "exampleEnglish": "Coastal infrastructure faces major physical risks from sea level rise and storm surges."
   },
   {
     "id": "transition-risk",
+    "category": "Basic Concept",
     "word": "Transition risk",
     "chineseTranslation": "转型风险",
+    "pinyin": "zhuǎn xíng fēng xiǎn",
+    "pronunciation": "转: “jwan” as in swan; 型: “shing” as in sing; 风: “fung” as in hung; 险: “shyen” as in yen",
     "description": "Financial and business risks that arise from the transition to a low-carbon economy, including policy changes, technological disruption, and shifts in market preferences.",
     "answerA": "The risk that a climate adaptation project will fail to deliver its intended benefits.",
     "answerB": "Risks associated with international political disagreements over climate finance obligations.",
     "answerC": "Financial and business risks that arise from the transition to a low-carbon economy, including policy changes, technological disruption, and shifts in market preferences.",
-    "example": "随着各国政府加速淘汰化石燃料，煤炭企业面临重大转型风险。"
+    "example": "随着各国政府加速淘汰化石燃料，煤炭企业面临重大转型风险。",
+    "exampleEnglish": "Coal companies face major transition risks as governments accelerate the phase-out of fossil fuels."
   },
   {
     "id": "disaster-risk",
+    "category": "Basic Concept",
     "word": "Disaster risk",
     "chineseTranslation": "灾害风险",
+    "pinyin": "zāi hài fēng xiǎn",
+    "pronunciation": "灾: “dz-eye” as in eye; 害: “hi” as in hi; 风: “fung” as in hung; 险: “shyen” as in yen",
     "description": "The potential for loss of life, injury, or destruction of assets due to natural hazards such as floods, droughts, and storms, many of which are intensified by climate change.",
     "answerA": "The likelihood that a renewable energy project will underperform its projected output.",
     "answerB": "The potential for loss of life, injury, or destruction of assets due to natural hazards such as floods, droughts, and storms, many of which are intensified by climate change.",
     "answerC": "Political risks that undermine international climate negotiations and agreement implementation.",
-    "example": "低洼沿海城市必须为海平面上升带来的日益增加的灾害风险做好规划。"
+    "example": "低洼沿海城市必须为海平面上升带来的日益增加的灾害风险做好规划。",
+    "exampleEnglish": "Low-lying coastal cities must plan for the growing disaster risks caused by sea level rise."
   },
   {
     "id": "risk-assessment",
+    "category": "Basic Concept",
     "word": "Risk assessment",
     "chineseTranslation": "风险评估",
+    "pinyin": "fēng xiǎn píng gū",
+    "pronunciation": "风: “fung” as in hung; 险: “shyen” as in yen; 评: “ping” as in ping; 估: “goo” as in goose",
     "description": "The process of identifying, analyzing, and evaluating potential risks to determine their likelihood and impact, enabling informed decision-making and risk management strategies.",
     "answerA": "The process of identifying, analyzing, and evaluating potential risks to determine their likelihood and impact, enabling informed decision-making and risk management strategies.",
     "answerB": "A scientific study measuring the rate and intensity of ongoing climate change.",
     "answerC": "A financial audit examining the composition and performance of a green investment portfolio.",
-    "example": "政府委托开展了一项风险评估，以识别易受气候相关洪涝影响的基础设施。"
+    "example": "政府委托开展了一项风险评估，以识别易受气候相关洪涝影响的基础设施。",
+    "exampleEnglish": "The government commissioned a risk assessment to identify infrastructure vulnerable to climate-related flooding."
   },
   {
     "id": "climate-resilience",
+    "category": "Basic Concept",
     "word": "Climate Resilience",
     "chineseTranslation": "气候韧性",
+    "pinyin": "qì hòu rèn xìng",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 韧: “run” as in run; 性: “shing” as in sing",
     "description": "The ability of a system, community, or society to cope with, adapt to, and recover from climate change impacts while maintaining essential functions.",
     "answerA": "The capacity of a technology to generate electricity reliably under extreme weather conditions.",
     "answerB": "A measure of how quickly an economy can be fully transitioned to renewable energy sources.",
     "answerC": "The ability of a system, community, or society to cope with, adapt to, and recover from climate change impacts while maintaining essential functions.",
-    "example": "投资城市绿色基础设施可以有效提升城市的气候韧性。"
+    "example": "投资城市绿色基础设施可以有效提升城市的气候韧性。",
+    "exampleEnglish": "Investing in urban green infrastructure can effectively improve a city's climate resilience."
   },
   {
     "id": "model",
+    "category": "Basic Concept",
     "word": "Model",
     "chineseTranslation": "模型",
+    "pinyin": "mó xíng",
+    "pronunciation": "模: “mo” as in more; 型: “shing” as in sing",
     "description": "A mathematical or computational representation of a system used to simulate and predict behavior; climate models project future temperature and rainfall changes under different emissions scenarios.",
     "answerA": "A collection of historical weather records used to document past climate variations.",
     "answerB": "A mathematical or computational representation of a system used to simulate and predict behavior; climate models project future temperature and rainfall changes under different emissions scenarios.",
     "answerC": "A policy framework for designing and implementing a national carbon pricing mechanism.",
-    "example": "气候科学家使用复杂的模型来预测不同温室气体排放水平的影响。"
+    "example": "气候科学家使用复杂的模型来预测不同温室气体排放水平的影响。",
+    "exampleEnglish": "Climate scientists use complex models to predict the impacts of different levels of greenhouse gas emissions."
   },
   {
     "id": "uncertainty",
+    "category": "Basic Concept",
     "word": "Uncertainty",
     "chineseTranslation": "不确定性",
+    "pinyin": "bù què dìng xìng",
+    "pronunciation": "不: “boo” as in boot; 确: “chweh” as in wet; 定: “ding” as in ding; 性: “shing” as in sing",
     "description": "The range of possible outcomes or imprecision about future conditions; in climate science, refers to the range of projected impacts under different scenarios and model assumptions.",
     "answerA": "The measured discrepancy between a country's actual emissions and officially reported figures.",
     "answerB": "The margin of error permissible in calculating a company's carbon footprint for reporting.",
     "answerC": "The range of possible outcomes or imprecision about future conditions; in climate science, refers to the range of projected impacts under different scenarios and model assumptions.",
-    "example": "尽管对确切结果存在不确定性，科学家们一致认为，不采取行动将导致气候发生重大变化。"
+    "example": "尽管对确切结果存在不确定性，科学家们一致认为，不采取行动将导致气候发生重大变化。",
+    "exampleEnglish": "Although there is uncertainty about the exact outcomes, scientists agree that inaction will lead to major climate changes."
   },
   {
     "id": "eco-friendly",
+    "category": "Green Lifestyle",
     "word": "Eco-friendly",
     "chineseTranslation": "环境友好的",
+    "pinyin": "huán jìng yǒu hǎo de",
+    "pronunciation": "环: “hwan” as in swan; 境: “jing” as in jingle; 友: “yo” as in yo-yo; 好: “how” as in how; 的: “duh” as in done",
     "description": "Describes products, practices, or behaviors that have little or no harmful impact on the environment, typically involving reduced emissions, waste, or resource use.",
     "answerA": "Describes products, practices, or behaviors that have little or no harmful impact on the environment, typically involving reduced emissions, waste, or resource use.",
     "answerB": "A label specifically certifying that a product is manufactured from 100% recycled materials.",
     "answerC": "A description of energy technologies that produce zero air pollutants during operation.",
-    "example": "该公司改用环境友好型包装，以减少塑料废弃物和碳足迹。"
+    "example": "该公司改用环境友好型包装，以减少塑料废弃物和碳足迹。",
+    "exampleEnglish": "The company switched to eco-friendly packaging to reduce plastic waste and its carbon footprint."
   },
   {
     "id": "public-transit",
+    "category": "Green Lifestyle",
     "word": "Public transit",
     "chineseTranslation": "公共交通",
+    "pinyin": "gōng gòng jiāo tōng",
+    "pronunciation": "公: “gong” as in gong; 共: “gong” as in gong; 交: “jyow” as in meow; 通: “tong” as in tongue",
     "description": "A system of shared transportation services available to the public, such as buses, trains, and subways, which reduces per-capita carbon emissions compared to private car travel.",
     "answerA": "A government program providing subsidies for the purchase of electric vehicles.",
     "answerB": "A system of shared transportation services available to the public, such as buses, trains, and subways, which reduces per-capita carbon emissions compared to private car travel.",
     "answerC": "Transportation services operated by private contractors under government license.",
-    "example": "扩大公共交通系统有助于减少人口密集城市中私家车的碳排放。"
+    "example": "扩大公共交通系统有助于减少人口密集城市中私家车的碳排放。",
+    "exampleEnglish": "Expanding public transit systems helps reduce carbon emissions from private cars in dense cities."
   },
   {
     "id": "recycling",
+    "category": "Green Lifestyle",
     "word": "Recycling",
     "chineseTranslation": "回收利用",
+    "pinyin": "huí shōu lì yòng",
+    "pronunciation": "回: “hway” as in way; 收: “sho” as in show; 利: “lee” as in Lee; 用: “yong” as in young",
     "description": "The process of collecting and processing waste materials to create new products, reducing demand for raw materials and lowering the energy and emissions required for manufacturing.",
     "answerA": "The process of collecting and processing waste materials to create new products, reducing demand for raw materials and lowering the energy and emissions required for manufacturing.",
     "answerB": "The use of organic waste to produce biogas fuel through anaerobic digestion.",
     "answerC": "The safe disposal of hazardous materials in specially engineered landfill facilities.",
-    "example": "回收铝所消耗的能源比从原矿石中生产新铝少95%。"
+    "example": "回收铝所消耗的能源比从原矿石中生产新铝少95%。",
+    "exampleEnglish": "Recycling aluminum uses 95% less energy than producing new aluminum from raw ore."
   },
   {
     "id": "reuse",
+    "category": "Green Lifestyle",
     "word": "Reuse",
     "chineseTranslation": "再利用",
+    "pinyin": "zài lì yòng",
+    "pronunciation": "再: “dz-eye” as in eye; 利: “lee” as in Lee; 用: “yong” as in young",
     "description": "The practice of using a product or material more than once, either for its original purpose or a different one, reducing waste and the demand for new resource-intensive products.",
     "answerA": "The industrial process of breaking materials down into their components for recovery.",
     "answerB": "A composting method that converts organic waste into nutrient-rich soil amendments.",
     "answerC": "The practice of using a product or material more than once, either for its original purpose or a different one, reducing waste and the demand for new resource-intensive products.",
-    "example": "玻璃瓶的再利用减少了制造新容器所需的能源和原材料消耗。"
+    "example": "玻璃瓶的再利用减少了制造新容器所需的能源和原材料消耗。",
+    "exampleEnglish": "Reusing glass bottles reduces the energy and raw materials needed to make new containers."
   },
   {
     "id": "reduce",
+    "category": "Green Lifestyle",
     "word": "Reduce",
     "chineseTranslation": "减少使用",
+    "pinyin": "jiǎn shǎo shǐ yòng",
+    "pronunciation": "减: “jyen” as in Jen; 少: “shao” as in shower; 使: “shur” as in shirt; 用: “yong” as in young",
     "description": "The practice of consuming fewer resources and generating less waste as the first and most effective step in the waste hierarchy, minimizing environmental impact at the source.",
     "answerA": "An industrial process for improving product manufacturing efficiency and cutting energy per unit.",
     "answerB": "The practice of consuming fewer resources and generating less waste as the first and most effective step in the waste hierarchy, minimizing environmental impact at the source.",
     "answerC": "A consumer strategy for lowering carbon emissions by switching to a green energy tariff.",
-    "example": "减少肉类消费是个人能够采取的最有影响力的气候行动之一。"
+    "example": "减少肉类消费是个人能够采取的最有影响力的气候行动之一。",
+    "exampleEnglish": "Reducing meat consumption is one of the most impactful climate actions individuals can take."
   },
   {
     "id": "waste",
+    "category": "Green Lifestyle",
     "word": "Waste",
     "chineseTranslation": "废弃物",
+    "pinyin": "fèi qì wù",
+    "pronunciation": "废: “fay” as in say; 弃: “chee” as in cheese; 物: “woo” as in woo",
     "description": "Materials that are discarded or no longer needed after use; managing waste is critical for reducing greenhouse gas emissions, particularly methane generated in landfills.",
     "answerA": "A category of industrial chemicals that are acutely hazardous to human health.",
     "answerB": "Carbon dioxide captured from power plant flue gases before atmospheric release.",
     "answerC": "Materials that are discarded or no longer needed after use; managing waste is critical for reducing greenhouse gas emissions, particularly methane generated in landfills.",
-    "example": "有机废弃物在填埋场中分解会产生甲烷，这是一种效力很强的温室气体。"
+    "example": "有机废弃物在填埋场中分解会产生甲烷，这是一种效力很强的温室气体。",
+    "exampleEnglish": "Organic waste decomposing in landfills produces methane, a powerful greenhouse gas."
   },
   {
     "id": "community",
+    "category": "Green Lifestyle",
     "word": "Community",
     "chineseTranslation": "社区",
+    "pinyin": "shè qū",
+    "pronunciation": "社: “shuh” as in shut; 区: “chew” as in chew",
     "description": "A group of people living in the same area or sharing common values and interests; communities play an essential role in grassroots climate action and local adaptation.",
     "answerA": "An international organization that provides grants and loans for climate projects.",
     "answerB": "A government agency responsible for setting and enforcing national environmental law.",
     "answerC": "A group of people living in the same area or sharing common values and interests; communities play an essential role in grassroots climate action and local adaptation.",
-    "example": "当地社区团体组织了一次植树活动，以改善社区环境并增加绿化覆盖率。"
+    "example": "当地社区团体组织了一次植树活动，以改善社区环境并增加绿化覆盖率。",
+    "exampleEnglish": "Local community groups organized a tree-planting event to improve the neighborhood environment and increase green cover."
   },
   {
     "id": "action",
+    "category": "Basic Concept",
     "word": "Action",
     "chineseTranslation": "行动",
+    "pinyin": "xíng dòng",
+    "pronunciation": "行: “shing” as in sing; 动: “dong” as in dong",
     "description": "Steps taken by individuals, organizations, or governments to address climate change, either through reducing emissions, adapting to impacts, or advocating for systemic change.",
     "answerA": "A formal multilateral agreement between nations to reduce greenhouse gas emissions.",
     "answerB": "Steps taken by individuals, organizations, or governments to address climate change, either through reducing emissions, adapting to impacts, or advocating for systemic change.",
     "answerC": "An official scientific report assessing the current state of the global climate system.",
-    "example": "年轻的气候活动人士正在要求各国领导人立即采取气候行动。"
+    "example": "年轻的气候活动人士正在要求各国领导人立即采取气候行动。",
+    "exampleEnglish": "Young climate activists are demanding immediate climate action from national leaders."
   },
   {
     "id": "climate-justice",
+    "category": "Basic Concept",
     "word": "Climate justice",
     "chineseTranslation": "气候正义",
+    "pinyin": "qì hòu zhèng yì",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 正: “jung” as in jungle; 义: “ee” as in see",
     "description": "The principle that climate change impacts and the responsibilities for climate action should be distributed fairly, especially protecting vulnerable and historically marginalized communities.",
     "answerA": "A legal framework requiring corporations to financially compensate for environmental damage.",
     "answerB": "A policy obliging wealthy nations to transfer clean energy technology to developing countries.",
     "answerC": "The principle that climate change impacts and the responsibilities for climate action should be distributed fairly, especially protecting vulnerable and historically marginalized communities.",
-    "example": "气候正义倡导者认为，造成大部分历史排放的富裕国家必须引领气候行动。"
+    "example": "气候正义倡导者认为，造成大部分历史排放的富裕国家必须引领气候行动。",
+    "exampleEnglish": "Climate justice advocates argue that wealthy countries responsible for most historical emissions must lead climate action."
   },
   {
     "id": "behaviour",
+    "category": "Basic Concept",
     "word": "Behaviour",
     "chineseTranslation": "行为",
+    "pinyin": "xíng wéi",
+    "pronunciation": "行: “shing” as in sing; 为: “way” as in way",
     "description": "The way individuals or groups act; changing consumer behavior—such as diet, transport, and energy choices—can significantly reduce personal and collective carbon emissions.",
     "answerA": "The way individuals or groups act; changing consumer behavior—such as diet, transport, and energy choices—can significantly reduce personal and collective carbon emissions.",
     "answerB": "A government nudge strategy used to encourage eco-friendly purchasing decisions.",
     "answerC": "A scientific term describing how ecosystems respond biologically to climate stress.",
-    "example": "研究表明，有针对性的信息宣传活动可以引导消费者形成更可持续的行为习惯。"
+    "example": "研究表明，有针对性的信息宣传活动可以引导消费者形成更可持续的行为习惯。",
+    "exampleEnglish": "Research shows that targeted information campaigns can guide consumers toward more sustainable behaviors."
   },
   {
     "id": "dual-carbon-goals",
+    "category": "Policies & Cooperation",
     "word": "Dual carbon goals",
     "chineseTranslation": "双碳目标",
+    "pinyin": "shuāng tàn mù biāo",
+    "pronunciation": "双: “shwahng” as in long; 碳: “tahn” as in tan; 目: “moo” as in moon; 标: “byow” as in meow",
     "description": "China's national climate commitments: reaching peak carbon dioxide emissions before 2030 and achieving carbon neutrality by 2060.",
     "answerA": "A UN framework requiring all member nations to set two distinct emissions reduction targets.",
     "answerB": "An international target for reducing both carbon and methane emissions at equal rates.",
     "answerC": "China's national climate commitments: reaching peak carbon dioxide emissions before 2030 and achieving carbon neutrality by 2060.",
-    "example": "中国双碳目标正在推动太阳能、风能和电池技术领域的大规模投资。"
+    "example": "中国双碳目标正在推动太阳能、风能和电池技术领域的大规模投资。",
+    "exampleEnglish": "China's dual carbon goals are driving large-scale investment in solar, wind, and battery technologies."
   },
   {
     "id": "ecological-civilization",
+    "category": "Policies & Cooperation",
     "word": "Ecological civilization",
     "chineseTranslation": "生态文明",
+    "pinyin": "shēng tài wén míng",
+    "pronunciation": "生: “sheng” as sh + “ung” in hung; 态: “tie” as in tie; 文: “wun” as in when; 明: “ming” as in sing",
     "description": "A Chinese philosophical and governance concept that advocates for harmonious coexistence between humans and nature, guiding national environmental and development strategies.",
     "answerA": "A Chinese philosophical and governance concept that advocates for harmonious coexistence between humans and nature, guiding national environmental and development strategies.",
     "answerB": "A global scientific movement promoting biodiversity conservation in rapidly urbanizing areas.",
     "answerC": "A UN standard for planning and certifying environmentally sustainable cities.",
-    "example": "习近平总书记将生态文明建设作为引领中国发展道路的重要指导理念加以推进。"
+    "example": "习近平总书记将生态文明建设作为引领中国发展道路的重要指导理念加以推进。",
+    "exampleEnglish": "General Secretary Xi Jinping has promoted ecological civilization as an important guiding concept for China's development path."
   },
   {
-    "id": "1-plus-n-policy-framework",
+    "id": "1plusn-policy-framework",
+    "category": "Policies & Cooperation",
     "word": "\"1+N\" Policy Framework",
     "chineseTranslation": "“1+N”政策体系",
+    "pinyin": "yī jiā N zhèng cè tǐ xì",
+    "pronunciation": "1: “one”; +: “plus”; N: like the letter N; 政: “jung” as in jungle; 策: “tsuh” as in sun; 体: “tee” as in tea; 系: “shee” as in she",
     "description": "China's climate policy architecture, where one overarching guidance document is supported by multiple sector-specific implementation plans covering energy, industry, and transport.",
     "answerA": "China's climate policy architecture, where one overarching guidance document is supported by multiple sector-specific implementation plans covering energy, industry, and transport.",
     "answerB": "A UN framework requiring developed nations to fund climate adaptation in developing countries.",
     "answerC": "An international agreement combining one global emissions budget with individual national plans.",
-    "example": "中国\"1+N\"政策体系涵盖能源、工业、交通和建筑等领域的脱碳实施方案。"
+    "example": "中国\"1+N\"政策体系涵盖能源、工业、交通和建筑等领域的脱碳实施方案。",
+    "exampleEnglish": "China's '1+N' policy framework includes decarbonization implementation plans for energy, industry, transportation, and buildings."
   },
   {
     "id": "green-development",
+    "category": "Policies & Cooperation",
     "word": "Green development",
     "chineseTranslation": "绿色发展",
+    "pinyin": "lǜ sè fā zhǎn",
+    "pronunciation": "绿: “loo” as in loop; 色: “suh” as in sun; 发: “fah” as in father; 展: “jahn” as in John",
     "description": "An approach to economic growth that integrates environmental sustainability, improving human well-being while reducing ecological risks and minimizing resource consumption.",
     "answerA": "A financial mechanism for directing capital investment into renewable energy projects.",
     "answerB": "A trade strategy for exporting clean technology products to emerging market economies.",
     "answerC": "An approach to economic growth that integrates environmental sustainability, improving human well-being while reducing ecological risks and minimizing resource consumption.",
-    "example": "绿色发展要求重新设计生产和消费体系，以更高效地利用资源。"
+    "example": "绿色发展要求重新设计生产和消费体系，以更高效地利用资源。",
+    "exampleEnglish": "Green development requires redesigning production and consumption systems to use resources more efficiently."
   },
   {
     "id": "belt-and-road-initiative",
+    "category": "Policies & Cooperation",
     "word": "Belt and Road Initiative",
     "chineseTranslation": "一带一路",
+    "pinyin": "yī dài yī lù",
+    "pronunciation": "一: “ee” as in see; 带: “die” as in die; 一: “ee” as in see; 路: “loo” as in loop",
     "description": "China's global infrastructure development strategy connecting Asia, Africa, and Europe through major investments in transport, energy, and trade networks, increasingly incorporating green financing standards.",
     "answerA": "China's global infrastructure development strategy connecting Asia, Africa, and Europe through major investments in transport, energy, and trade networks, increasingly incorporating green financing standards.",
     "answerB": "An international shipping network established specifically to reduce maritime transport emissions.",
     "answerC": "A Chinese domestic infrastructure program for expanding the high-speed rail network.",
-    "example": "环保团体呼吁在一带一路项目中执行更严格的绿色标准。"
+    "example": "环保团体呼吁在一带一路项目中执行更严格的绿色标准。",
+    "exampleEnglish": "Environmental groups are calling for stricter green standards in Belt and Road projects."
   },
   {
     "id": "global-warming",
+    "category": "Basic Concept",
     "word": "Global warming",
     "chineseTranslation": "全球变暖",
+    "pinyin": "quán qiú biàn nuǎn",
+    "pronunciation": "全: “chwan” as in swan; 球: “cho” as in show; 变: “byen” as in beyond; 暖: “nwan” as in swan",
     "description": "The long-term heating of Earth's surface due to human-caused increases in greenhouse gas concentrations, primarily from burning fossil fuels and deforestation.",
     "answerA": "A natural cycle of warming and cooling driven by periodic variations in the Earth's orbital path.",
     "answerB": "The long-term heating of Earth's surface due to human-caused increases in greenhouse gas concentrations, primarily from burning fossil fuels and deforestation.",
     "answerC": "A short-term increase in temperatures associated with El Niño weather phenomenon.",
-    "example": "全球变暖超过工业化前水平2°C将对生态系统和人类社会造成严重后果。"
+    "example": "全球变暖超过工业化前水平2°C将对生态系统和人类社会造成严重后果。",
+    "exampleEnglish": "Global warming beyond 2°C above pre-industrial levels would cause serious consequences for ecosystems and human societies."
   },
   {
     "id": "carbon-footprint",
+    "category": "Basic Concept",
     "word": "carbon footprint",
     "chineseTranslation": "碳足迹",
+    "pinyin": "tàn zú jì",
+    "pronunciation": "碳: “tahn” as in tan; 足: “dzoo” as in zoo; 迹: “jee” as in jeep",
     "description": "The total amount of greenhouse gases, expressed as CO₂ equivalent, produced directly or indirectly by an individual, organization, product, or event.",
     "answerA": "The total amount of greenhouse gases, expressed as CO₂ equivalent, produced directly or indirectly by an individual, organization, product, or event.",
     "answerB": "The total land area required to absorb all of a company's carbon dioxide emissions.",
     "answerC": "A scientific measurement of the carbon stored in all global soil, forest, and ocean systems.",
-    "example": "减少肉食摄入和减少飞行次数可以有效降低个人碳足迹。"
+    "example": "减少肉食摄入和减少飞行次数可以有效降低个人碳足迹。",
+    "exampleEnglish": "Reducing meat consumption and taking fewer flights can effectively lower an individual's carbon footprint."
   },
   {
     "id": "climate-crisis",
+    "category": "Basic Concept",
     "word": "climate crisis",
     "chineseTranslation": "气候危机",
+    "pinyin": "qì hòu wēi jī",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 危: “way” as in way; 机: “jee” as in jeep",
     "description": "The urgent and potentially catastrophic threat posed by accelerating climate change, calling for immediate and large-scale action to prevent the worst outcomes.",
     "answerA": "The urgent and potentially catastrophic threat posed by accelerating climate change, calling for immediate and large-scale action to prevent the worst outcomes.",
     "answerB": "A specific climate event triggered by crossing one of Earth's planetary tipping points.",
     "answerC": "A political disagreement between developed and developing nations over climate finance.",
-    "example": "许多年轻人认为当前形势是一场全面的气候危机，需要紧急采取行动加以应对。"
+    "example": "许多年轻人认为当前形势是一场全面的气候危机，需要紧急采取行动加以应对。",
+    "exampleEnglish": "Many young people see the current situation as a full-scale climate crisis that requires urgent action."
   },
   {
     "id": "environmental-protection",
+    "category": "Basic Concept",
     "word": "environmental protection",
     "chineseTranslation": "环境保护",
+    "pinyin": "huán jìng bǎo hù",
+    "pronunciation": "环: “hwan” as in swan; 境: “jing” as in jingle; 保: “bow” as in bow; 护: “hoo” as in who",
     "description": "Practices, policies, and laws aimed at preventing harm to natural systems and conserving the environment for current and future generations.",
     "answerA": "Practices, policies, and laws aimed at preventing harm to natural systems and conserving the environment for current and future generations.",
     "answerB": "A scientific process for continuously monitoring air and water quality in industrial zones.",
     "answerC": "A set of financial accounting standards for corporate environmental impact reporting.",
-    "example": "环境保护法律禁止向河流和沿海水域排放工业废弃物。"
+    "example": "环境保护法律禁止向河流和沿海水域排放工业废弃物。",
+    "exampleEnglish": "Environmental protection laws prohibit the discharge of industrial waste into rivers and coastal waters."
   },
   {
     "id": "biodiveristy",
+    "category": "Natural Environment",
     "word": "biodiveristy",
     "chineseTranslation": "生物多样性",
+    "pinyin": "shēng wù duō yàng xìng",
+    "pronunciation": "生: “sheng” as sh + “ung” in hung; 物: “woo” as in woo; 多: “dwaw” as in draw; 样: “yahng” as in young; 性: “shing” as in sing",
     "description": "The variety of life on Earth, encompassing the diversity of species, genes, and ecosystems; threatened by climate change, habitat loss, invasive species, and pollution.",
     "answerA": "The genetic variation found within a single population of an animal or plant species.",
     "answerB": "The variety of life on Earth, encompassing the diversity of species, genes, and ecosystems; threatened by climate change, habitat loss, invasive species, and pollution.",
     "answerC": "The capacity of an ecosystem to produce sufficient food and resources for human communities.",
-    "example": "科学家警告，当前生物多样性丧失的速度与历史上的大灭绝事件相当。"
+    "example": "科学家警告，当前生物多样性丧失的速度与历史上的大灭绝事件相当。",
+    "exampleEnglish": "Scientists warn that the current rate of biodiversity loss is comparable to past mass extinction events."
   },
   {
     "id": "nitrous-oxide",
+    "category": "Greenhouse gases",
     "word": "Nitrous oxide",
     "chineseTranslation": "一氧化二氮",
+    "pinyin": "yī yǎng huà èr dàn",
+    "pronunciation": "一: “ee” as in see; 氧: “yahng” as in young; 化: “hwah” as in wow; 二: “ar” as in are; 氮: “dahn” as in Don",
     "description": "A greenhouse gas (N₂O) released mainly from agricultural soils, synthetic fertilizers, and livestock manure; approximately 300 times more potent than CO₂ over a 100-year period.",
     "answerA": "A toxic industrial gas released by coal-fired power plants that causes acid rain.",
     "answerB": "A greenhouse gas (N₂O) released mainly from agricultural soils, synthetic fertilizers, and livestock manure; approximately 300 times more potent than CO₂ over a 100-year period.",
     "answerC": "An industrial byproduct that reacts with ultraviolet light and depletes the ozone layer.",
-    "example": "施用化肥产生的一氧化二氮排放是农业气候影响的重要组成部分。"
+    "example": "施用化肥产生的一氧化二氮排放是农业气候影响的重要组成部分。",
+    "exampleEnglish": "Nitrous oxide emissions from fertilizer use are an important part of agriculture's climate impact."
   },
   {
     "id": "coal",
+    "category": "Energy",
     "word": "coal",
     "chineseTranslation": "煤炭",
+    "pinyin": "méi tàn",
+    "pronunciation": "煤: “may” as in may; 炭: “tahn” as in tan",
     "description": "A combustible sedimentary rock formed from ancient plant matter; the most carbon-intensive fossil fuel and historically the largest single source of global CO₂ emissions.",
     "answerA": "A liquid fuel derived from crude oil used mainly in heating, transport, and aviation.",
     "answerB": "A combustible sedimentary rock formed from ancient plant matter; the most carbon-intensive fossil fuel and historically the largest single source of global CO₂ emissions.",
     "answerC": "A solid waste residue produced as a byproduct from burning other types of fossil fuels.",
-    "example": "为实现气候目标，许多国家正在加快关停煤电厂的步伐。"
+    "example": "为实现气候目标，许多国家正在加快关停煤电厂的步伐。",
+    "exampleEnglish": "To meet climate goals, many countries are accelerating the closure of coal-fired power plants."
   },
   {
     "id": "oil",
+    "category": "Energy",
     "word": "oil",
     "chineseTranslation": "石油",
+    "pinyin": "shí yóu",
+    "pronunciation": "石: “shur” as in shirt; 油: “yo” as in yo-yo",
     "description": "A liquid fossil fuel extracted from underground geological formations, used primarily for transportation fuels, plastics, and chemicals; a major source of global greenhouse gas emissions.",
     "answerA": "A solid fossil fuel formed from the compression of ancient plant material over millions of years.",
     "answerB": "A biofuel produced from vegetable crops such as soybeans, rapeseed, and palm oil.",
     "answerC": "A liquid fossil fuel extracted from underground geological formations, used primarily for transportation fuels, plastics, and chemicals; a major source of global greenhouse gas emissions.",
-    "example": "随着电动汽车普及率提升，石油需求预计将加速下降。"
+    "example": "随着电动汽车普及率提升，石油需求预计将加速下降。",
+    "exampleEnglish": "As electric vehicle adoption increases, oil demand is expected to decline more quickly."
   },
   {
     "id": "natural-gas",
+    "category": "Energy",
     "word": "natural gas",
     "chineseTranslation": "天然气",
+    "pinyin": "tiān rán qì",
+    "pronunciation": "天: “tyen” as in yen; 然: “rahn” as in run; 气: “chee” as in cheese",
     "description": "A fossil fuel composed primarily of methane, widely used for heating, cooking, and electricity generation; methane leaks during extraction and distribution intensify its climate impact.",
     "answerA": "A fuel produced by fermenting organic agricultural waste for use in power plants.",
     "answerB": "A fossil fuel composed primarily of methane, widely used for heating, cooking, and electricity generation; methane leaks during extraction and distribution intensify its climate impact.",
     "answerC": "A liquid fuel used to power large ships and commercial aircraft internationally.",
-    "example": "天然气常被描述为从高排放煤炭向清洁能源转型过程中的\"过渡燃料\"。"
+    "example": "天然气常被描述为从高排放煤炭向清洁能源转型过程中的\"过渡燃料\"。",
+    "exampleEnglish": "Natural gas is often described as a 'transition fuel' from high-emission coal to clean energy."
   },
   {
     "id": "deforestation",
+    "category": "Natural Environment",
     "word": "Deforestation",
     "chineseTranslation": "毁林",
+    "pinyin": "huǐ lín",
+    "pronunciation": "毁: “hway” as in way; 林: “lin” as in Lynn",
     "description": "The large-scale removal or clearing of forests, which releases stored carbon into the atmosphere and destroys important carbon sinks and biodiversity habitats.",
     "answerA": "The large-scale removal or clearing of forests, which releases stored carbon into the atmosphere and destroys important carbon sinks and biodiversity habitats.",
     "answerB": "The managed thinning of forests to reduce the risk of catastrophic wildfire.",
     "answerC": "The selective harvesting of mature trees while preserving the overall forest structure.",
-    "example": "亚马逊地区的毁林活动释放了储存在树木和土壤中的数十亿吨二氧化碳。"
+    "example": "亚马逊地区的毁林活动释放了储存在树木和土壤中的数十亿吨二氧化碳。",
+    "exampleEnglish": "Deforestation in the Amazon has released billions of tonnes of carbon dioxide stored in trees and soil."
   },
   {
     "id": "afforestation",
+    "category": "Natural Environment",
     "word": "afforestation",
     "chineseTranslation": "造林",
+    "pinyin": "zào lín",
+    "pronunciation": "造: “dzow” as in cow; 林: “lin” as in Lynn",
     "description": "The establishment of a new forest in an area where there was previously no forest cover, used to sequester carbon and restore ecosystem services.",
     "answerA": "The removal of existing trees to prepare land for agricultural or urban development.",
     "answerB": "The establishment of a new forest in an area where there was previously no forest cover, used to sequester carbon and restore ecosystem services.",
     "answerC": "The creation of firebreaks by clearing strips of vegetation between forest areas.",
-    "example": "中国开展了大规模造林工程，以防治荒漠化并增加碳吸收量。"
+    "example": "中国开展了大规模造林工程，以防治荒漠化并增加碳吸收量。",
+    "exampleEnglish": "China has carried out large-scale afforestation projects to combat desertification and increase carbon absorption."
   },
   {
     "id": "reforestation",
+    "category": "Natural Environment",
     "word": "reforestation",
     "chineseTranslation": "再造林",
+    "pinyin": "zài zào lín",
+    "pronunciation": "再: “dz-eye” as in eye; 造: “dzow” as in cow; 林: “lin” as in Lynn",
     "description": "The replanting of trees on land that was previously forested but cleared due to logging, agriculture, or natural events, restoring ecosystem services and carbon storage capacity.",
     "answerA": "The planting of trees in areas that were never historically covered by forest.",
     "answerB": "The replanting of trees on land that was previously forested but cleared due to logging, agriculture, or natural events, restoring ecosystem services and carbon storage capacity.",
     "answerC": "A land management technique involving burning dead trees to rejuvenate forest soil nutrients.",
-    "example": "国际再造林项目旨在恢复退化的热带森林并增加碳封存量。"
+    "example": "国际再造林项目旨在恢复退化的热带森林并增加碳封存量。",
+    "exampleEnglish": "International reforestation projects aim to restore degraded tropical forests and increase carbon sequestration."
   },
   {
     "id": "burning",
+    "category": "Energy",
     "word": "burning",
     "chineseTranslation": "燃烧",
+    "pinyin": "rán shāo",
+    "pronunciation": "燃: “rahn” as in run; 烧: “shao” as in shower",
     "description": "The rapid chemical reaction of a substance with oxygen that produces heat and light; in climate contexts, the burning of fossil fuels and biomass releases CO₂ and other pollutants.",
     "answerA": "The rapid chemical reaction of a substance with oxygen that produces heat and light; in climate contexts, the burning of fossil fuels and biomass releases CO₂ and other pollutants.",
     "answerB": "The slow underground release of methane gas from decomposing buried organic material.",
     "answerC": "The biological conversion of solar energy into stored chemical energy in plant cells.",
-    "example": "为农业开垦而焚烧雨林土地，向大气层释放了大量储存的碳。"
+    "example": "为农业开垦而焚烧雨林土地，向大气层释放了大量储存的碳。",
+    "exampleEnglish": "Burning rainforest land for agriculture releases large amounts of stored carbon into the atmosphere."
   },
   {
     "id": "ozone-layer",
+    "category": "Basic Concept",
     "word": "ozone layer",
     "chineseTranslation": "臭氧层",
+    "pinyin": "chòu yǎng céng",
+    "pronunciation": "臭: “cho” as in show; 氧: “yahng” as in young; 层: “tsung” as in sung",
     "description": "A region of the stratosphere with high concentrations of ozone (O₃) that absorbs most harmful ultraviolet radiation from the sun, protecting life on Earth.",
     "answerA": "The atmospheric layer closest to the surface where most weather events occur.",
     "answerB": "The layer of greenhouse gases close to the surface that traps outgoing heat radiation.",
     "answerC": "A region of the stratosphere with high concentrations of ozone (O₃) that absorbs most harmful ultraviolet radiation from the sun, protecting life on Earth.",
-    "example": "国际社会禁用氟氯化碳后，臭氧层的逐步恢复是环保史上的重大成就。"
+    "example": "国际社会禁用氟氯化碳后，臭氧层的逐步恢复是环保史上的重大成就。",
+    "exampleEnglish": "The gradual recovery of the ozone layer after the international ban on CFCs is a major achievement in environmental history."
   },
   {
     "id": "contamination",
+    "category": "Basic Concept",
     "word": "contamination",
     "chineseTranslation": "污染",
+    "pinyin": "wū rǎn",
+    "pronunciation": "污: “woo” as in woo; 染: “rahn” as in run",
     "description": "The introduction of harmful substances—such as chemicals, pollutants, or pathogens—into air, water, or soil, making it dangerous for organisms and ecosystems.",
     "answerA": "The natural process by which environmental pollutants gradually break down over time.",
     "answerB": "The introduction of harmful substances—such as chemicals, pollutants, or pathogens—into air, water, or soil, making it dangerous for organisms and ecosystems.",
     "answerC": "The progressive accumulation of toxic chemicals in the tissues of organisms up the food chain.",
-    "example": "工业污染导致当地渔业和社区饮用水资源遭到严重破坏。"
+    "example": "工业污染导致当地渔业和社区饮用水资源遭到严重破坏。",
+    "exampleEnglish": "Industrial contamination has severely damaged local fisheries and community drinking water resources."
   },
   {
     "id": "geothermal-energy",
+    "category": "Energy",
     "word": "geothermal energy",
     "chineseTranslation": "地热能",
+    "pinyin": "dì rè néng",
+    "pronunciation": "地: “dee” as in deep; 热: “ruh” as in run; 能: “nung” as in hung",
     "description": "Energy extracted from heat stored beneath the Earth's surface, used to generate electricity or provide heating with very low greenhouse gas emissions.",
     "answerA": "Energy produced from burning organic matter such as wood pellets and agricultural residue.",
     "answerB": "Electricity generated using the thermal difference between warm ocean surface and cold deep water.",
     "answerC": "Energy extracted from heat stored beneath the Earth's surface, used to generate electricity or provide heating with very low greenhouse gas emissions.",
-    "example": "冰岛大部分电力和供暖来自地热能。"
+    "example": "冰岛大部分电力和供暖来自地热能。",
+    "exampleEnglish": "Most of Iceland's electricity and heating come from geothermal energy."
   },
   {
     "id": "biomass",
+    "category": "Energy",
     "word": "biomass",
     "chineseTranslation": "生物质能",
+    "pinyin": "shēng wù zhì néng",
+    "pronunciation": "生: “sheng” as sh + “ung” in hung; 物: “woo” as in woo; 质: “jur” as in jerk; 能: “nung” as in hung",
     "description": "Organic material from plants and animals used as a fuel source; when sustainably sourced, it can serve as a low-carbon alternative to fossil fuels in heat and power generation.",
     "answerA": "Microscopic soil organisms that break down organic matter and release nutrients.",
     "answerB": "Preserved organic matter frozen in Arctic permafrost that releases methane upon thawing.",
     "answerC": "Organic material from plants and animals used as a fuel source; when sustainably sourced, it can serve as a low-carbon alternative to fossil fuels in heat and power generation.",
-    "example": "利用农业废弃物生产的生物质能源，有助于农村社区减少对煤炭的依赖。"
+    "example": "利用农业废弃物生产的生物质能源，有助于农村社区减少对煤炭的依赖。",
+    "exampleEnglish": "Biomass energy produced from agricultural waste can help rural communities reduce their dependence on coal."
   },
   {
     "id": "energy-efficiency",
+    "category": "Energy",
     "word": "energy efficiency",
     "chineseTranslation": "能源效率",
+    "pinyin": "néng yuán xiào lǜ",
+    "pronunciation": "能: “nung” as in hung; 源: “ywen” as in when; 效: “shyow” as in shower; 率: “loo” as in loop",
     "description": "The practice of using less energy to accomplish the same task or produce the same output, reducing energy waste and lowering greenhouse gas emissions.",
     "answerA": "The ability of a power station to operate continuously at its full rated capacity.",
     "answerB": "The rate at which a battery system charges and discharges its stored electrical energy.",
     "answerC": "The practice of using less energy to accomplish the same task or produce the same output, reducing energy waste and lowering greenhouse gas emissions.",
-    "example": "在建筑物中安装LED照明可以显著提高能源效率，降低电费支出。"
+    "example": "在建筑物中安装LED照明可以显著提高能源效率，降低电费支出。",
+    "exampleEnglish": "Installing LED lighting in buildings can significantly improve energy efficiency and reduce electricity bills."
   },
   {
     "id": "energy-conservation",
+    "category": "Energy",
     "word": "energy conservation",
     "chineseTranslation": "节能",
+    "pinyin": "jié néng",
+    "pronunciation": "节: “jyeh” as in yes; 能: “nung” as in hung",
     "description": "The deliberate reduction of energy use through behavioral changes and improved practices—such as adjusting thermostats and turning off equipment—to lower emissions and costs.",
     "answerA": "The deliberate reduction of energy use through behavioral changes and improved practices—such as adjusting thermostats and turning off equipment—to lower emissions and costs.",
     "answerB": "Government regulations setting mandatory minimum energy performance standards for equipment.",
     "answerC": "The technical process of storing surplus electricity generated by renewable sources.",
-    "example": "公共建筑采取节能措施后，该城市的电力消耗降低了15%。"
+    "example": "公共建筑采取节能措施后，该城市的电力消耗降低了15%。",
+    "exampleEnglish": "After public buildings adopted energy conservation measures, the city's electricity consumption fell by 15%."
   },
   {
     "id": "electric-vehicle",
+    "category": "Technology",
     "word": "electric vehicle",
     "chineseTranslation": "电动车",
+    "pinyin": "diàn dòng chē",
+    "pronunciation": "电: “dyen” as in yen; 动: “dong” as in dong; 车: “chuh” as in chuck",
     "description": "A vehicle powered entirely or partially by an electric motor using energy stored in rechargeable batteries, producing zero direct exhaust emissions.",
     "answerA": "A vehicle powered by hydrogen fuel cells that emits only water vapor as exhaust.",
     "answerB": "A bus or tram powered by an overhead electric catenary wire system.",
     "answerC": "A vehicle powered entirely or partially by an electric motor using energy stored in rechargeable batteries, producing zero direct exhaust emissions.",
-    "example": "随着电池成本下降和充电基础设施不断完善，电动汽车销量正在迅速增长。"
+    "example": "随着电池成本下降和充电基础设施不断完善，电动汽车销量正在迅速增长。",
+    "exampleEnglish": "Electric vehicle sales are growing rapidly as battery costs fall and charging infrastructure improves."
   },
   {
     "id": "power-grid",
+    "category": "Energy",
     "word": "power grid",
     "chineseTranslation": "电网",
+    "pinyin": "diàn wǎng",
+    "pronunciation": "电: “dyen” as in yen; 网: “wahng” as in long",
     "description": "The interconnected network of power generation facilities, high-voltage transmission lines, and distribution infrastructure that delivers electricity from producers to consumers.",
     "answerA": "A computer system that monitors and automatically controls energy use in smart buildings.",
     "answerB": "A system of home batteries used to store solar electricity for use during the evening.",
     "answerC": "The interconnected network of power generation facilities, high-voltage transmission lines, and distribution infrastructure that delivers electricity from producers to consumers.",
-    "example": "对电网进行现代化改造，是接入大规模可再生能源的必要条件。"
+    "example": "对电网进行现代化改造，是接入大规模可再生能源的必要条件。",
+    "exampleEnglish": "Modernizing the power grid is necessary for integrating large amounts of renewable energy."
   },
   {
     "id": "rainforest",
+    "category": "Natural Environment",
     "word": "rainforest",
     "chineseTranslation": "热带雨林",
+    "pinyin": "rè dài yǔ lín",
+    "pronunciation": "热: “ruh” as in run; 带: “die” as in die; 雨: “yoo” as in you; 林: “lin” as in Lynn",
     "description": "A dense, biodiverse forest found in tropical regions with consistently high annual rainfall; rainforests are critical carbon sinks and biodiversity hotspots threatened by deforestation.",
     "answerA": "A dense, biodiverse forest found in tropical regions with consistently high annual rainfall; rainforests are critical carbon sinks and biodiversity hotspots threatened by deforestation.",
     "answerB": "A temperate forest that sheds its leaves seasonally in response to cold winters.",
     "answerC": "A coastal forest ecosystem that grows in saltwater and protects shorelines from erosion.",
-    "example": "亚马逊热带雨林在其树木和土壤中储存了约1000亿吨碳。"
+    "example": "亚马逊热带雨林在其树木和土壤中储存了约1000亿吨碳。",
+    "exampleEnglish": "The Amazon rainforest stores about 100 billion tonnes of carbon in its trees and soil."
   },
   {
     "id": "wetland",
+    "category": "Natural Environment",
     "word": "wetland",
     "chineseTranslation": "湿地",
+    "pinyin": "shī dì",
+    "pronunciation": "湿: “shur” as in shirt; 地: “dee” as in deep",
     "description": "An area where land is saturated or covered with water, including marshes, bogs, and swamps; wetlands store large amounts of carbon and provide critical habitat for wildlife.",
     "answerA": "A low-lying coastal zone that is regularly inundated by tidal saltwater.",
     "answerB": "A seasonally flooded river plain typical of tropical and subtropical river systems.",
     "answerC": "An area where land is saturated or covered with water, including marshes, bogs, and swamps; wetlands store large amounts of carbon and provide critical habitat for wildlife.",
-    "example": "排干湿地用于农业会释放大量储存的二氧化碳和甲烷。"
+    "example": "排干湿地用于农业会释放大量储存的二氧化碳和甲烷。",
+    "exampleEnglish": "Draining wetlands for agriculture releases large amounts of stored carbon dioxide and methane."
   },
   {
     "id": "glacier",
+    "category": "Natural Environment",
     "word": "glacier",
     "chineseTranslation": "冰川",
+    "pinyin": "bīng chuān",
+    "pronunciation": "冰: “bing” as in bing; 川: “chwan” as in swan",
     "description": "A large, persistent body of ice formed from compacted snow in high-altitude or polar regions; glaciers are retreating rapidly as global temperatures rise.",
     "answerA": "The permanent ice sheet covering the entire continent of Antarctica.",
     "answerB": "A thin seasonal layer of ice that forms on lakes and rivers during winter.",
     "answerC": "A large, persistent body of ice formed from compacted snow in high-altitude or polar regions; glaciers are retreating rapidly as global temperatures rise.",
-    "example": "山地冰川的快速融化威胁着数亿下游居民的淡水供应安全。"
+    "example": "山地冰川的快速融化威胁着数亿下游居民的淡水供应安全。",
+    "exampleEnglish": "The rapid melting of mountain glaciers threatens the freshwater supply of hundreds of millions of people downstream."
   },
   {
     "id": "ocean-acidification",
+    "category": "Natural Environment",
     "word": "ocean acidification",
     "chineseTranslation": "海洋酸化",
+    "pinyin": "hǎi yáng suān huà",
+    "pronunciation": "海: “hi” as in hi; 洋: “yahng” as in young; 酸: “swan” as in swan; 化: “hwah” as in wow",
     "description": "The decrease in ocean pH caused by absorption of atmospheric CO₂, threatening marine ecosystems—especially coral reefs and shellfish—by weakening calcium carbonate structures.",
     "answerA": "The decrease in ocean pH caused by absorption of atmospheric CO₂, threatening marine ecosystems—especially coral reefs and shellfish—by weakening calcium carbonate structures.",
     "answerB": "The warming of sea surface temperatures caused by rising atmospheric greenhouse gases.",
     "answerC": "The depletion of dissolved oxygen in ocean water caused by nutrient-rich agricultural runoff.",
-    "example": "海洋酸化已在可测量层面上影响到海洋生物的贝壳和骨骼形成。"
+    "example": "海洋酸化已在可测量层面上影响到海洋生物的贝壳和骨骼形成。",
+    "exampleEnglish": "Ocean acidification is already measurably affecting shell and skeleton formation in marine organisms."
   },
   {
     "id": "desertification",
+    "category": "Natural Environment",
     "word": "desertification",
     "chineseTranslation": "荒漠化",
+    "pinyin": "huāng mò huà",
+    "pronunciation": "荒: “hwahng” as in long; 漠: “mo” as in more; 化: “hwah” as in wow",
     "description": "The process by which fertile or semi-arid land becomes desert, driven by drought, deforestation, overgrazing, and unsustainable agricultural practices, often exacerbated by climate change.",
     "answerA": "The process by which fertile or semi-arid land becomes desert, driven by drought, deforestation, overgrazing, and unsustainable agricultural practices, often exacerbated by climate change.",
     "answerB": "The natural geological formation of sand dunes in arid and hyper-arid desert regions.",
     "answerC": "The gradual conversion of primary forest into agricultural land through clearing and burning.",
-    "example": "荒漠化威胁着撒哈拉以南非洲和中亚大部分地区的粮食安全和民众生计。"
+    "example": "荒漠化威胁着撒哈拉以南非洲和中亚大部分地区的粮食安全和民众生计。",
+    "exampleEnglish": "Desertification threatens food security and livelihoods across much of Sub-Saharan Africa and Central Asia."
   },
   {
     "id": "heatwave",
+    "category": "Natural Environment",
     "word": "heatwave",
     "chineseTranslation": "热浪",
+    "pinyin": "rè làng",
+    "pronunciation": "热: “ruh” as in run; 浪: “lahng” as in long",
     "description": "A prolonged period of excessively hot weather, often lasting several days or weeks, posing serious health risks; heatwaves are becoming more frequent and intense due to climate change.",
     "answerA": "A period of warm weather driven by tropical ocean temperature anomalies.",
     "answerB": "A prolonged period of excessively hot weather, often lasting several days or weeks, posing serious health risks; heatwaves are becoming more frequent and intense due to climate change.",
     "answerC": "The thermal effect of urban concrete and asphalt absorbing and re-emitting solar heat.",
-    "example": "2003年欧洲热浪造成超过7万人超额死亡，并打破了多项气温纪录。"
+    "example": "2003年欧洲热浪造成超过7万人超额死亡，并打破了多项气温纪录。",
+    "exampleEnglish": "The 2003 European heatwave caused more than 70,000 excess deaths and broke multiple temperature records."
   },
   {
     "id": "habitat",
+    "category": "Natural Environment",
     "word": "habitat",
     "chineseTranslation": "栖息地",
+    "pinyin": "qī xī dì",
+    "pronunciation": "栖: “chee” as in cheese; 息: “shee” as in she; 地: “dee” as in deep",
     "description": "The natural environment in which a specific species lives, finds food, and reproduces; habitats are being rapidly degraded by climate change, deforestation, and pollution.",
     "answerA": "A protected scientific reserve legally set aside to safeguard a single endangered species.",
     "answerB": "The natural environment in which a specific species lives, finds food, and reproduces; habitats are being rapidly degraded by climate change, deforestation, and pollution.",
     "answerC": "A human-engineered environment designed to replace a permanently destroyed natural ecosystem.",
-    "example": "湿地栖息地的破坏威胁着众多鸟类、鱼类和两栖类物种的生存。"
+    "example": "湿地栖息地的破坏威胁着众多鸟类、鱼类和两栖类物种的生存。",
+    "exampleEnglish": "The destruction of wetland habitats threatens the survival of many bird, fish, and amphibian species."
   },
   {
     "id": "species",
+    "category": "Natural Environment",
     "word": "species",
     "chineseTranslation": "物种",
+    "pinyin": "wù zhǒng",
+    "pronunciation": "物: “woo” as in woo; 种: “jong” as in John",
     "description": "A group of organisms sharing common characteristics that can interbreed; species diversity is a core measure of biodiversity, increasingly threatened by climate change and habitat loss.",
     "answerA": "The universal classification system scientists use to name and organize all known life forms.",
     "answerB": "A group of organisms sharing common characteristics that can interbreed; species diversity is a core measure of biodiversity, increasingly threatened by climate change and habitat loss.",
     "answerC": "A population of organisms geographically isolated on an island and evolving independently.",
-    "example": "科学家估计，目前约有100万个物种面临灭绝风险。"
+    "example": "科学家估计，目前约有100万个物种面临灭绝风险。",
+    "exampleEnglish": "Scientists estimate that about one million species are currently at risk of extinction."
   },
   {
     "id": "loss",
+    "category": "Natural Environment",
     "word": "loss",
     "chineseTranslation": "丧失",
+    "pinyin": "sàng shī",
+    "pronunciation": "丧: “sahng” as in song; 失: “shur” as in shirt",
     "description": "In climate and biodiversity contexts, the disappearance or significant reduction of species, ecosystems, or natural resources; 'loss and damage' refers specifically to harm caused by climate change.",
     "answerA": "The decline in the market value of a green investment portfolio over a given period.",
     "answerB": "The decreasing productivity of global fisheries attributable to decades of overfishing.",
     "answerC": "In climate and biodiversity contexts, the disappearance or significant reduction of species, ecosystems, or natural resources; 'loss and damage' refers specifically to harm caused by climate change.",
-    "example": "由于栖息地破坏和气候变化，生物多样性丧失正在以惊人的速度加速。"
+    "example": "由于栖息地破坏和气候变化，生物多样性丧失正在以惊人的速度加速。",
+    "exampleEnglish": "Due to habitat destruction and climate change, biodiversity loss is accelerating at an alarming rate."
   },
   {
     "id": "extinction",
+    "category": "Natural Environment",
     "word": "extinction",
     "chineseTranslation": "灭绝",
+    "pinyin": "miè jué",
+    "pronunciation": "灭: “myeh” as in yes; 绝: “jweh” as in wet",
     "description": "The complete disappearance of a species from the Earth, driven by factors such as habitat destruction, climate change, invasive species, and overexploitation.",
     "answerA": "A sharp decline in the population of a species to critically low levels of survival.",
     "answerB": "The voluntary migration of a species out of its native range to a newly suitable area.",
     "answerC": "The complete disappearance of a species from the Earth, driven by factors such as habitat destruction, climate change, invasive species, and overexploitation.",
-    "example": "科学家警告，人类活动正在推动第六次大规模物种灭绝的发生。"
+    "example": "科学家警告，人类活动正在推动第六次大规模物种灭绝的发生。",
+    "exampleEnglish": "Scientists warn that human activities are driving the sixth mass extinction of species."
   },
   {
     "id": "composting",
+    "category": "Natural Environment",
     "word": "composting",
     "chineseTranslation": "堆肥",
+    "pinyin": "duī féi",
+    "pronunciation": "堆: “dway” as in way; 肥: “fay” as in say",
     "description": "The controlled decomposition of organic waste materials—such as food scraps and yard trimmings—into nutrient-rich compost that enriches soil and diverts methane-emitting waste from landfills.",
     "answerA": "A biological process for treating sewage and removing pathogens from wastewater.",
     "answerB": "A chemical process for breaking down plastic waste into harmless organic compounds.",
     "answerC": "The controlled decomposition of organic waste materials—such as food scraps and yard trimmings—into nutrient-rich compost that enriches soil and diverts methane-emitting waste from landfills.",
-    "example": "在家中对厨余垃圾进行堆肥处理，可以减少填埋场的有机废弃物和甲烷排放。"
+    "example": "在家中对厨余垃圾进行堆肥处理，可以减少填埋场的有机废弃物和甲烷排放。",
+    "exampleEnglish": "Composting food waste at home can reduce organic waste in landfills and methane emissions."
   },
   {
     "id": "carbon-offset",
+    "category": "Policies & Cooperation",
     "word": "carbon offset",
     "chineseTranslation": "碳抵消",
+    "pinyin": "tàn dǐ xiāo",
+    "pronunciation": "碳: “tahn” as in tan; 抵: “dee” as in deep; 消: “shyow” as in shower",
     "description": "A reduction in greenhouse gas emissions—achieved through tree planting, renewable energy, or other projects—used to compensate for emissions produced elsewhere, measured in tonnes of CO₂ equivalent.",
     "answerA": "A reduction in greenhouse gas emissions—achieved through tree planting, renewable energy, or other projects—used to compensate for emissions produced elsewhere, measured in tonnes of CO₂ equivalent.",
     "answerB": "A government tax credit awarded to companies that successfully reduce their direct emissions.",
     "answerC": "A financial penalty imposed on airlines that exceed their government-allocated emissions quota.",
-    "example": "该航空公司为乘客提供购买碳抵消的选项，以补偿其乘机产生的碳排放。"
+    "example": "该航空公司为乘客提供购买碳抵消的选项，以补偿其乘机产生的碳排放。",
+    "exampleEnglish": "The airline offers passengers the option to buy carbon offsets to compensate for emissions from their flights."
   },
   {
     "id": "climate-policy",
+    "category": "Policies & Cooperation",
     "word": "climate policy",
     "chineseTranslation": "气候政策",
+    "pinyin": "qì hòu zhèng cè",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 政: “jung” as in jungle; 策: “tsuh” as in sun",
     "description": "Government plans, regulations, and frameworks designed to reduce greenhouse gas emissions and build societal resilience to the impacts of climate change.",
     "answerA": "A scientific assessment evaluating the risks posed by ongoing climate change to human society.",
     "answerB": "A technical standard requiring all new household appliances to meet minimum energy efficiency levels.",
     "answerC": "Government plans, regulations, and frameworks designed to reduce greenhouse gas emissions and build societal resilience to the impacts of climate change.",
-    "example": "有效的气候政策需要在能源、交通、农业和工业等多个领域协同推进。"
+    "example": "有效的气候政策需要在能源、交通、农业和工业等多个领域协同推进。",
+    "exampleEnglish": "Effective climate policy requires coordinated action across energy, transportation, agriculture, and industry."
   },
   {
     "id": "climate-fund",
+    "category": "Policies & Cooperation",
     "word": "climate fund",
     "chineseTranslation": "气候基金",
+    "pinyin": "qì hòu jī jīn",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 基: “jee” as in jeep; 金: “jin” as in gin",
     "description": "A dedicated financial mechanism that channels resources toward climate change mitigation, adaptation, or both, often supporting developing countries in addressing climate challenges.",
     "answerA": "A private equity fund investing in fossil fuel companies that are transitioning to renewables.",
     "answerB": "A dedicated financial mechanism that channels resources toward climate change mitigation, adaptation, or both, often supporting developing countries in addressing climate challenges.",
     "answerC": "An international financial reserve for compensating countries hit by severe climate disasters.",
-    "example": "绿色气候基金支持发展中国家减少排放，并适应气候变化的影响。"
+    "example": "绿色气候基金支持发展中国家减少排放，并适应气候变化的影响。",
+    "exampleEnglish": "The Green Climate Fund supports developing countries in reducing emissions and adapting to the impacts of climate change."
   },
   {
     "id": "carbon-market",
+    "category": "Policies & Cooperation",
     "word": "carbon market",
     "chineseTranslation": "碳市场",
+    "pinyin": "tàn shì chǎng",
+    "pronunciation": "碳: “tahn” as in tan; 市: “shur” as in shirt; 场: “chahng” as in song",
     "description": "A trading system in which companies and governments buy and sell units of carbon dioxide emissions, creating a financial incentive to reduce greenhouse gas emissions cost-effectively.",
     "answerA": "A trading system in which companies and governments buy and sell units of carbon dioxide emissions, creating a financial incentive to reduce greenhouse gas emissions cost-effectively.",
     "answerB": "A marketplace where renewable energy certificates and guarantees of origin are bought and sold.",
     "answerC": "A commodity exchange where futures contracts for fossil fuel products are traded globally.",
-    "example": "碳市场价格需要足够高，才能有效驱动清洁技术领域的投资。"
+    "example": "碳市场价格需要足够高，才能有效驱动清洁技术领域的投资。",
+    "exampleEnglish": "Carbon market prices need to be high enough to effectively drive investment in clean technologies."
   },
   {
     "id": "agriculture",
+    "category": "Agriculture",
     "word": "agriculture",
     "chineseTranslation": "农业",
+    "pinyin": "nóng yè",
+    "pronunciation": "农: “nong” as in song; 业: “yeh” as in yes",
     "description": "The practice of cultivating crops and raising livestock for food and other products; a significant source of greenhouse gases including methane from livestock and nitrous oxide from soils.",
     "answerA": "The practice of cultivating crops and raising livestock for food and other products; a significant source of greenhouse gases including methane from livestock and nitrous oxide from soils.",
     "answerB": "The management of forest resources for timber production, recreation, and carbon storage.",
     "answerC": "The industrial production of synthetic fertilizers from natural gas via the Haber-Bosch process.",
-    "example": "农业约占全球温室气体排放总量的10%至12%。"
+    "example": "农业约占全球温室气体排放总量的10%至12%。",
+    "exampleEnglish": "Agriculture accounts for about 10% to 12% of total global greenhouse gas emissions."
   },
   {
     "id": "irrigation",
+    "category": "Agriculture",
     "word": "irrigation",
     "chineseTranslation": "灌溉",
+    "pinyin": "guàn gài",
+    "pronunciation": "灌: “gwan” as in swan; 溉: “guy” as in guy",
     "description": "The controlled supply of water to agricultural land through channels, pipes, or sprinklers, enabling crop production in dry areas; a major consumer of freshwater resources.",
     "answerA": "The controlled supply of water to agricultural land through channels, pipes, or sprinklers, enabling crop production in dry areas; a major consumer of freshwater resources.",
     "answerB": "An agricultural practice of growing crops in layered systems that mimic natural forest structure.",
     "answerC": "A farming approach that avoids synthetic pesticides, herbicides, and mineral fertilizers.",
-    "example": "精准灌溉系统可以将农业用水量减少多达50%。"
+    "example": "精准灌溉系统可以将农业用水量减少多达50%。",
+    "exampleEnglish": "Precision irrigation systems can reduce agricultural water use by up to 50%."
   },
   {
     "id": "soil-erosion",
+    "category": "Agriculture",
     "word": "soil erosion",
     "chineseTranslation": "土壤侵蚀",
+    "pinyin": "tǔ rǎng qīn shí",
+    "pronunciation": "土: “too” as in tooth; 壤: “rahng” as in long; 侵: “chin” as in chin; 蚀: “shur” as in shirt",
     "description": "The wearing away and displacement of topsoil by water, wind, or human activity such as deforestation and poor farming, reducing land fertility and releasing stored carbon.",
     "answerA": "The gradual loss of soil moisture in regions experiencing long-term or recurring drought.",
     "answerB": "The wearing away and displacement of topsoil by water, wind, or human activity such as deforestation and poor farming, reducing land fertility and releasing stored carbon.",
     "answerC": "The compaction of agricultural soil caused by the weight of heavy farm machinery.",
-    "example": "高地地区的土壤侵蚀导致农业用地退化，并使河流泥沙含量增加。"
+    "example": "高地地区的土壤侵蚀导致农业用地退化，并使河流泥沙含量增加。",
+    "exampleEnglish": "Soil erosion in highland areas degrades farmland and increases sediment levels in rivers."
   },
   {
     "id": "overfishing",
+    "category": "Agriculture",
     "word": "overfishing",
     "chineseTranslation": "过度捕捞",
+    "pinyin": "guò dù bǔ lāo",
+    "pronunciation": "过: “gwaw” as in draw; 度: “doo” as in do; 捕: “boo” as in boot; 捞: “lao” as in loud",
     "description": "The harvesting of fish at a rate faster than populations can naturally reproduce, leading to the depletion of fish stocks, ecosystem collapse, and threats to food security.",
     "answerA": "The use of deep-sea drag nets that physically damage and disturb the seabed habitat.",
     "answerB": "The harvesting of fish at a rate faster than populations can naturally reproduce, leading to the depletion of fish stocks, ecosystem collapse, and threats to food security.",
     "answerC": "The contamination of commercial fish stocks with microplastics and industrial pollutants.",
-    "example": "过度捕捞已严重耗尽蓝鳍金枪鱼及其他多种重要商业鱼类的种群资源。"
+    "example": "过度捕捞已严重耗尽蓝鳍金枪鱼及其他多种重要商业鱼类的种群资源。",
+    "exampleEnglish": "Overfishing has severely depleted populations of bluefin tuna and many other important commercial fish species."
   },
   {
     "id": "livestock-emissions",
+    "category": "Agriculture",
     "word": "livestock emissions",
     "chineseTranslation": "畜牧业排放",
+    "pinyin": "xù mù yè pái fàng",
+    "pronunciation": "畜: “shoo” as in shoe; 牧: “moo” as in moon; 业: “yeh” as in yes; 排: “pie” as in pie; 放: “fahng” as in song",
     "description": "Greenhouse gases—primarily methane from cattle digestion and manure—produced by farm animals; livestock contributes a significant share of global agricultural emissions.",
     "answerA": "Carbon dioxide produced from burning crop residues after the annual harvest season.",
     "answerB": "Greenhouse gases—primarily methane from cattle digestion and manure—produced by farm animals; livestock contributes a significant share of global agricultural emissions.",
     "answerC": "Exhaust emissions produced by the operation of tractors and other farm machinery.",
-    "example": "牛羊等牲畜产生的畜牧业排放占全球甲烷产量的重要份额。"
+    "example": "牛羊等牲畜产生的畜牧业排放占全球甲烷产量的重要份额。",
+    "exampleEnglish": "Livestock emissions from cattle, sheep, and other animals account for a significant share of global methane production."
   },
   {
     "id": "plant-based-diet",
+    "category": "Agriculture",
     "word": "plant-based diet",
     "chineseTranslation": "植物性饮食",
+    "pinyin": "zhí wù xìng yǐn shí",
+    "pronunciation": "植: “jur” as in jerk; 物: “woo” as in woo; 性: “shing” as in sing; 饮: “yin” as in in; 食: “shur” as in shirt",
     "description": "A diet centered on vegetables, grains, legumes, and fruits with minimal or no animal products; it generates significantly lower greenhouse gas emissions than diets rich in meat and dairy.",
     "answerA": "A diet centered on vegetables, grains, legumes, and fruits with minimal or no animal products; it generates significantly lower greenhouse gas emissions than diets rich in meat and dairy.",
     "answerB": "A dietary regime consisting exclusively of raw and unprocessed foods without any cooking.",
     "answerC": "A nutritional program specifically recommended for communities living in drought-prone regions.",
-    "example": "转向植物性饮食是个人减少碳排放最具影响力的行动之一。"
+    "example": "转向植物性饮食是个人减少碳排放最具影响力的行动之一。",
+    "exampleEnglish": "Shifting to a plant-based diet is one of the most impactful actions individuals can take to reduce carbon emissions."
   },
   {
     "id": "climate-refugee",
+    "category": "Social Impact",
     "word": "climate refugee",
     "chineseTranslation": "气候难民",
+    "pinyin": "qì hòu nàn mín",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 难: “nahn” as in non; 民: “min” as in mint",
     "description": "A person displaced from their home due to the impacts of climate change, such as sea-level rise, desertification, flooding, or extreme weather making areas uninhabitable.",
     "answerA": "A person displaced from their home due to the impacts of climate change, such as sea-level rise, desertification, flooding, or extreme weather making areas uninhabitable.",
     "answerB": "A researcher who has relocated internationally due to personal threats from climate change deniers.",
     "answerC": "A former fossil fuel industry worker displaced by the closure of a coal mine or oil refinery.",
-    "example": "海水入侵和海平面上升已迫使部分太平洋岛屿社区作为气候难民被迫迁移。"
+    "example": "海水入侵和海平面上升已迫使部分太平洋岛屿社区作为气候难民被迫迁移。",
+    "exampleEnglish": "Saltwater intrusion and sea level rise have forced some Pacific island communities to relocate as climate refugees."
   },
   {
     "id": "migration",
+    "category": "Social Impact",
     "word": "migration",
     "chineseTranslation": "迁移",
+    "pinyin": "qiān yí",
+    "pronunciation": "迁: “chyen” as in yen; 移: “ee” as in see",
     "description": "The movement of people or animals from one location to another; climate-induced human migration is increasingly driven by sea-level rise, drought, and extreme weather events.",
     "answerA": "The seasonal long-distance movement of birds between breeding and wintering grounds.",
     "answerB": "The relocation of multinational companies to countries with less stringent climate regulations.",
     "answerC": "The movement of people or animals from one location to another; climate-induced human migration is increasingly driven by sea-level rise, drought, and extreme weather events.",
-    "example": "气候引发的迁移预计将到2050年使数亿人被迫流离失所。"
+    "example": "气候引发的迁移预计将到2050年使数亿人被迫流离失所。",
+    "exampleEnglish": "Climate-induced migration is expected to displace hundreds of millions of people by 2050."
   },
   {
     "id": "carbon-peak",
+    "category": "Policies & Cooperation",
     "word": "carbon peak",
     "chineseTranslation": "碳达峰",
+    "pinyin": "tàn dá fēng",
+    "pronunciation": "碳: “tahn” as in tan; 达: “dah” as in dot; 峰: “fung” as in hung",
     "description": "The point at which a country's or sector's greenhouse gas emissions reach their highest level before beginning a sustained decline; China aims to peak emissions before 2030.",
     "answerA": "The maximum annual amount of carbon dioxide that a mature forest can absorb per hectare.",
     "answerB": "The threshold beyond which a carbon tax ceases to be effective at reducing emissions.",
     "answerC": "The point at which a country's or sector's greenhouse gas emissions reach their highest level before beginning a sustained decline; China aims to peak emissions before 2030.",
-    "example": "实现碳达峰是通往碳中和目标道路上的重要里程碑。"
+    "example": "实现碳达峰是通往碳中和目标道路上的重要里程碑。",
+    "exampleEnglish": "Reaching peak carbon emissions is an important milestone on the path to carbon neutrality."
   },
   {
     "id": "climate-governance",
+    "category": "Policies & Cooperation",
     "word": "Climate governance",
     "chineseTranslation": "气候治理",
+    "pinyin": "qì hòu zhì lǐ",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 治: “jur” as in jerk; 理: “lee” as in Lee",
     "description": "The systems, institutions, rules, and processes through which climate-related decisions are made and implemented at local, national, and international levels.",
     "answerA": "The authority of the United Nations to impose binding sanctions on non-compliant member states.",
     "answerB": "The systems, institutions, rules, and processes through which climate-related decisions are made and implemented at local, national, and international levels.",
     "answerC": "The oversight of international carbon market operations by financial regulatory authorities.",
-    "example": "有效的气候治理需要政府、企业和公民社会之间的积极协调与合作。"
+    "example": "有效的气候治理需要政府、企业和公民社会之间的积极协调与合作。",
+    "exampleEnglish": "Effective climate governance requires active coordination and cooperation among governments, businesses, and civil society."
   },
   {
     "id": "tipping-point",
+    "category": "Basic Concept",
     "word": "Tipping point",
     "chineseTranslation": "临界点",
+    "pinyin": "lín jiè diǎn",
+    "pronunciation": "临: “lin” as in Lynn; 界: “jyeh” as in yes; 点: “dyen” as in yen",
     "description": "A threshold in the climate system at which a small additional perturbation triggers a larger, often irreversible shift, such as the collapse of ice sheets or the die-back of the Amazon.",
     "answerA": "A threshold in the climate system at which a small additional perturbation triggers a larger, often irreversible shift, such as the collapse of ice sheets or the die-back of the Amazon.",
     "answerB": "The emissions level at which carbon pricing begins to meaningfully change industrial behavior.",
     "answerC": "A precise atmospheric CO₂ concentration at which global warming becomes completely irreversible.",
-    "example": "科学家警告，我们可能已危险地接近几个关键的气候临界点。"
+    "example": "科学家警告，我们可能已危险地接近几个关键的气候临界点。",
+    "exampleEnglish": "Scientists warn that we may be dangerously close to several key climate tipping points."
   },
   {
     "id": "feedback-loop",
+    "category": "Basic Concept",
     "word": "feedback loop",
     "chineseTranslation": "反馈循环",
+    "pinyin": "fǎn kuì xún huán",
+    "pronunciation": "反: “fahn” as in fun; 馈: “kway” as in way; 循: “shun” as in shun; 环: “hwan” as in swan",
     "description": "A process in which the effects of a change amplify (positive feedback) or dampen (negative feedback) the original change; Arctic ice loss reducing albedo is a key climate feedback loop.",
     "answerA": "A reporting system used by companies to track and disclose their greenhouse gas emissions.",
     "answerB": "An evaluation mechanism used by governments to measure climate policy effectiveness over time.",
     "answerC": "A process in which the effects of a change amplify (positive feedback) or dampen (negative feedback) the original change; Arctic ice loss reducing albedo is a key climate feedback loop.",
-    "example": "永久冻土反馈循环可能释放大量甲烷，从而显著加速全球变暖进程。"
+    "example": "永久冻土反馈循环可能释放大量甲烷，从而显著加速全球变暖进程。",
+    "exampleEnglish": "The permafrost feedback loop could release large amounts of methane and significantly accelerate global warming."
   },
   {
     "id": "energy-security",
+    "category": "Energy",
     "word": "energy security",
     "chineseTranslation": "能源安全",
+    "pinyin": "néng yuán ān quán",
+    "pronunciation": "能: “nung” as in hung; 源: “ywen” as in when; 安: “ahn” as in on; 全: “chwan” as in swan",
     "description": "A country's ability to maintain reliable, affordable access to sufficient energy; transitioning to domestic renewables can improve energy security by reducing reliance on imported fossil fuels.",
     "answerA": "The protection of critical energy infrastructure from cyberattacks and physical sabotage.",
     "answerB": "A country's ability to maintain reliable, affordable access to sufficient energy; transitioning to domestic renewables can improve energy security by reducing reliance on imported fossil fuels.",
     "answerC": "A strategic national reserve of fossil fuels maintained for emergency supply disruptions.",
-    "example": "天然气供应中断促使许多国家将本国能源安全列为优先议题。"
+    "example": "天然气供应中断促使许多国家将本国能源安全列为优先议题。",
+    "exampleEnglish": "Disruptions to natural gas supplies have led many countries to prioritize their own energy security."
   },
   {
     "id": "food-security",
+    "category": "Agriculture",
     "word": "food security",
     "chineseTranslation": "粮食安全",
+    "pinyin": "liáng shí ān quán",
+    "pronunciation": "粮: “lyahng” as in young; 食: “shur” as in shirt; 安: “ahn” as in on; 全: “chwan” as in swan",
     "description": "The condition in which all people have consistent access to sufficient, safe, and nutritious food; climate change threatens food security through droughts, floods, and heat stress on crops.",
     "answerA": "A government policy framework that establishes and guarantees minimum farmgate food prices.",
     "answerB": "The condition in which all people have consistent access to sufficient, safe, and nutritious food; climate change threatens food security through droughts, floods, and heat stress on crops.",
     "answerC": "A nutritional standard assessing the dietary quality of crops grown in different climate zones.",
-    "example": "气候变化通过降低粮食产量和加剧天气波动，威胁着许多地区的粮食安全。"
+    "example": "气候变化通过降低粮食产量和加剧天气波动，威胁着许多地区的粮食安全。",
+    "exampleEnglish": "Climate change threatens food security in many regions by reducing crop yields and increasing weather volatility."
   },
   {
     "id": "food-waste",
+    "category": "Agriculture",
     "word": "food waste",
     "chineseTranslation": "食物浪费",
+    "pinyin": "shí wù làng fèi",
+    "pronunciation": "食: “shur” as in shirt; 物: “woo” as in woo; 浪: “lahng” as in long; 费: “fay” as in say",
     "description": "Food discarded or lost during production, transport, retail, or consumption; decomposing food in landfills generates methane, making food waste a significant source of greenhouse gas emissions.",
     "answerA": "The overuse of chemical inputs such as fertilizers and pesticides in industrial food production.",
     "answerB": "The export of surplus agricultural output from wealthy nations to poorer countries as food aid.",
     "answerC": "Food discarded or lost during production, transport, retail, or consumption; decomposing food in landfills generates methane, making food waste a significant source of greenhouse gas emissions.",
-    "example": "减少食物浪费是削减全球温室气体排放最具成本效益的策略之一。"
+    "example": "减少食物浪费是削减全球温室气体排放最具成本效益的策略之一。",
+    "exampleEnglish": "Reducing food waste is one of the most cost-effective strategies for cutting global greenhouse gas emissions."
   },
   {
     "id": "blue-economy",
+    "category": "Policies & Cooperation",
     "word": "blue economy",
     "chineseTranslation": "蓝色经济",
+    "pinyin": "lán sè jīng jì",
+    "pronunciation": "蓝: “lahn” as in lawn; 色: “suh” as in sun; 经: “jing” as in jingle; 济: “jee” as in jeep",
     "description": "The sustainable use of ocean resources for economic growth and improved livelihoods while preserving the health of ocean ecosystems, including fisheries, shipping, and marine renewable energy.",
     "answerA": "An economic model that focuses exclusively on the conservation of freshwater lake systems.",
     "answerB": "The sustainable use of ocean resources for economic growth and improved livelihoods while preserving the health of ocean ecosystems, including fisheries, shipping, and marine renewable energy.",
     "answerC": "A development strategy for island nations centered solely on marine and coastal tourism.",
-    "example": "蓝色经济为沿海国家和岛屿国家提供了可持续发展的路径选择。"
+    "example": "蓝色经济为沿海国家和岛屿国家提供了可持续发展的路径选择。",
+    "exampleEnglish": "The blue economy offers a sustainable development pathway for coastal and island countries."
   },
   {
     "id": "nature-based-solutions",
+    "category": "Policies & Cooperation",
     "word": "nature-based solutions",
     "chineseTranslation": "基于自然的解决方案",
+    "pinyin": "jī yú zì rán de jiě jué fāng àn",
+    "pronunciation": "基: “jee” as in jeep; 于: “yoo” as in you; 自: “dzuh” as in pizza; 然: “rahn” as in run; 的: “duh” as in done; 解: “jyeh” as in yes; 决: “jweh” as in wet; 方: “fahng” as in song; 案: “ahn” as in on",
     "description": "Actions that protect, restore, or sustainably manage ecosystems to simultaneously address climate change, biodiversity loss, and other societal challenges.",
     "answerA": "Actions that protect, restore, or sustainably manage ecosystems to simultaneously address climate change, biodiversity loss, and other societal challenges.",
     "answerB": "Technologies designed to artificially mimic natural processes for capturing and storing carbon.",
     "answerC": "Scientific techniques for breeding and developing climate-resilient crop and livestock varieties.",
-    "example": "恢复红树林和泥炭地是既能储存碳又能保护海岸线的基于自然的解决方案。"
+    "example": "恢复红树林和泥炭地是既能储存碳又能保护海岸线的基于自然的解决方案。",
+    "exampleEnglish": "Restoring mangroves and peatlands is a nature-based solution that both stores carbon and protects coastlines."
   },
   {
     "id": "greenwashing",
+    "category": "Social Impact",
     "word": "greenwashing",
     "chineseTranslation": "漂绿",
+    "pinyin": "piāo lǜ",
+    "pronunciation": "漂: “pyow” as in meow; 绿: “loo” as in loop",
     "description": "The practice of making misleading or unsubstantiated claims about the environmental benefits of a product or company, often to improve brand image without making meaningful sustainability changes.",
     "answerA": "The process of converting industrial or commercial facilities to run on green renewable energy.",
     "answerB": "The practice of making misleading or unsubstantiated claims about the environmental benefits of a product or company, often to improve brand image without making meaningful sustainability changes.",
     "answerC": "A marketing practice of using green colors and nature imagery on genuinely sustainable products.",
-    "example": "该公司被指控\"漂绿\"，其\"碳中和\"产品声明被发现依赖低质量的碳抵消凭证。"
+    "example": "该公司被指控\"漂绿\"，其\"碳中和\"产品声明被发现依赖低质量的碳抵消凭证。",
+    "exampleEnglish": "The company was accused of greenwashing after its 'carbon neutral' product claim was found to rely on low-quality carbon offsets."
   },
   {
     "id": "carbon-sink",
+    "category": "Natural Environment",
     "word": "carbon sink",
     "chineseTranslation": "碳汇",
+    "pinyin": "tàn huì",
+    "pronunciation": "碳: “tahn” as in tan; 汇: “hway” as in way",
     "description": "A natural or artificial system that absorbs more carbon dioxide from the atmosphere than it releases, including forests, oceans, soils, and wetlands.",
     "answerA": "A natural or artificial system that absorbs more carbon dioxide from the atmosphere than it releases, including forests, oceans, soils, and wetlands.",
     "answerB": "An underground geological formation used to permanently contain compressed CO₂ under pressure.",
     "answerC": "A sealed industrial vessel used to capture and store methane from large landfill sites.",
-    "example": "亚马逊雨林是全球最重要也是最受威胁的碳汇之一。"
+    "example": "亚马逊雨林是全球最重要也是最受威胁的碳汇之一。",
+    "exampleEnglish": "The Amazon rainforest is one of the world's most important and most threatened carbon sinks."
   },
   {
     "id": "carbon-leakage",
+    "category": "Social Impact",
     "word": "carbon leakage",
     "chineseTranslation": "碳泄露",
+    "pinyin": "tàn xiè lòu",
+    "pronunciation": "碳: “tahn” as in tan; 泄: “shyeh” as in yes; 露: “lo” as in low",
     "description": "The shift of industrial production and associated emissions from jurisdictions with strict climate policies to those with weaker regulations, resulting in no net global emission reduction.",
     "answerA": "The shift of industrial production and associated emissions from jurisdictions with strict climate policies to those with weaker regulations, resulting in no net global emission reduction.",
     "answerB": "The accidental escape of CO₂ from underground carbon capture and storage facilities.",
     "answerC": "The unintended CO₂ emissions from disturbed soil at construction and development sites.",
-    "example": "碳边境调节机制旨在防止严格国内政策导致的碳泄露问题。"
+    "example": "碳边境调节机制旨在防止严格国内政策导致的碳泄露问题。",
+    "exampleEnglish": "The carbon border adjustment mechanism aims to prevent carbon leakage caused by strict domestic policies."
   },
   {
     "id": "global-stocktake",
+    "category": "Policies & Cooperation",
     "word": "Global stocktake",
     "chineseTranslation": "全球盘点",
+    "pinyin": "quán qiú pán diǎn",
+    "pronunciation": "全: “chwan” as in swan; 球: “cho” as in show; 盘: “pahn” as in pond; 点: “dyen” as in yen",
     "description": "A five-yearly review under the Paris Agreement to assess collective global progress toward meeting long-term climate goals and to inform the next round of national climate commitments.",
     "answerA": "An annual UN-coordinated survey of all member countries' reported greenhouse gas emissions.",
     "answerB": "An international compliance review assessing adherence to multilateral environmental agreements.",
     "answerC": "A five-yearly review under the Paris Agreement to assess collective global progress toward meeting long-term climate goals and to inform the next round of national climate commitments.",
-    "example": "2023年首次全球盘点发现，各国在实现《巴黎协定》目标方面整体进展不足。"
+    "example": "2023年首次全球盘点发现，各国在实现《巴黎协定》目标方面整体进展不足。",
+    "exampleEnglish": "The first global stocktake in 2023 found that countries were not making enough overall progress toward the goals of the Paris Agreement."
   },
   {
     "id": "climate-vulnerability",
+    "category": "Policies & Cooperation",
     "word": "Climate vulnerability",
     "chineseTranslation": "气候脆弱性",
+    "pinyin": "qì hòu cuì ruò xìng",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 脆: “tsway” as in sway; 弱: “rwaw” as in raw; 性: “shing” as in sing",
     "description": "The degree to which a system, community, or region is susceptible to harm from climate change, based on its exposure to hazards, its sensitivity, and its adaptive capacity.",
     "answerA": "A measure of a country's historical contribution to cumulative global greenhouse gas emissions.",
     "answerB": "The level of public awareness and concern about climate change within a national population.",
     "answerC": "The degree to which a system, community, or region is susceptible to harm from climate change, based on its exposure to hazards, its sensitivity, and its adaptive capacity.",
-    "example": "小岛屿发展中国家因地势低洼且资源有限，具有极高的气候脆弱性。"
+    "example": "小岛屿发展中国家因地势低洼且资源有限，具有极高的气候脆弱性。",
+    "exampleEnglish": "Small island developing states are highly climate-vulnerable because of their low elevation and limited resources."
   },
   {
     "id": "capacity-building",
+    "category": "Policies & Cooperation",
     "word": "capacity building",
     "chineseTranslation": "能力建设",
+    "pinyin": "néng lì jiàn shè",
+    "pronunciation": "能: “nung” as in hung; 力: “lee” as in Lee; 建: “jyen” as in Jen; 设: “shuh” as in shut",
     "description": "The process of strengthening the skills, knowledge, institutions, and resources of individuals and communities to enable them to manage climate change challenges more effectively.",
     "answerA": "The physical construction of protective infrastructure such as seawalls and flood barriers.",
     "answerB": "An international program for training climate scientists working in university research institutions.",
     "answerC": "The process of strengthening the skills, knowledge, institutions, and resources of individuals and communities to enable them to manage climate change challenges more effectively.",
-    "example": "在发展中国家开展能力建设，对于实现有效的气候适应和减排目标至关重要。"
+    "example": "在发展中国家开展能力建设，对于实现有效的气候适应和减排目标至关重要。",
+    "exampleEnglish": "Capacity building in developing countries is essential for effective climate adaptation and emissions reduction."
   },
   {
     "id": "climate-pact",
+    "category": "Policies & Cooperation",
     "word": "climate pact",
     "chineseTranslation": "气候协定",
+    "pinyin": "qì hòu xié dìng",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 协: “shyeh” as in yes; 定: “ding” as in ding",
     "description": "A formal agreement between parties—countries, organizations, or regions—to take coordinated action on climate change, setting shared goals and mutual commitments.",
     "answerA": "An informal voluntary understanding between businesses to reduce their emissions over time.",
     "answerB": "A formal agreement between parties—countries, organizations, or regions—to take coordinated action on climate change, setting shared goals and mutual commitments.",
     "answerC": "A legal framework for prosecuting and penalizing violations of environmental law.",
-    "example": "《格拉斯哥气候协定》呼吁各国每年重新审视并加强其气候承诺。"
+    "example": "《格拉斯哥气候协定》呼吁各国每年重新审视并加强其气候承诺。",
+    "exampleEnglish": "The Glasgow Climate Pact calls on countries to revisit and strengthen their climate commitments every year."
   },
   {
     "id": "permafrost",
+    "category": "Natural Environment",
     "word": "permafrost",
     "chineseTranslation": "永久冻土",
+    "pinyin": "yǒng jiǔ dòng tǔ",
+    "pronunciation": "永: “yong” as in young; 久: “jyo” as in yo-yo; 冻: “dong” as in dong; 土: “too” as in tooth",
     "description": "Ground that remains frozen for two or more consecutive years, found mainly in Arctic and sub-Arctic regions; as it thaws due to warming, it releases stored carbon and methane.",
     "answerA": "A thick, compacted layer of ice and snow covering high mountain peaks year-round.",
     "answerB": "A persistent snow layer that accumulates on north-facing alpine slopes through summer.",
     "answerC": "Ground that remains frozen for two or more consecutive years, found mainly in Arctic and sub-Arctic regions; as it thaws due to warming, it releases stored carbon and methane.",
-    "example": "西伯利亚永久冻土融化正在释放甲烷，可能显著加速全球变暖。"
+    "example": "西伯利亚永久冻土融化正在释放甲烷，可能显著加速全球变暖。",
+    "exampleEnglish": "Thawing permafrost in Siberia is releasing methane and could significantly accelerate global warming."
   },
   {
     "id": "glacier-retreat",
+    "category": "Natural Environment",
     "word": "glacier retreat",
     "chineseTranslation": "冰川退缩",
+    "pinyin": "bīng chuān tuì suō",
+    "pronunciation": "冰: “bing” as in bing; 川: “chwan” as in swan; 退: “tway” as in way; 缩: “swaw” as in saw",
     "description": "The recession or shrinkage of glaciers caused by rising temperatures, reducing freshwater availability for downstream communities and contributing to sea-level rise.",
     "answerA": "The slow, gravity-driven downhill movement of glacial ice toward lower elevations and valleys.",
     "answerB": "The calving of large icebergs from glacier faces as they reach the ocean or a lake.",
     "answerC": "The recession or shrinkage of glaciers caused by rising temperatures, reducing freshwater availability for downstream communities and contributing to sea-level rise.",
-    "example": "喜马拉雅山冰川退缩威胁着数亿下游居民的长期水资源安全。"
+    "example": "喜马拉雅山冰川退缩威胁着数亿下游居民的长期水资源安全。",
+    "exampleEnglish": "Glacier retreat in the Himalayas threatens the long-term water security of hundreds of millions of people downstream."
   },
   {
     "id": "carbon-intensive",
+    "category": "Energy",
     "word": "Carbon-intensive",
     "chineseTranslation": "高碳的",
+    "pinyin": "gāo tàn de",
+    "pronunciation": "高: “gow” as in go; 碳: “tahn” as in tan; 的: “duh” as in done",
     "description": "Describes an industry, process, or product that generates large amounts of CO₂ per unit of output, such as steel production, cement manufacturing, and coal-fired electricity generation.",
     "answerA": "Describes a product or process that requires very large amounts of raw material inputs.",
     "answerB": "Describes an industry, process, or product that generates large amounts of CO₂ per unit of output, such as steel production, cement manufacturing, and coal-fired electricity generation.",
     "answerC": "Describes a country or region with particularly high per-capita energy consumption.",
-    "example": "航空业因高度依赖喷气燃料而被认为是典型的高碳行业。"
+    "example": "航空业因高度依赖喷气燃料而被认为是典型的高碳行业。",
+    "exampleEnglish": "Aviation is considered a typical carbon-intensive industry because of its heavy reliance on jet fuel."
   },
   {
     "id": "energy-intensive",
+    "category": "Energy",
     "word": "Energy-intensive",
     "chineseTranslation": "高耗能的",
+    "pinyin": "gāo hào néng de",
+    "pronunciation": "高: “gow” as in go; 耗: “how” as in how; 能: “nung” as in hung; 的: “duh” as in done",
     "description": "Describes industries or processes that consume large amounts of energy per unit of output, such as aluminum smelting, chemical production, and large-scale data centers.",
     "answerA": "Describes a technology platform that is capable of generating very large amounts of energy.",
     "answerB": "Describes a consumer product that consumes substantial electricity during its operational lifetime.",
     "answerC": "Describes industries or processes that consume large amounts of energy per unit of output, such as aluminum smelting, chemical production, and large-scale data centers.",
-    "example": "高耗能行业必须推进工艺电气化并转向可再生能源，以实现深度脱碳。"
+    "example": "高耗能行业必须推进工艺电气化并转向可再生能源，以实现深度脱碳。",
+    "exampleEnglish": "Energy-intensive industries must electrify processes and shift to renewable energy to achieve deep decarbonization."
   },
   {
     "id": "climate-roadmap",
+    "category": "Policies & Cooperation",
     "word": "Climate roadmap",
     "chineseTranslation": "气候路线图",
+    "pinyin": "qì hòu lù xiàn tú",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 路: “loo” as in loop; 线: “shyen” as in yen; 图: “too” as in tooth",
     "description": "A strategic plan outlining the policies, milestones, and timelines required to achieve long-term climate goals, such as reaching carbon neutrality by a target date.",
     "answerA": "A scientific climate projection mapping temperature and rainfall changes under different scenarios.",
     "answerB": "A strategic plan outlining the policies, milestones, and timelines required to achieve long-term climate goals, such as reaching carbon neutrality by a target date.",
     "answerC": "A document cataloguing international financial commitments made at a specific climate conference.",
-    "example": "政府发布了气候路线图，详细阐述了实现2050年净零目标的分步计划。"
+    "example": "政府发布了气候路线图，详细阐述了实现2050年净零目标的分步计划。",
+    "exampleEnglish": "The government released a climate roadmap outlining a step-by-step plan to achieve net-zero emissions by 2050."
   },
   {
     "id": "cop-conference",
+    "category": "Policies & Cooperation",
     "word": "COP Conference",
     "chineseTranslation": "缔约方大会",
+    "pinyin": "dì yuē fāng dà huì",
+    "pronunciation": "缔: “dee” as in deep; 约: “yweh” as in wet; 方: “fahng” as in song; 大: “dah” as in dot; 会: “hway” as in way",
     "description": "The annual Conference of the Parties to the UN Framework Convention on Climate Change, where world leaders and negotiators meet to advance and review global climate commitments.",
     "answerA": "A biennial summit at which G20 nations formally review and update their climate pledges.",
     "answerB": "The annual Conference of the Parties to the UN Framework Convention on Climate Change, where world leaders and negotiators meet to advance and review global climate commitments.",
     "answerC": "A regional diplomatic meeting where neighboring countries align their national climate policy approaches.",
-    "example": "格拉斯哥举办的第26届缔约方大会就逐步减少煤炭使用和削减甲烷排放作出新的国际承诺。"
+    "example": "格拉斯哥举办的第26届缔约方大会就逐步减少煤炭使用和削减甲烷排放作出新的国际承诺。",
+    "exampleEnglish": "COP26 in Glasgow produced new international commitments to phase down coal use and cut methane emissions."
   },
   {
     "id": "carbon-capture",
+    "category": "Technology",
     "word": "carbon capture",
     "chineseTranslation": "碳捕集",
+    "pinyin": "tàn bǔ jí",
+    "pronunciation": "碳: “tahn” as in tan; 捕: “boo” as in boot; 集: “jee” as in jeep",
     "description": "The process of capturing carbon dioxide—from industrial sources or the atmosphere—before or after emission, to prevent it from contributing to climate change.",
     "answerA": "The process of capturing carbon dioxide—from industrial sources or the atmosphere—before or after emission, to prevent it from contributing to climate change.",
     "answerB": "The passive absorption of CO₂ by ocean water and photosynthetic marine phytoplankton.",
     "answerC": "A national accounting system for measuring carbon dioxide stored in geological rock formations.",
-    "example": "碳捕集技术被认为是水泥等难以减排行业实现脱碳的必要手段。"
+    "example": "碳捕集技术被认为是水泥等难以减排行业实现脱碳的必要手段。",
+    "exampleEnglish": "Carbon capture technology is considered necessary for decarbonizing hard-to-abate industries such as cement."
   },
   {
     "id": "carbon-storage",
+    "category": "Technology",
     "word": "carbon storage",
     "chineseTranslation": "碳封存",
+    "pinyin": "tàn fēng cún",
+    "pronunciation": "碳: “tahn” as in tan; 封: “fung” as in hung; 存: “tsun” as in sun",
     "description": "The secure, long-term containment of captured carbon dioxide, typically in underground geological formations such as depleted oil fields or saline aquifers.",
     "answerA": "The secure, long-term containment of captured carbon dioxide, typically in underground geological formations such as depleted oil fields or saline aquifers.",
     "answerB": "The natural biological accumulation of carbon in the soil organic matter and plant biomass.",
     "answerC": "A national emissions database maintained by government agencies to track carbon reduction progress.",
-    "example": "成功的碳封存需要能够在数千年内保持稳定且不发生泄漏的地质构造。"
+    "example": "成功的碳封存需要能够在数千年内保持稳定且不发生泄漏的地质构造。",
+    "exampleEnglish": "Successful carbon storage requires geological formations that can remain stable and leak-free for thousands of years."
   },
   {
     "id": "beautiful-china",
+    "category": "Policies & Cooperation",
     "word": "Beautiful China",
     "chineseTranslation": "美丽中国",
+    "pinyin": "měi lì zhōng guó",
+    "pronunciation": "美: “may” as in may; 丽: “lee” as in Lee; 中: “jong” as in John; 国: “gwaw” as in draw",
     "description": "A Chinese national vision promoting a clean, green, and ecologically healthy environment as a core element of the country's long-term development and governance goals.",
     "answerA": "A Chinese government tourism campaign showcasing the country's scenic natural heritage.",
     "answerB": "An environmental literacy and nature education program for primary school children across China.",
     "answerC": "A Chinese national vision promoting a clean, green, and ecologically healthy environment as a core element of the country's long-term development and governance goals.",
-    "example": "「美丽中国」愿景引领着全国各地的生态保护和自然景观修复政策的制定与实施。"
+    "example": "「美丽中国」愿景引领着全国各地的生态保护和自然景观修复政策的制定与实施。",
+    "exampleEnglish": "The 'Beautiful China' vision guides the development and implementation of ecological protection and landscape restoration policies across the country."
   },
   {
     "id": "planetary-boundaries",
+    "category": "Basic Concept",
     "word": "Planetary boundaries",
     "chineseTranslation": "行星边界",
+    "pinyin": "xíng xīng biān jiè",
+    "pronunciation": "行: “shing” as in sing; 星: “shing” as in sing; 边: “byen” as in beyond; 界: “jyeh” as in yes",
     "description": "A framework identifying nine Earth system processes and the limits within which humanity must operate to maintain a stable, habitable planet; several boundaries have already been exceeded.",
     "answerA": "The maximum cumulative amount of greenhouse gases that the global atmosphere can safely absorb.",
     "answerB": "A framework identifying nine Earth system processes and the limits within which humanity must operate to maintain a stable, habitable planet; several boundaries have already been exceeded.",
     "answerC": "Scientific annual emission limits set to ensure air quality standards are not violated.",
-    "example": "科学家警告，人类已突破多项行星边界，包括气候变化和生物多样性丧失方面的边界。"
+    "example": "科学家警告，人类已突破多项行星边界，包括气候变化和生物多样性丧失方面的边界。",
+    "exampleEnglish": "Scientists warn that humanity has crossed several planetary boundaries, including those related to climate change and biodiversity loss."
   },
   {
     "id": "degradation",
+    "category": "Basic Concept",
     "word": "degradation",
     "chineseTranslation": "退化",
+    "pinyin": "tuì huà",
+    "pronunciation": "退: “tway” as in way; 化: “hwah” as in wow",
     "description": "The deterioration of land, ecosystems, or natural resources due to human activity or climate impacts, reducing their ability to support biodiversity and provide essential services.",
     "answerA": "The deterioration of land, ecosystems, or natural resources due to human activity or climate impacts, reducing their ability to support biodiversity and provide essential services.",
     "answerB": "The physical weathering and deterioration of built infrastructure over time.",
     "answerC": "The loss of soil nutrients and fertility caused by intensive, monoculture agricultural practices.",
-    "example": "土地退化降低了农业生产力，加剧了侵蚀，并加重了粮食不安全问题。"
+    "example": "土地退化降低了农业生产力，加剧了侵蚀，并加重了粮食不安全问题。",
+    "exampleEnglish": "Land degradation reduces agricultural productivity, worsens erosion, and increases food insecurity."
   },
   {
     "id": "green-recovery",
+    "category": "Policies & Cooperation",
     "word": "Green recovery",
     "chineseTranslation": "绿色复苏",
+    "pinyin": "lǜ sè fù sū",
+    "pronunciation": "绿: “loo” as in loop; 色: “suh” as in sun; 复: “foo” as in food; 苏: “soo” as in soup",
     "description": "An economic recovery strategy that prioritizes investments in clean energy, sustainable infrastructure, and environmental restoration, particularly after a crisis such as the COVID-19 pandemic.",
     "answerA": "An economic recovery strategy that prioritizes investments in clean energy, sustainable infrastructure, and environmental restoration, particularly after a crisis such as the COVID-19 pandemic.",
     "answerB": "A financial program specifically designed to repair infrastructure damaged by climate-related disasters.",
     "answerC": "A corporate restructuring strategy that integrates environmental sustainability into business models.",
-    "example": "许多经济学家呼吁采取绿色复苏方案，在重建新冠后经济的同时加速脱碳进程。"
+    "example": "许多经济学家呼吁采取绿色复苏方案，在重建新冠后经济的同时加速脱碳进程。",
+    "exampleEnglish": "Many economists have called for green recovery plans that rebuild the post-COVID economy while accelerating decarbonization."
   },
   {
     "id": "technology-transfer",
+    "category": "Technology",
     "word": "Technology transfer",
     "chineseTranslation": "技术转让",
+    "pinyin": "jì shù zhuǎn ràng",
+    "pronunciation": "技: “jee” as in jeep; 术: “shoo” as in shoe; 转: “jwan” as in swan; 让: “rahng” as in long",
     "description": "The sharing of climate-related knowledge, expertise, and technologies from developed to developing countries to help them reduce emissions and build resilience to climate impacts.",
     "answerA": "The sharing of climate-related knowledge, expertise, and technologies from developed to developing countries to help them reduce emissions and build resilience to climate impacts.",
     "answerB": "The commercial export of renewable energy equipment and components to international markets.",
     "answerC": "The sale of intellectual property rights related to patented climate technology innovations.",
-    "example": "技术转让是支持发展中国家能源转型的国际气候协议的重要支柱。"
+    "example": "技术转让是支持发展中国家能源转型的国际气候协议的重要支柱。",
+    "exampleEnglish": "Technology transfer is an important pillar of international climate agreements that support energy transitions in developing countries."
   },
   {
     "id": "climate-scenario",
+    "category": "Basic Concept",
     "word": "Climate scenario",
     "chineseTranslation": "气候情景",
+    "pinyin": "qì hòu qíng jǐng",
+    "pronunciation": "气: “chee” as in cheese; 候: “ho” as in home; 情: “ching” as in sing; 景: “jing” as in jingle",
     "description": "A plausible description of future climate conditions based on different assumptions about greenhouse gas emissions, policy choices, and socioeconomic development pathways, used for planning and risk assessment.",
     "answerA": "A plausible description of future climate conditions based on different assumptions about greenhouse gas emissions, policy choices, and socioeconomic development pathways, used for planning and risk assessment.",
     "answerB": "An official government projection of the expected impacts of currently implemented climate policy.",
     "answerC": "A set of historical climate records used as a reference to calibrate and validate climate models.",
-    "example": "气候情景帮助企业和政府为高温和低温变暖的不同未来做好规划准备。"
+    "example": "气候情景帮助企业和政府为高温和低温变暖的不同未来做好规划准备。",
+    "exampleEnglish": "Climate scenarios help companies and governments prepare for different futures with higher or lower levels of warming."
   },
   {
     "id": "fossil-fuel-phase-out",
+    "category": "Energy",
     "word": "Fossil fuel phase-out",
     "chineseTranslation": "淘汰化石燃料",
+    "pinyin": "táo tài huà shí rán liào",
+    "pronunciation": "淘: “tao” as in towel; 汰: “tie” as in tie; 化: “hwah” as in wow; 石: “shur” as in shirt; 燃: “rahn” as in run; 料: “lyow” as in meow",
     "description": "The gradual and systematic elimination of coal, oil, and natural gas from energy systems, replacing them with renewable energy sources to achieve decarbonization goals.",
     "answerA": "The scheduled decommissioning of aging fossil fuel power plants after they reach end of operational life.",
     "answerB": "A voluntary industry program for retiring coal plants in exchange for carbon credits on the market.",
     "answerC": "The gradual and systematic elimination of coal, oil, and natural gas from energy systems, replacing them with renewable energy sources to achieve decarbonization goals.",
-    "example": "第28届缔约方大会协议包含了各方向摆脱化石燃料过渡的历史性呼吁。"
+    "example": "第28届缔约方大会协议包含了各方向摆脱化石燃料过渡的历史性呼吁。",
+    "exampleEnglish": "The COP28 agreement included a historic call for all parties to transition away from fossil fuels."
   },
   {
     "id": "subsidy",
+    "category": "Policies & Cooperation",
     "word": "subsidy",
     "chineseTranslation": "补贴",
+    "pinyin": "bǔ tiē",
+    "pronunciation": "补: “boo” as in boot; 贴: “tyeh” as in yes",
     "description": "Financial support provided by a government to lower the cost of a product or service; fossil fuel subsidies artificially reduce fossil fuel costs, while green subsidies incentivize clean energy adoption.",
     "answerA": "Financial support provided by a government to lower the cost of a product or service; fossil fuel subsidies artificially reduce fossil fuel costs, while green subsidies incentivize clean energy adoption.",
     "answerB": "A consumer tax rebate given to households that purchase certified energy-efficient appliances.",
     "answerC": "An international transfer payment made to developing countries for meeting climate commitments.",
-    "example": "改革化石燃料补贴可以将数千亿美元的资金重新引导至清洁能源投资领域。"
+    "example": "改革化石燃料补贴可以将数千亿美元的资金重新引导至清洁能源投资领域。",
+    "exampleEnglish": "Reforming fossil fuel subsidies can redirect hundreds of billions of dollars toward clean energy investment."
   },
   {
     "id": "transition-pathway",
+    "category": "Policies & Cooperation",
     "word": "Transition pathway",
     "chineseTranslation": "转型路径",
+    "pinyin": "zhuǎn xíng lù jìng",
+    "pronunciation": "转: “jwan” as in swan; 型: “shing” as in sing; 路: “loo” as in loop; 径: “jing” as in jingle",
     "description": "A detailed, evidence-based plan describing how a country, sector, or company will progressively transform its activities to achieve low-carbon or net-zero targets over time.",
     "answerA": "A scientific analysis projecting how climate change will physically affect a specific economic sector.",
     "answerB": "An investor assessment framework for evaluating climate-related financial risks in asset portfolios.",
     "answerC": "A detailed, evidence-based plan describing how a country, sector, or company will progressively transform its activities to achieve low-carbon or net-zero targets over time.",
-    "example": "钢铁企业正在制定转型路径，以绿氢替代煤炭，实现净零排放目标。"
+    "example": "钢铁企业正在制定转型路径，以绿氢替代煤炭，实现净零排放目标。",
+    "exampleEnglish": "Steel companies are developing transition pathways to replace coal with green hydrogen and achieve net-zero emissions."
   },
   {
     "id": "infrastructure",
+    "category": "Basic Concept",
     "word": "infrastructure",
     "chineseTranslation": "基础设施",
+    "pinyin": "jī chǔ shè shī",
+    "pronunciation": "基: “jee” as in jeep; 础: “choo” as in chew; 设: “shuh” as in shut; 施: “shur” as in shirt",
     "description": "The fundamental physical systems needed for the operation of society, including transport networks, energy systems, and water supply; must be both climate-resilient and low-carbon.",
     "answerA": "The financial institutions and capital market systems that underpin economic development.",
     "answerB": "The fundamental physical systems needed for the operation of society, including transport networks, energy systems, and water supply; must be both climate-resilient and low-carbon.",
     "answerC": "The administrative, legal, and regulatory frameworks that govern land use and urban planning.",
-    "example": "气候韧性基础设施对于保护社区免受日益增长的气候变化影响至关重要。"
+    "example": "气候韧性基础设施对于保护社区免受日益增长的气候变化影响至关重要。",
+    "exampleEnglish": "Climate-resilient infrastructure is essential for protecting communities from the growing impacts of climate change."
   }
 ]
