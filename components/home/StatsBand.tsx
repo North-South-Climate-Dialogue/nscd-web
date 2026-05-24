@@ -1,7 +1,7 @@
 const steps = [
   { word: "LEARN", caption: "149 bilingual climate terms" },
   { word: "PRACTICE", caption: "Flashcards · Quiz · Real sentences" },
-  { word: "MATCH", caption: "In-person language exchange in Vancouver" },
+  { word: "DIALOGUE", caption: "In-person language exchange in Vancouver" },
 ];
 
 export default function StatsBand() {
