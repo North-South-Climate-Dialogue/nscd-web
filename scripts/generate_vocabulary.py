@@ -11,6 +11,14 @@ Rules:
   - NEVER rename or delete an existing slug — doing so will break
     saved user progress in Supabase. Only ADD new rows.
   - The script will warn you if it detects any duplicate slugs.
+
+Columns expected (from the latest workbook):
+  Required:  Word, Chinese Translation, Description,
+             Answer A, Answer B, Answer C, Example
+  Added:     Category, Chinese Pinyin, English Pronunciation Guide,
+             Example English Translation
+  Optional columns are emitted as empty strings when missing, so
+  older workbook variants still work.
 """
 
 import json
@@ -51,21 +59,40 @@ def main():
 
     required_columns = [
         'Word', 'Chinese Translation', 'Description',
-        'Answer A', 'Answer B', 'Answer C', 'Example'
+        'Answer A', 'Answer B', 'Answer C', 'Example',
     ]
     missing = [col for col in required_columns if col not in df.columns]
     if missing:
         print(f"Error: Missing columns in Excel file: {missing}")
         sys.exit(1)
 
+    # Optional columns added in later workbook versions. Filled in with "" when
+    # the column is missing so the script keeps working on older files.
+    OPTIONAL_FIELDS = [
+        ('category',         'Category'),
+        ('pinyin',           'Chinese Pinyin'),
+        ('pronunciation',    'English Pronunciation Guide'),
+        ('exampleEnglish',   'Example English Translation'),
+    ]
+
+    def cell(row, column: str) -> str:
+        """Trim a cell, returning '' for missing columns or empty values."""
+        if column not in row:
+            return ""
+        val = row[column]
+        if val is None:
+            return ""
+        s = str(val).strip()
+        return "" if s == "nan" else s
+
     vocab = []
     slugs_seen = {}
 
     for i, row in df.iterrows():
-        word = str(row['Word']).strip()
+        word = cell(row, 'Word')
 
         # Skip empty rows
-        if not word or word == 'nan':
+        if not word:
             continue
 
         slug = slugify(word)
@@ -80,21 +107,37 @@ def main():
         else:
             slugs_seen[slug] = i + 2  # +2 for 1-based row + header row
 
-        vocab.append({
+        entry = {
             "id":                 slug,
+            "category":           cell(row, 'Category'),
             "word":               word,
-            "chineseTranslation": str(row['Chinese Translation']).strip(),
-            "description":        str(row['Description']).strip(),
-            "answerA":            str(row['Answer A']).strip(),
-            "answerB":            str(row['Answer B']).strip(),
-            "answerC":            str(row['Answer C']).strip(),
-            "example":            str(row['Example']).strip(),
-        })
+            "chineseTranslation": cell(row, 'Chinese Translation'),
+            "pinyin":             cell(row, 'Chinese Pinyin'),
+            "pronunciation":      cell(row, 'English Pronunciation Guide'),
+            "description":        cell(row, 'Description'),
+            "answerA":            cell(row, 'Answer A'),
+            "answerB":            cell(row, 'Answer B'),
+            "answerC":            cell(row, 'Answer C'),
+            "example":            cell(row, 'Example'),
+            "exampleEnglish":     cell(row, 'Example English Translation'),
+        }
+
+        # Sanity check: exactly one of A/B/C should match the description verbatim.
+        matches = sum(1 for k in ('answerA', 'answerB', 'answerC')
+                      if entry[k] == entry['description'])
+        if matches != 1:
+            print(
+                f"Warning: row {i + 2} ('{word}'): "
+                f"{matches} of A/B/C match the description — expected exactly 1."
+            )
+
+        vocab.append(entry)
 
     # Write output
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
         json.dump(vocab, f, ensure_ascii=False, indent=2)
+        f.write('\n')
 
     print(f"Done! {len(vocab)} words written to: {OUTPUT_FILE.relative_to(PROJECT_ROOT)}")
 
