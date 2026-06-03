@@ -331,7 +331,7 @@
     <h1><span class="stroke">NSCD</span>Web<br />Build Review.</h1>
     <p>
       Bilingual climate learning platform — Home, About, Contact, Events,
-      Learning (Glossary · Pinyin Guide · Flashcards), Quiz, Blog (MDX),
+      Learning (Glossary · Pinyin Guide · Flashcards · Test your understanding), Quiz, Blog (MDX),
       Sign up / Log in, and a full /account dashboard. This page has a
       screenshot of every shipped route — no dev server needed to review.
     </p>
@@ -416,7 +416,7 @@
           <ul>
             <li>QiQi mascot · animated wave + bilingual bubbles</li>
             <li>Two sample vocab cards (Climate · Net Zero)</li>
-            <li>CTAs into Glossary and Quiz</li>
+            <li>CTAs into Glossary and Test your understanding</li>
             <li>Full footer with land acknowledgement</li>
           </ul>
           <a class="src" href="https://github.com/North-South-Climate-Dialogue/nscd-web/blob/main/app/page.tsx" target="_blank">Source on GitHub →</a>
@@ -577,14 +577,17 @@
             <span class="route">/quiz</span>
           </div>
           <p>
-            Multiple-choice rounds drawn from <code>answerA/B/C</code>. Setup
-            → Play → Results. Three-button choice picker, instant feedback,
-            missed-words review at the end with deep-links into the glossary.
+            A standalone 20-question round that mixes three question types at
+            random — Setup → Play → Results, with instant feedback and a
+            missed-words review that deep-links into the glossary. (The classic
+            definition-matching quiz now lives under LEARN as
+            <strong>Test your understanding</strong> at <code>/learning/quiz</code>.)
           </p>
           <ul>
-            <li>5 / 10 / 20 / All round length · 9-category filter</li>
-            <li>Live timer · animated progress bar</li>
-            <li>Auto-marks correct answers as learned</li>
+            <li>填空 — fill the blanked term into a Chinese example sentence</li>
+            <li>配对 — match a Chinese term to its English word or definition</li>
+            <li>组字 — pick the missing character to complete a Chinese phrase</li>
+            <li>20 random questions · 9-category filter · auto-marks correct as learned</li>
             <li>Keyboard: 1 / 2 / 3 to choose · Enter to advance</li>
           </ul>
           <a class="src" href="https://github.com/North-South-Climate-Dialogue/nscd-web/blob/main/app/quiz/page.tsx" target="_blank">Source on GitHub →</a>
@@ -877,13 +880,6 @@ npm run dev</pre>
         progress saves to localStorage. Once auth is live, swap the import in
         <code>hooks/useProgress.ts</code> to use
         <code>lib/supabase/vocabulary-progress.ts</code> (already written).
-      </li>
-      <li>
-        <strong>Fill-in-the-Blank quiz mode</strong>
-        (<a href="https://github.com/North-South-Climate-Dialogue/nscd-web/issues/1" target="_blank" style="color:var(--coral);border-bottom:2px solid var(--coral)">issue #1</a>) —
-        new game type that blanks out the vocab term from the Chinese example
-        sentence. No backend changes needed; everything's in
-        <code>vocabulary.json</code> already.
       </li>
       <li>
         <strong>Cohort / contributions / tasks schema</strong>

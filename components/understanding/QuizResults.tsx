@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { QuizQuestion } from "@/lib/quiz/build";
+import type { QuizQuestion } from "@/lib/quiz/understanding";
 
 export interface QuizAnswer {
   questionIndex: number;
@@ -27,14 +27,10 @@ export default function QuizResults({
   const pct = total === 0 ? 0 : Math.round((correct / total) * 100);
   const missed = answers
     .filter((a) => !a.correct)
-    .map((a) => {
-      const question = questions[a.questionIndex];
-      return {
-        question,
-        chosen: question.choices[a.chosenIndex],
-        correctChoice: question.choices.find((c) => c.correct),
-      };
-    });
+    .map((a) => ({
+      question: questions[a.questionIndex],
+      chosen: questions[a.questionIndex].choices[a.chosenIndex],
+    }));
 
   const mm = String(Math.floor(elapsedSec / 60)).padStart(2, "0");
   const ss = String(elapsedSec % 60).padStart(2, "0");
@@ -132,17 +128,11 @@ export default function QuizResults({
                   </p>
                 </div>
 
-                {/* "Correct" — the right choice for this question */}
+                {/* "Correct" — labelled, full wrap, coral accent */}
                 <div className="mt-4 w-full min-w-0">
-                  <div className="label-mono text-coral mb-1">Correct answer</div>
+                  <div className="label-mono text-coral mb-1">Correct</div>
                   <p
-                    className="block w-full min-w-0 text-ink text-[15px] md:text-[16px] leading-[1.65] font-semibold"
-                    style={{ overflowWrap: "anywhere", wordBreak: "normal" }}
-                  >
-                    {m.correctChoice?.text}
-                  </p>
-                  <p
-                    className="mt-1.5 block w-full min-w-0 text-ink/70 text-[14px] leading-[1.6]"
+                    className="block w-full min-w-0 text-ink text-[15px] md:text-[16px] leading-[1.65]"
                     style={{ overflowWrap: "anywhere", wordBreak: "normal" }}
                   >
                     {m.question.entry.description}

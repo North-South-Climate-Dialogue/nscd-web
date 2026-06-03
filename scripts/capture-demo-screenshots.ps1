@@ -18,7 +18,7 @@ $pages = @(
   @{ id = "glossary-detail";   path = "/learning/glossary?sel=climate" },
   @{ id = "pinyin-guide";      path = "/learning/pinyin-guide" },
   @{ id = "flashcards";        path = "/learning/flashcards" },
-  @{ id = "quiz";              path = "/quiz" },
+  @{ id = "quiz";              path = "/learning/quiz" },
   @{ id = "blog";              path = "/blog" },
   @{ id = "blog-post";         path = "/blog/cityhive-shifting-systems-2025" },
   @{ id = "signup";            path = "/signup" },

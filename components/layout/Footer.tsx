@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-ink text-paper mt-24 border-t-[6px] border-ink">
       <div className="max-w-[1200px] mx-auto px-8 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-[1.6fr_1.2fr_0.8fr_1fr_1fr] gap-10">
           <div>
             <Image
               src="/logo/NSCD_Logo_DarkBlue.png"
@@ -22,6 +22,7 @@ export default function Footer() {
             { href: "/learning/glossary",     label: "Glossary" },
             { href: "/learning/pinyin-guide", label: "Simple Pinyin Guide" },
             { href: "/learning/flashcards",   label: "Flashcards" },
+            { href: "/learning/quiz",         label: "Test your understanding" },
           ]} />
           <FooterCol heading="Quiz" items={[
             { href: "/quiz", label: "Take the quiz" },

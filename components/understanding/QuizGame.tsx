@@ -4,9 +4,9 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import type { VocabEntry } from "@/types/vocabulary";
 import { catSlug } from "@/lib/glossary/filters";
-import { buildQuiz, DEFAULT_ROUND, type QuizQuestion } from "@/lib/quiz/build";
+import { buildQuiz, type QuizQuestion } from "@/lib/quiz/understanding";
 import { useProgress } from "@/hooks/useProgress";
-import QuizSetup from "./QuizSetup";
+import QuizSetup, { type RoundLength } from "./QuizSetup";
 import QuizPlay from "./QuizPlay";
 import QuizResults, { type QuizAnswer } from "./QuizResults";
 
@@ -20,6 +20,7 @@ export default function QuizGame({ entries }: { entries: VocabEntry[] }) {
 
   const cat = searchParams.get("cat") ?? "";
 
+  const [length, setLength] = useState<RoundLength>(10);
   const [phase, setPhase] = useState<Phase>("setup");
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -58,10 +59,10 @@ export default function QuizGame({ entries }: { entries: VocabEntry[] }) {
   );
 
   const handleStart = useCallback(() => {
-    const count = Math.min(DEFAULT_ROUND, pool.length);
+    const count = length === 0 ? pool.length : Math.min(length, pool.length);
     if (count === 0) return;
-    startRound(buildQuiz(pool, entries, count));
-  }, [entries, pool, startRound]);
+    startRound(buildQuiz(pool, count));
+  }, [length, pool, startRound]);
 
   const handleRetry = useCallback(() => {
     startRound(questions); // same questions, reshuffled choices? keep same for fairness
@@ -140,9 +141,10 @@ export default function QuizGame({ entries }: { entries: VocabEntry[] }) {
     return (
       <QuizSetup
         cat={cat}
+        length={length}
         available={pool.length}
-        roundSize={Math.min(DEFAULT_ROUND, pool.length)}
         onChangeCat={writeCat}
+        onChangeLength={setLength}
         onStart={handleStart}
       />
     );

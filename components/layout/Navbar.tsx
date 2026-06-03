@@ -17,6 +17,7 @@ const NAV: NavItem[] = [
       { href: "/learning/glossary",     label: "Glossary" },
       { href: "/learning/pinyin-guide", label: "Simple Pinyin Guide" },
       { href: "/learning/flashcards",   label: "Flashcards" },
+      { href: "/learning/quiz",         label: "Test your understanding" },
     ],
   },
   { href: "/quiz", label: "Quiz" },
