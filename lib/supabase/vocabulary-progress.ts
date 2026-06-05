@@ -40,6 +40,38 @@ export async function markVocabCompleted(vocabId: string): Promise<void> {
 
 
 // ------------------------------------------------------------
+// unmarkVocabCompleted
+//
+// Removes the completion record for a vocabulary word, letting
+// the user reset and re-learn it. Mirrors the same function in
+// lib/progress/local.ts — same name, same signature.
+//
+// Safe to call even if the word was never completed — does
+// nothing in that case rather than throwing.
+//
+// Usage:
+//   await unmarkVocabCompleted('carbon-neutrality')
+// ------------------------------------------------------------
+export async function unmarkVocabCompleted(vocabId: string): Promise<void> {
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) {
+    throw new Error('unmarkVocabCompleted: no authenticated user')
+  }
+
+  const { error } = await supabase
+    .from('vocabulary_progress')
+    .delete()
+    .eq('user_id', user.id)
+    .eq('vocab_id', vocabId)
+
+  if (error) {
+    throw new Error(`unmarkVocabCompleted failed for "${vocabId}": ${error.message}`)
+  }
+}
+
+
+// ------------------------------------------------------------
 // getUserProgress
 //
 // Returns all vocabulary progress rows for the current user.
