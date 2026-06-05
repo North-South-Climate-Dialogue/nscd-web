@@ -143,21 +143,11 @@ create table if not exists public.workshop_cohorts (
 create index if not exists workshop_cohorts_facilitator_id_idx
   on public.workshop_cohorts (facilitator_id);
 
--- RLS
+-- RLS enabled here; policies that reference cohort_members are
+-- added AFTER that table is created below (ordering fix).
 alter table public.workshop_cohorts enable row level security;
 
--- Members can see cohorts they belong to
-create policy "Members can view their cohorts"
-  on public.workshop_cohorts for select
-  using (
-    exists (
-      select 1 from public.cohort_members
-      where cohort_id = workshop_cohorts.id
-      and   user_id   = auth.uid()
-    )
-  );
-
--- Facilitators can create and manage cohorts
+-- Facilitators can create and manage cohorts (no cross-table ref)
 create policy "Facilitators can insert cohorts"
   on public.workshop_cohorts for insert
   with check (
@@ -236,6 +226,18 @@ create policy "Facilitators can manage cohort members"
       select 1 from public.workshop_cohorts wc
       where wc.id = cohort_members.cohort_id
       and   wc.facilitator_id = auth.uid()
+    )
+  );
+
+-- workshop_cohorts policy that references cohort_members —
+-- added here now that cohort_members exists.
+create policy "Members can view their cohorts"
+  on public.workshop_cohorts for select
+  using (
+    exists (
+      select 1 from public.cohort_members
+      where cohort_id = workshop_cohorts.id
+      and   user_id   = auth.uid()
     )
   );
 
