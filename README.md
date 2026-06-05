@@ -215,11 +215,4 @@ nscd-web/
 
 ---
 
-## The team
-
-| Name | Role |
-|---|---|
-| **Hailin Wang** 王海琳 | Co-founder, backend & data |
-| **Junhua Qu** 曲君华 | Co-founder, product & vision |
-
 Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [Supabase](https://supabase.com).
