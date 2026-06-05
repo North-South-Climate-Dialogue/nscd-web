@@ -1,160 +1,225 @@
-# nscd-web
-Web game development
-# NSCD Backend — How It Works
+# North South Climate Dialogue — Web Platform
 
-This document explains how the NSCD app stores and manages data.
-No coding knowledge required to understand this!
+**NSCD** is a bilingual climate vocabulary learning platform that helps English and Mandarin Chinese speakers learn climate terminology together — through flashcards, quizzes, and in-person collaborative workshops in Vancouver.
 
----
-
-## The Big Picture
-
-The NSCD app has two types of information to manage:
-
-1. **The vocabulary content** — the actual climate words, their Chinese translations, definitions, and example sentences.
-2. **User progress** — which words each person has completed.
-
-These two types of information are stored in **different places**, for a good reason. Here's why.
+> *"Deconstruct. Translate. Rebuild."*
 
 ---
 
-## Where the Vocabulary Content Lives — Local File
+## What the website does
 
-All 149 climate vocabulary words are stored in a single file on the app's own server:
+The NSCD website has several sections, each serving a different purpose:
+
+| Section | What it does |
+|---|---|
+| **Home** | Introduction to NSCD, QiQi the mascot, and live platform stats |
+| **Glossary** | Browse all 149 bilingual climate terms, filter by category, track progress |
+| **Flashcards** | Flip-card study mode — EN → 中文 or 中文 → EN, with pinyin and pronunciation |
+| **Quiz** | Multiple-choice rounds drawn from the vocabulary, with immediate feedback |
+| **Pinyin Guide** | A simple guide to Mandarin pronunciation for English speakers |
+| **Blog** | Field notes, workshop recaps, and essays on climate language |
+| **About** | Who we are, our mission, QiQi's origin story, and co-founder bios |
+| **Events** | Upcoming workshops and community events |
+| **Contact** | Get in touch or express interest in joining |
+| **Account** | Personal progress dashboard, language goals, and workshop matching form |
+
+---
+
+## The two building blocks
+
+The website is made of two separate systems that work together:
+
+### 🗂️ 1. The vocabulary list (local file)
+
+All 149 climate terms live in a single file:
 
 ```
 data/vocabulary.json
 ```
 
-Think of this like a **laminated reference card** — it never changes unless we deliberately update it. Every word has a unique ID (called a "slug") that looks like this:
+Each word contains everything the app needs to display and quiz it:
 
-| English Word | Unique ID (slug) |
-|---|---|
-| Carbon Neutrality | `carbon-neutrality` |
-| Net Zero | `net-zero` |
-| Dual Carbon Goals | `dual-carbon-goals` |
-| "1+N" Policy Framework | `1-plus-n-policy-framework` |
-
-This ID is the key that connects the vocabulary content to the user's progress.
-
-**Why store it locally instead of in a database?**
-- The vocabulary list doesn't change often — it doesn't need to be in a live database.
-- It's faster to read from a local file than to make a database request every time.
-- It keeps the database simple and cheap to run.
-
----
-
-## Where User Progress Lives — Supabase
-
-[Supabase](https://supabase.com) is the app's online database. It handles two things:
-
-### 1. User Accounts (Authentication)
-When someone signs up for NSCD, Supabase creates their account and handles their login securely. We never store passwords ourselves — Supabase takes care of all of that.
-
-When a new user signs up, the database **automatically** creates a profile for them. No manual work needed.
-
-### 2. Vocabulary Progress
-Every time a user completes a vocabulary word, the app saves a small record to Supabase that looks like this:
-
-| Field | Example | What it means |
+| Field | Example | What it is |
 |---|---|---|
-| `user_id` | `a1b2c3...` | Which user completed it |
-| `vocab_id` | `carbon-neutrality` | Which word they completed |
-| `completed` | `true` | Whether it's done |
-| `completed_at` | `2026-05-18 10:32:00` | When they completed it |
+| `id` | `net-zero` | A unique stable identifier for the word |
+| `word` | Net Zero | The English term |
+| `chineseTranslation` | 净零排放 | The Mandarin translation |
+| `pinyin` | jìng líng pái fàng | How to pronounce it |
+| `pronunciation` | "jing" as in jingle... | Plain English pronunciation guide |
+| `category` | Basic Concept | One of 9 topic categories |
+| `description` | A state in which... | The correct definition |
+| `answerA/B/C` | Three options... | Quiz answer choices (one is correct) |
+| `example` | 英国的目标是... | Example sentence in Chinese |
+| `exampleEnglish` | The UK aims to... | English translation of the example |
 
-That's it. Supabase does **not** store the word definitions, translations, or quiz answers — just the completion record.
-
----
-
-## How They Connect
-
-Here's the flow when a user completes a word:
-
-```
-User completes "Carbon Neutrality"
-        ↓
-App looks up the word's ID from vocabulary.json
-        → ID is "carbon-neutrality"
-        ↓
-App saves to Supabase:
-        → user_id: "this user"
-        → vocab_id: "carbon-neutrality"
-        → completed: true
-```
-
-And when the app loads a user's progress page:
-
-```
-App fetches all completed vocab_ids from Supabase
-        → ["carbon-neutrality", "net-zero", "methane", ...]
-        ↓
-App reads the full word details from vocabulary.json
-        → looks up each ID to get the word, translation, definition
-        ↓
-Shows the user their completed words with full content
-```
-
-The `vocab_id` slug is the **bridge** between the two systems.
+**To add new words:** update `Vocabulary List.xlsx` and run `python3 scripts/generate_vocabulary.py`. That's it — no database changes needed.
 
 ---
 
-## Privacy & Security
+### 🗄️ 2. The database (Supabase)
 
-- Each user can **only see their own progress** — it's impossible for one user to read another user's data. This is enforced at the database level (called "Row Level Security").
-- Users are automatically **siloed** from each other. Even if someone tried to access another user's data, the database would refuse.
+[Supabase](https://supabase.com) is the app's secure online database. It stores only what needs to be personalised per user — not the vocabulary content itself.
+
+Think of it this way:
+
+> The vocabulary file is a **shared textbook** everyone reads from.
+> The database is each student's **personal notebook** — private to them.
+
+The database has three layers of functionality:
+
+#### User accounts
+When someone signs up, Supabase securely manages their email, password, and login session. A profile is automatically created for them — no manual work needed.
+
+#### Vocabulary progress
+Every time a user completes a word, a small record is saved:
+
+| What's saved | Example |
+|---|---|
+| Which user | `a1b2-c3d4...` (anonymous ID) |
+| Which word | `net-zero` |
+| Completed? | Yes |
+| When | 4 June 2026, 10:32am |
+
+#### Collaboration (future features)
+The database is also set up for upcoming collaborative features — workshop cohorts, glossary contributions, and translation tasks. These tables exist and are ready but don't have a frontend yet.
 
 ---
 
-## The Three Helper Functions
+## How the vocabulary file and database connect
 
-The app uses three simple functions to talk to Supabase:
-
-### `markVocabCompleted("carbon-neutrality")`
-> "This user just finished the word 'Carbon Neutrality'. Save it."
-
-Saves a completion record. Safe to call multiple times — it won't create duplicates.
-
-### `getUserProgress()`
-> "Give me a list of everything this user has completed."
-
-Returns all completed words for the logged-in user, most recent first. The frontend uses this to show progress stats and highlight finished words.
-
-### `isVocabCompleted("carbon-neutrality")`
-> "Has this user already completed 'Carbon Neutrality'? Yes or no."
-
-Returns `true` or `false`. Useful for showing a checkmark on a word card, or skipping already-completed words in the quiz.
-
----
-
-## File Map
+The word ID (called a "slug") is the bridge between the two systems. For example:
 
 ```
-Web/
-├── data/
-│   └── vocabulary.json          ← All 149 climate words (local, not in database)
+Vocabulary file knows:   net-zero → "Net Zero" → 净零排放 → definition → quiz answers
+Database knows:          user abc123 completed net-zero on 4 June 2026
+```
+
+When a user loads their progress page, the app:
+1. Fetches their completed word IDs from the database
+2. Looks up the full details for each word from the vocabulary file
+3. Displays everything together
+
+---
+
+## Privacy and security
+
+- Every user can **only see their own data** — the database enforces this automatically
+- **No social features** — there are no follower lists, public feeds, or direct messages
+- Users collaborate through shared learning tasks and workshops, not through each other's profiles
+
+---
+
+## Pages and features at a glance
+
+### Available now (no account needed)
+- ✅ Home page with platform stats
+- ✅ Full glossary with search, filter, and sort
+- ✅ Flashcard deck (EN ↔ 中文, by category)
+- ✅ Multiple-choice quiz
+- ✅ Pinyin pronunciation guide
+- ✅ Blog
+- ✅ About, Events, Contact pages
+
+### Available when logged in
+- ✅ Personal progress dashboard (words learned, streaks, by category)
+- ✅ Language goals form
+- ✅ Workshop matching form (for in-person pairing)
+
+### Coming soon
+- 🔜 Fill-in-the-blank quiz mode (see [issue #1](../../issues/1))
+- 🔜 Glossary contributions (suggest improved translations)
+- 🔜 Workshop cohorts (join a learning group with a code)
+- 🔜 Collaborative translation tasks
+
+---
+
+## Deployment status
+
+| Step | Status |
+|---|---|
+| Vocabulary data (149 words, all fields) | ✅ Done |
+| Database schema (users, progress, collaboration) | ✅ Live on Supabase |
+| Frontend (Next.js app, all pages) | ✅ Built |
+| Deploy to Vercel | 🔜 [Issue #10](../../issues/10) |
+| Configure Supabase auth for production | 🔜 [Issue #9](../../issues/9) |
+| Connect custom domain | 🔜 [Issue #11](../../issues/11) |
+| Wire live stats to home page | 🔜 [Issue #7](../../issues/7) |
+| Swap localStorage → Supabase progress | 🔜 [Issue #8](../../issues/8) |
+
+---
+
+## How to make content changes
+
+### Adding or editing a blog post
+Blog posts live in `content/blog/` as plain text files. To add one:
+1. Go to `content/blog/` on GitHub
+2. Click **Add file → Create new file**
+3. Name it `your-post-title.mdx`
+4. Write your content (see an existing post for the format)
+5. Click **Commit changes** — the site rebuilds automatically
+
+### Adding new vocabulary words
+1. Open `Vocabulary List.xlsx` and add new rows
+2. Run `python3 scripts/generate_vocabulary.py`
+3. Commit and push the updated `data/vocabulary.json`
+4. No database changes needed
+
+### Updating team photos or images
+Drop new images into the `public/` folder, commit, and push.
+
+---
+
+## Project structure
+
+```
+nscd-web/
 │
-├── supabase/
-│   ├── migrations/
-│   │   └── 001_initial_schema.sql  ← Instructions for setting up the database tables
-│   └── README.md                ← This file
+├── 📄 data/
+│   └── vocabulary.json          All 149 climate terms (the shared textbook)
 │
-└── lib/
-    └── supabase/
-        ├── client.ts            ← Opens the connection to Supabase
-        ├── types.ts             ← Describes the shape of data in the database
-        └── vocabulary-progress.ts  ← The three helper functions above
+├── 📄 content/
+│   └── blog/                    Blog posts as plain text files (.mdx)
+│
+├── 📄 public/                   Images, logos, QiQi artwork
+│
+├── 📄 app/                      Every page of the website
+│   ├── page.tsx                 Home
+│   ├── about/                   About page
+│   ├── learning/                Glossary, flashcards, quiz, pinyin guide
+│   ├── account/                 Dashboard, goals, matching, progress
+│   ├── blog/                    Blog index and posts
+│   └── auth/                    Sign up, log in, email callback
+│
+├── 📄 components/               Reusable building blocks for each page
+│
+├── 📄 lib/                      Behind-the-scenes logic
+│   ├── supabase/                Database helpers
+│   │   ├── client.ts            Opens the connection to Supabase
+│   │   ├── types.ts             Describes the shape of the data
+│   │   ├── vocabulary-progress.ts  Mark/unmark/check word completion
+│   │   └── stats.ts             Live platform stats for the home page
+│   ├── progress/                Progress tracking (localStorage fallback)
+│   ├── auth/                    Login and session management
+│   └── vocabulary/              Reads from vocabulary.json
+│
+├── 📄 scripts/
+│   └── generate_vocabulary.py   Converts the Excel file → vocabulary.json
+│
+└── 📄 supabase/
+    ├── migrations/
+    │   ├── 001_initial_schema.sql    User profiles + vocabulary progress
+    │   ├── 002_platform_stats.sql    Live stats function for home page
+    │   └── 003_collaboration_schema.sql  Cohorts, tasks, contributions
+    └── README.md                Detailed backend architecture notes
 ```
 
 ---
 
-## What's NOT in the Database (Yet)
+## The team
 
-To keep the MVP simple, the following are **deliberately left out** for now:
+| Name | Role |
+|---|---|
+| **Hailin Wang** 王海琳 | Co-founder, backend & data |
+| **Junhua Qu** 曲君华 | Co-founder, product & vision |
 
-- ❌ Quiz scores or attempts
-- ❌ Full vocabulary word content (definitions, translations)
-- ❌ Matching game data
-- ❌ Word categories or difficulty levels
-
-These can be added later as the product grows.
+Built with [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), and [Supabase](https://supabase.com).
