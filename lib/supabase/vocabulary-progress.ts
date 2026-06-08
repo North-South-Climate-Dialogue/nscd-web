@@ -1,4 +1,29 @@
-import { supabase } from './client'
+/**
+ * lib/supabase/vocabulary-progress.ts
+ *
+ * Supabase-backed vocabulary progress helpers.
+ *
+ * IMPORTANT — client injection pattern (Option A from issue #12):
+ * These functions accept a SupabaseClient parameter instead of importing a
+ * singleton. This ensures the session-aware SSR client (@supabase/ssr,
+ * cookie-based) is used rather than a plain createClient() that reads
+ * localStorage and cannot see the logged-in session.
+ *
+ * Usage in a client component:
+ *   import { getBrowserSupabase } from '@/lib/auth/browser'
+ *   const client = getBrowserSupabase()
+ *   if (client) await markVocabCompleted(client, 'carbon-neutrality')
+ *
+ * Usage in a server component / action:
+ *   import { getServerSupabase } from '@/lib/auth/server'
+ *   const client = getServerSupabase()
+ *   if (client) await getUserProgress(client)
+ *
+ * The router that chooses between localStorage (logged-out) and these
+ * Supabase helpers (logged-in) lives in lib/progress/index.ts (issue #8).
+ */
+
+import type { SupabaseClient } from '@supabase/supabase-js'
 import type { VocabularyProgressRow } from './types'
 
 // ------------------------------------------------------------
@@ -9,9 +34,12 @@ import type { VocabularyProgressRow } from './types'
 // create duplicate rows.
 //
 // Usage:
-//   await markVocabCompleted('carbon-neutrality')
+//   await markVocabCompleted(client, 'carbon-neutrality')
 // ------------------------------------------------------------
-export async function markVocabCompleted(vocabId: string): Promise<void> {
+export async function markVocabCompleted(
+  supabase: SupabaseClient,
+  vocabId: string,
+): Promise<void> {
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) {
@@ -27,10 +55,7 @@ export async function markVocabCompleted(vocabId: string): Promise<void> {
         completed:    true,
         completed_at: new Date().toISOString(),
       },
-      {
-        // Match on the unique (user_id, vocab_id) pair
-        onConflict: 'user_id,vocab_id',
-      }
+      { onConflict: 'user_id,vocab_id' },
     )
 
   if (error) {
@@ -44,15 +69,17 @@ export async function markVocabCompleted(vocabId: string): Promise<void> {
 //
 // Removes the completion record for a vocabulary word, letting
 // the user reset and re-learn it. Mirrors the same function in
-// lib/progress/local.ts — same name, same signature.
+// lib/progress/local.ts — same name, same signature (+ client).
 //
-// Safe to call even if the word was never completed — does
-// nothing in that case rather than throwing.
+// Safe to call even if the word was never completed.
 //
 // Usage:
-//   await unmarkVocabCompleted('carbon-neutrality')
+//   await unmarkVocabCompleted(client, 'carbon-neutrality')
 // ------------------------------------------------------------
-export async function unmarkVocabCompleted(vocabId: string): Promise<void> {
+export async function unmarkVocabCompleted(
+  supabase: SupabaseClient,
+  vocabId: string,
+): Promise<void> {
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) {
@@ -75,14 +102,14 @@ export async function unmarkVocabCompleted(vocabId: string): Promise<void> {
 // getUserProgress
 //
 // Returns all vocabulary progress rows for the current user.
-// The frontend can use this to build a "words learned" count
-// or highlight completed words in the glossary.
 //
 // Usage:
-//   const progress = await getUserProgress()
-//   const completedIds = progress.filter(p => p.completed).map(p => p.vocab_id)
+//   const rows = await getUserProgress(client)
+//   const completedIds = rows.filter(r => r.completed).map(r => r.vocab_id)
 // ------------------------------------------------------------
-export async function getUserProgress(): Promise<VocabularyProgressRow[]> {
+export async function getUserProgress(
+  supabase: SupabaseClient,
+): Promise<VocabularyProgressRow[]> {
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) {
@@ -110,9 +137,12 @@ export async function getUserProgress(): Promise<VocabularyProgressRow[]> {
 // vocabulary word, false otherwise.
 //
 // Usage:
-//   const done = await isVocabCompleted('carbon-neutrality')
+//   const done = await isVocabCompleted(client, 'carbon-neutrality')
 // ------------------------------------------------------------
-export async function isVocabCompleted(vocabId: string): Promise<boolean> {
+export async function isVocabCompleted(
+  supabase: SupabaseClient,
+  vocabId: string,
+): Promise<boolean> {
   const { data: { user } } = await supabase.auth.getUser()
 
   if (!user) {
@@ -130,6 +160,5 @@ export async function isVocabCompleted(vocabId: string): Promise<boolean> {
     throw new Error(`isVocabCompleted failed for "${vocabId}": ${error.message}`)
   }
 
-  // No row yet means the user hasn't started this word
   return data?.completed ?? false
 }
