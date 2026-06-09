@@ -1,4 +1,4 @@
-import { getPlatformStats } from "@/lib/stats/platform";
+import { getPlatformStats } from "@/lib/supabase/stats";
 
 // Shown when Supabase isn't configured or the stats call fails — the page
 // must never crash, so this is always a safe fallback.

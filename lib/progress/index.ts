@@ -5,18 +5,13 @@
  *   - Logged-in users  → Supabase `vocabulary_progress` (synced across devices)
  *   - Logged-out users → localStorage shim (lib/progress/local.ts)
  *
- * Why we re-implement the Supabase queries here instead of importing
- * lib/supabase/vocabulary-progress.ts:
- *   - Those helpers use a different Supabase client (`@supabase/supabase-js`,
- *     localStorage sessions) than the app's auth flow (`@supabase/ssr`,
- *     cookie sessions), so they can't see a logged-in user's session, and
- *     their module throws at import when env is missing. See issue #12.
- *   - Here we use the SAME session-aware browser client the auth UI uses
- *     (`getBrowserSupabase()`), so sessions line up and nothing crashes when
- *     Supabase isn't configured.
+ * The Supabase work is delegated to lib/supabase/vocabulary-progress.ts using
+ * the injected-client pattern (Option A, issue #12): we pass the session-aware
+ * `@supabase/ssr` browser client (`getBrowserSupabase()`) so the cookie session
+ * is visible and `auth.getUser()` resolves to the logged-in user.
  *
- * On first read while logged in, any progress saved locally (from before the
- * user signed in) is migrated up to Supabase once, then cleared locally.
+ * On the first authed read, any progress saved locally (from before the user
+ * signed in) is migrated up to Supabase once, then cleared locally.
  */
 
 import type { SupabaseClient } from "@supabase/supabase-js";
@@ -27,6 +22,7 @@ import {
   resetProgress as resetLocalProgress,
   type ProgressRow,
 } from "@/lib/progress/derived";
+import * as remote from "@/lib/supabase/vocabulary-progress";
 
 const CHANGE_EVENT = "nscd:progress-changed";
 const TABLE = "vocabulary_progress";
@@ -50,7 +46,8 @@ function notify(): void {
 /**
  * One-time lift of localStorage progress into Supabase after sign-in.
  * Idempotent: upsert avoids duplicates, and the local store is cleared on
- * success so this becomes a no-op afterwards.
+ * success so this becomes a no-op afterwards. The backend helpers operate one
+ * row at a time, so the bulk upsert here is done directly on the client.
  */
 async function migrateLocalToRemote(client: SupabaseClient, userId: string): Promise<void> {
   const ids = [...local.getLearnedIdsSync()];
@@ -76,51 +73,42 @@ async function migrateLocalToRemote(client: SupabaseClient, userId: string): Pro
 export async function getLearnedIds(): Promise<Set<string>> {
   const auth = await getAuth();
   if (!auth) return local.getLearnedIdsSync();
-
-  await migrateLocalToRemote(auth.client, auth.userId);
-  const { data, error } = await auth.client
-    .from(TABLE)
-    .select("vocab_id")
-    .eq("user_id", auth.userId)
-    .eq("completed", true);
-
-  if (error) return new Set();
-  return new Set((data ?? []).map((r) => (r as { vocab_id: string }).vocab_id));
+  try {
+    await migrateLocalToRemote(auth.client, auth.userId);
+    const rows = await remote.getUserProgress(auth.client);
+    return new Set(rows.filter((r) => r.completed).map((r) => r.vocab_id));
+  } catch {
+    return new Set();
+  }
 }
 
 /** Progress rows (id + completed_at) for streaks / recent activity / category stats. */
 export async function getProgressRows(): Promise<ProgressRow[]> {
   const auth = await getAuth();
   if (!auth) return readProgressRows();
-
-  await migrateLocalToRemote(auth.client, auth.userId);
-  const { data, error } = await auth.client
-    .from(TABLE)
-    .select("vocab_id, completed_at")
-    .eq("user_id", auth.userId)
-    .eq("completed", true);
-
-  if (error) return [];
-  return (data ?? []).map((r) => {
-    const row = r as { vocab_id: string; completed_at: string | null };
-    return { vocabId: row.vocab_id, completed_at: row.completed_at ?? new Date().toISOString() };
-  });
+  try {
+    await migrateLocalToRemote(auth.client, auth.userId);
+    const rows = await remote.getUserProgress(auth.client);
+    return rows
+      .filter((r) => r.completed)
+      .map((r) => ({
+        vocabId: r.vocab_id,
+        completed_at: r.completed_at ?? new Date().toISOString(),
+      }));
+  } catch {
+    return [];
+  }
 }
 
 /** Whether the current user has completed a single term. */
 export async function isVocabCompleted(vocabId: string): Promise<boolean> {
   const auth = await getAuth();
   if (!auth) return local.isVocabCompleted(vocabId);
-
-  const { data, error } = await auth.client
-    .from(TABLE)
-    .select("completed")
-    .eq("user_id", auth.userId)
-    .eq("vocab_id", vocabId)
-    .maybeSingle();
-
-  if (error) return false;
-  return (data as { completed: boolean } | null)?.completed ?? false;
+  try {
+    return await remote.isVocabCompleted(auth.client, vocabId);
+  } catch {
+    return false;
+  }
 }
 
 // ── Writes ───────────────────────────────────────────────────────────────────
@@ -131,16 +119,12 @@ export async function markVocabCompleted(vocabId: string): Promise<void> {
     await local.markVocabCompleted(vocabId); // local shim dispatches its own event
     return;
   }
-  await auth.client.from(TABLE).upsert(
-    {
-      user_id: auth.userId,
-      vocab_id: vocabId,
-      completed: true,
-      completed_at: new Date().toISOString(),
-    },
-    { onConflict: "user_id,vocab_id" },
-  );
-  notify();
+  try {
+    await remote.markVocabCompleted(auth.client, vocabId);
+    notify();
+  } catch {
+    // progress is non-critical — swallow transient write errors
+  }
 }
 
 export async function unmarkVocabCompleted(vocabId: string): Promise<void> {
@@ -149,12 +133,12 @@ export async function unmarkVocabCompleted(vocabId: string): Promise<void> {
     await local.unmarkVocabCompleted(vocabId);
     return;
   }
-  await auth.client
-    .from(TABLE)
-    .delete()
-    .eq("user_id", auth.userId)
-    .eq("vocab_id", vocabId);
-  notify();
+  try {
+    await remote.unmarkVocabCompleted(auth.client, vocabId);
+    notify();
+  } catch {
+    // ignore
+  }
 }
 
 /** Clear all progress — Supabase rows when logged in, otherwise localStorage. */
@@ -164,8 +148,12 @@ export async function resetProgress(): Promise<void> {
     resetLocalProgress(); // dispatches its own event
     return;
   }
-  await auth.client.from(TABLE).delete().eq("user_id", auth.userId);
-  notify();
+  try {
+    await auth.client.from(TABLE).delete().eq("user_id", auth.userId);
+    notify();
+  } catch {
+    // ignore
+  }
 }
 
 // ── Subscription ─────────────────────────────────────────────────────────────
