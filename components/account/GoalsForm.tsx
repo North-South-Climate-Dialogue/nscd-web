@@ -40,7 +40,7 @@ export default function GoalsForm({
   const weekCount = learnedThisWeek(rows);
   const streak = streakDays(rows);
   const totalLearned = rows.length;
-  const weekPct = target === 0 ? 0 : Math.min(100, Math.round((weekCount / target) * 100));
+  const weekPct = Math.min(100, Math.round((weekCount / target) * 100));
 
   async function handleSubmit(ev: React.FormEvent) {
     ev.preventDefault();
