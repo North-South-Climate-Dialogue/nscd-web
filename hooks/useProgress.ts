@@ -2,26 +2,37 @@
 
 import { useCallback, useEffect, useState } from "react";
 import {
-  getLearnedIdsSync,
+  getLearnedIds,
   markVocabCompleted,
-  onProgressChanged,
   unmarkVocabCompleted,
-} from "@/lib/progress/local";
+  subscribeProgress,
+} from "@/lib/progress";
 
 /**
- * React-friendly view over the localStorage progress shim.
+ * React-friendly view over the progress router.
  *
- * SSR returns an empty Set so server and first-client renders match; the real
- * data is loaded on mount, after which the component re-renders with the
- * learned IDs filled in.
+ * Routes to Supabase for logged-in users and localStorage for everyone else
+ * (see lib/progress/index.ts). SSR starts with an empty Set so server and
+ * first-client renders match; the real data loads on mount, and the component
+ * re-renders once it arrives. Writes dispatch a change event this hook
+ * subscribes to, so the learned set stays in sync after every mark/unmark and
+ * across login/logout.
  */
 export function useProgress() {
   const [learnedIds, setLearnedIds] = useState<Set<string>>(() => new Set());
 
   useEffect(() => {
-    const sync = () => setLearnedIds(getLearnedIdsSync());
-    sync();
-    return onProgressChanged(sync);
+    let alive = true;
+    const load = async () => {
+      const ids = await getLearnedIds();
+      if (alive) setLearnedIds(ids);
+    };
+    load();
+    const off = subscribeProgress(load);
+    return () => {
+      alive = false;
+      off();
+    };
   }, []);
 
   const mark = useCallback(async (id: string) => {
@@ -34,8 +45,7 @@ export function useProgress() {
 
   const toggle = useCallback(
     async (id: string) => {
-      const isLearned = learnedIds.has(id);
-      if (isLearned) {
+      if (learnedIds.has(id)) {
         await unmarkVocabCompleted(id);
       } else {
         await markVocabCompleted(id);

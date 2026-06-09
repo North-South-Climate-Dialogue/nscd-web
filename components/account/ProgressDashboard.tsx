@@ -5,13 +5,17 @@ import Link from "next/link";
 import type { VocabEntry } from "@/types/vocabulary";
 import { useProgress } from "@/hooks/useProgress";
 import {
-  readProgressRows,
   learnedByCategory,
   recentActivity,
   relativeDate,
-  resetProgress,
+  type ProgressRow,
 } from "@/lib/progress/derived";
-import { onProgressChanged } from "@/lib/progress/local";
+import {
+  getProgressRows,
+  resetProgress,
+  subscribeProgress,
+} from "@/lib/progress";
+import { getBrowserSupabase } from "@/lib/auth/browser";
 
 export default function ProgressDashboard({
   entries,
@@ -23,13 +27,28 @@ export default function ProgressDashboard({
   const learned = learnedIds.size;
   const pct = total === 0 ? 0 : Math.round((learned / total) * 100);
 
-  // Re-derive activity rows on storage changes (useProgress only gives us IDs).
-  const [version, setVersion] = useState(0);
-  useEffect(() => onProgressChanged(() => setVersion((v) => v + 1)), []);
-  const rows = (() => {
-    void version;
-    return readProgressRows();
-  })();
+  // Activity rows (with dates) come from the router — Supabase when logged in,
+  // localStorage otherwise. `synced` drives the "saved locally / synced" copy.
+  const [rows, setRows] = useState<ProgressRow[]>([]);
+  const [synced, setSynced] = useState(false);
+  useEffect(() => {
+    let alive = true;
+    const client = getBrowserSupabase();
+    const refresh = async () => {
+      const r = await getProgressRows();
+      if (alive) setRows(r);
+      if (client) {
+        const { data } = await client.auth.getUser();
+        if (alive) setSynced(Boolean(data.user));
+      }
+    };
+    refresh();
+    const off = subscribeProgress(refresh);
+    return () => {
+      alive = false;
+      off();
+    };
+  }, []);
 
   const byCategory = learnedByCategory(entries, learnedIds);
   const recent = recentActivity(rows, entries, 10);
@@ -42,8 +61,9 @@ export default function ProgressDashboard({
 
   function handleReset() {
     if (typeof window === "undefined") return;
-    if (window.confirm("Reset all progress on this device? This cannot be undone.")) {
-      resetProgress();
+    const where = synced ? "your account" : "this device";
+    if (window.confirm(`Reset all progress on ${where}? This cannot be undone.`)) {
+      void resetProgress();
     }
   }
 
@@ -71,7 +91,9 @@ export default function ProgressDashboard({
           />
         </div>
         <div className="mt-2 label-mono text-sage normal-case tracking-normal text-[12px]">
-          Progress is saved locally on this device.
+          {synced
+            ? "Progress is synced to your account."
+            : "Progress is saved locally on this device."}
         </div>
       </article>
 

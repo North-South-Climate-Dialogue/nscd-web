@@ -5,11 +5,11 @@ import { useRouter } from "next/navigation";
 import { getBrowserSupabase } from "@/lib/auth/browser";
 import AuthEnvWarning from "@/components/auth/AuthEnvWarning";
 import {
-  readProgressRows,
   learnedThisWeek,
   streakDays,
+  type ProgressRow,
 } from "@/lib/progress/derived";
-import { onProgressChanged } from "@/lib/progress/local";
+import { getProgressRows, subscribeProgress } from "@/lib/progress";
 
 export const WEEKLY_TARGETS = [5, 10, 20, 30] as const;
 export type WeeklyTarget = (typeof WEEKLY_TARGETS)[number];
@@ -30,13 +30,21 @@ export default function GoalsForm({
   const [phase, setPhase] = useState<Phase>("idle");
   const [serverError, setServerError] = useState<string | null>(null);
 
-  // Live progress stats from localStorage — re-derive on change.
-  const [rowsVersion, setRowsVersion] = useState(0);
-  useEffect(() => onProgressChanged(() => setRowsVersion((v) => v + 1)), []);
-  const rows = (() => {
-    void rowsVersion; // depend on it
-    return readProgressRows();
-  })();
+  // Live progress stats — Supabase when logged in, localStorage otherwise.
+  const [rows, setRows] = useState<ProgressRow[]>([]);
+  useEffect(() => {
+    let alive = true;
+    const load = async () => {
+      const r = await getProgressRows();
+      if (alive) setRows(r);
+    };
+    load();
+    const off = subscribeProgress(load);
+    return () => {
+      alive = false;
+      off();
+    };
+  }, []);
   const weekCount = learnedThisWeek(rows);
   const streak = streakDays(rows);
   const totalLearned = rows.length;
