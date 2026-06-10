@@ -2,42 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { getCurrentUser } from "@/lib/auth/server";
 import { signOutAction } from "@/app/account/actions";
-
-interface NavItem {
-  href: string;
-  label: string;
-  children?: { href: string; label: string }[];
-}
-
-const NAV: NavItem[] = [
-  {
-    href: "/learning/glossary",
-    label: "Learn",
-    children: [
-      { href: "/learning/glossary",     label: "Glossary" },
-      { href: "/learning/pinyin-guide", label: "Simple Pinyin Guide" },
-      { href: "/learning/flashcards",   label: "Flashcards" },
-      { href: "/learning/quiz",         label: "Test your understanding" },
-    ],
-  },
-  { href: "/quiz", label: "Quiz" },
-  {
-    href: "/blog",
-    label: "Our Work",
-    children: [
-      { href: "/blog",   label: "Blog" },
-      { href: "/events", label: "Events" },
-    ],
-  },
-  {
-    href: "/about",
-    label: "About",
-    children: [
-      { href: "/about",   label: "Who we are" },
-      { href: "/contact", label: "Contact / Join" },
-    ],
-  },
-];
+import { NAV, ACCOUNT_LINKS, type NavItem } from "./nav-items";
+import MobileNav from "./MobileNav";
 
 export default async function Navbar() {
   const user = await getCurrentUser();
@@ -60,22 +26,29 @@ export default async function Navbar() {
       </Link>
 
       <div className="flex items-center gap-8 ml-auto">
+        {/* Desktop nav — hidden on mobile */}
         <ul className="hidden md:flex gap-8 text-[13px] font-semibold uppercase tracking-[0.08em]">
           {NAV.map((item) => (
             <NavItemView key={item.label} item={item} />
           ))}
         </ul>
 
-        {user && displayName ? (
-          <AccountMenu displayName={displayName} />
-        ) : (
-          <Link
-            href="/login"
-            className="bg-ink text-paper text-[13px] font-semibold uppercase tracking-[0.08em] px-4 py-2.5 hover:bg-green transition-colors whitespace-nowrap"
-          >
-            Sign up / Log in
-          </Link>
-        )}
+        {/* Desktop auth — hidden on mobile */}
+        <div className="hidden md:block">
+          {user && displayName ? (
+            <AccountMenu displayName={displayName} />
+          ) : (
+            <Link
+              href="/login"
+              className="bg-ink text-paper text-[13px] font-semibold uppercase tracking-[0.08em] px-4 py-2.5 hover:bg-green transition-colors whitespace-nowrap"
+            >
+              Sign up / Log in
+            </Link>
+          )}
+        </div>
+
+        {/* Mobile nav — hamburger + drawer, hidden on desktop */}
+        <MobileNav signedIn={Boolean(user && displayName)} displayName={displayName} />
       </div>
     </nav>
   );
@@ -167,13 +140,7 @@ function AccountMenu({ displayName }: { displayName: string }) {
                    transition-[opacity,transform] duration-150"
       >
         <ul className="py-1.5">
-          {[
-            { href: "/account",          label: "Dashboard" },
-            { href: "/account/profile",  label: "Profile" },
-            { href: "/account/progress", label: "Progress" },
-            { href: "/account/goals",    label: "Goals" },
-            { href: "/account/matching", label: "Matching" },
-          ].map((item) => (
+          {ACCOUNT_LINKS.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
