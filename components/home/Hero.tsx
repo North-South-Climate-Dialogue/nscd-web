@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="max-w-[1200px] mx-auto px-5 md:px-8 py-20 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 items-center">
           <div>
-            <h1 className="display text-paper relative leading-[0.88] text-[80px] md:text-[140px] lg:text-[168px]">
+            <h1 className="display text-paper relative leading-[0.88] text-[64px] md:text-[140px] lg:text-[168px]">
               <span
                 aria-hidden
                 className="absolute inset-0 text-transparent translate-x-[8px] translate-y-[8px] opacity-70"
