@@ -4,7 +4,7 @@ import QiQi from "./QiQi";
 export default function Hero() {
   return (
     <section className="bg-green text-paper border-b-[6px] border-ink relative overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-8 py-20 md:py-24">
+      <div className="max-w-[1200px] mx-auto px-5 md:px-8 py-20 md:py-24">
         <div className="grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-10 items-center">
           <div>
             <h1 className="display text-paper relative leading-[0.88] text-[80px] md:text-[140px] lg:text-[168px]">
