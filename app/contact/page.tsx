@@ -84,14 +84,17 @@ export default function ContactPage() {
                 Find us elsewhere.
               </h2>
               <p className="mt-6 text-ink/85 text-[17px] md:text-[18px] leading-[1.65] max-w-[44ch]">
-                Our social channels are coming soon. Once they&apos;re live,
-                you&apos;ll find workshop recaps, climate term cards, and
-                pen-pal calls here.
+                We&apos;re on Instagram — workshop recaps, bilingual climate
+                term cards, and pen-pal calls. More channels are on the way.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
-              <SocialPlaceholder name="Instagram" handle="@nscd" />
+              <SocialLink
+                name="Instagram"
+                handle="@nsclimatedialogue"
+                href="https://www.instagram.com/nsclimatedialogue/"
+              />
               <SocialPlaceholder name="More to come" handle="LinkedIn · WeChat · 小红书" />
             </div>
           </div>
@@ -130,6 +133,37 @@ export default function ContactPage() {
         </div>
       </section>
     </>
+  );
+}
+
+function SocialLink({
+  name,
+  handle,
+  href,
+}: {
+  name: string;
+  handle: string;
+  href: string;
+}) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block border-2 border-ink bg-paper p-5 md:p-6 shadow-thunk hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0_#0E1F2C] transition-all"
+    >
+      <div className="flex items-baseline justify-between gap-2">
+        <span className="font-display font-extrabold text-ink text-[22px] md:text-[26px] leading-none tracking-tight normal-case">
+          {name}
+        </span>
+        <span className="label-mono text-coral whitespace-nowrap group-hover:text-ink transition-colors">
+          Follow →
+        </span>
+      </div>
+      <div className="mt-2 label-mono text-ink normal-case tracking-normal text-[14px] md:text-[15px]">
+        {handle}
+      </div>
+    </a>
   );
 }
 
