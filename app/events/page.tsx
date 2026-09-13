@@ -27,7 +27,7 @@ export default function EventsPage() {
         <div className="order-2 md:order-1">
           <div className="label-mono text-coral mb-3.5">Our work · Events</div>
           <h1 className="font-display font-extrabold text-ink text-[52px] md:text-[104px] leading-[0.92] tracking-tight normal-case max-w-[16ch]">
-            Rewrite the headline.
+            Wanna see me IRL?
           </h1>
           <p className="mt-6 max-w-[58ch] text-[18px] md:text-[20px] leading-[1.55] text-ink/80">
             In-person bilingual climate workshops and language-exchange meetups.
