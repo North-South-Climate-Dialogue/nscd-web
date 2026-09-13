@@ -65,19 +65,23 @@ export default function EventsPage() {
           </p>
         </div>
 
+        {/* Promo image — centered across the full card */}
+        <div className="p-6 md:p-10 pb-0 border-b-2 border-ink flex justify-center">
+          <div className="border-2 border-ink shadow-thunk max-w-[480px] w-full">
+            <Image
+              src="/events/vcd26-promo.jpg"
+              alt="Vancouver Climate Day 2026 promo graphic: 'Do the languages we speak shape who participates in local action?' Sept 18, 580 W Hastings."
+              width={876}
+              height={878}
+              className="block w-full h-auto"
+            />
+          </div>
+        </div>
+
         {/* Body: description + registration */}
         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr]">
           {/* Left — description + details */}
           <div className="p-6 md:p-10 lg:border-r-2 lg:border-ink min-w-0">
-            <div className="mb-8 border-2 border-ink shadow-thunk max-w-[480px] mx-auto">
-              <Image
-                src="/events/vcd26-promo.jpg"
-                alt="Vancouver Climate Day 2026 promo graphic: 'Do the languages we speak shape who participates in local action?' Sept 18, 580 W Hastings."
-                width={876}
-                height={878}
-                className="block w-full h-auto"
-              />
-            </div>
             <div className="space-y-4 text-ink/85 text-[16px] md:text-[17px] leading-[1.65]">
               <p>
                 How much can a few words change the way we understand climate
